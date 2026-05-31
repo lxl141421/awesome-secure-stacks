@@ -11,15 +11,15 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/awesome-secure-stacks/awesome-secure-stacks/stargazers"><img src="https://img.shields.io/github/stars/awesome-secure-stacks/awesome-secure-stacks?style=social" alt="Stars"></a>
+  <a href="https://github.com/lxl141421/awesome-secure-stacks/stargazers"><img src="https://img.shields.io/github/stars/lxl141421/awesome-secure-stacks?style=social" alt="Stars"></a>
   &nbsp;
-  <a href="https://github.com/awesome-secure-stacks/awesome-secure-stacks/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square" alt="PRs Welcome"></a>
+  <a href="https://github.com/lxl141421/awesome-secure-stacks/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square" alt="PRs Welcome"></a>
   &nbsp;
   <img src="https://img.shields.io/badge/last%20updated-2026--05--31-blue?style=flat-square" alt="Last Updated">
   &nbsp;
   <img src="https://img.shields.io/badge/security--audited-✓-brightgreen?style=flat-square&logo=checkmarx&logoColor=white" alt="Security Audited">
   &nbsp;
-  <a href="https://github.com/awesome-secure-stacks/awesome-secure-stacks/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="MIT License"></a>
+  <a href="https://github.com/lxl141421/awesome-secure-stacks/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="MIT License"></a>
   &nbsp;
   <img src="https://img.shields.io/badge/stacks-40+-purple?style=flat-square" alt="40+ Stacks">
 </p>
@@ -131,7 +131,7 @@ Browse the [Stack Categories](#-stack-categories) or search directly:
 
 ```bash
 # Clone the repository
-git clone https://github.com/awesome-secure-stacks/awesome-secure-stacks.git
+git clone https://github.com/lxl141421/awesome-secure-stacks.git
 cd awesome-secure-stacks
 
 # Search for stacks by technology
@@ -178,7 +178,7 @@ docker compose up -d
 
 - ⭐ **Star** this repo to get notified of score changes
 - 👀 **Watch** for security advisory releases
-- 📡 Subscribe to our [RSS feed](https://github.com/awesome-secure-stacks/awesome-secure-stacks/releases.atom) for monthly score updates
+- 📡 Subscribe to our [RSS feed](https://github.com/lxl141421/awesome-secure-stacks/releases.atom) for monthly score updates
 
 ---
 
@@ -434,7 +434,7 @@ Published: 2026-05-15
 ### Subscribe to Advisories
 
 - 🔔 **GitHub Watch** → "Releases only"
-- 📡 **Atom feed:** [`/advisories.atom`](https://github.com/awesome-secure-stacks/awesome-secure-stacks/releases.atom)
+- 📡 **Atom feed:** [`/advisories.atom`](https://github.com/lxl141421/awesome-secure-stacks/releases.atom)
 - 🐦 **Twitter/X:** [@secure_stacks](https://twitter.com/secure_stacks)
 
 ---
@@ -447,11 +447,11 @@ We welcome contributions! But security curation requires rigor. 贡献安全策�
 
 | Type | How | Difficulty |
 |------|-----|------------|
-| 🐛 Report a scoring error | [Open an issue](https://github.com/awesome-secure-stacks/awesome-secure-stacks/issues/new?template=bug_report.md) | Easy |
-| 📦 Propose a new stack | [Stack proposal template](https://github.com/awesome-secure-stacks/awesome-secure-stacks/issues/new?template=stack_proposal.md) | Medium |
-| 📊 Update a score | [Score update PR](https://github.com/awesome-secure-stacks/awesome-secure-stacks/compare) | Medium |
+| 🐛 Report a scoring error | [Open an issue](https://github.com/lxl141421/awesome-secure-stacks/issues/new?template=bug_report.md) | Easy |
+| 📦 Propose a new stack | [Stack proposal template](https://github.com/lxl141421/awesome-secure-stacks/issues/new?template=stack_proposal.md) | Medium |
+| 📊 Update a score | [Score update PR](https://github.com/lxl141421/awesome-secure-stacks/compare) | Medium |
 | 🔍 Audit a stack | [Audit guide](CONTRIBUTING.md#auditing-a-stack) | Hard |
-| 📝 Improve docs | [Standard PR](https://github.com/awesome-secure-stacks/awesome-secure-stacks/compare) | Easy |
+| 📝 Improve docs | [Standard PR](https://github.com/lxl141421/awesome-secure-stacks/compare) | Easy |
 
 ### Contribution Guidelines
 
@@ -526,8 +526,8 @@ This project would not be possible without:
 
 <p align="center">
   <b>⭐ If this project helps you ship more secure software, give it a star! ⭐</b><br><br>
-  <a href="https://github.com/awesome-secure-stacks/awesome-secure-stacks/stargazers">
-    <img src="https://img.shields.io/github/stars/awesome-secure-stacks/awesome-secure-stacks?style=social" alt="Stars">
+  <a href="https://github.com/lxl141421/awesome-secure-stacks/stargazers">
+    <img src="https://img.shields.io/github/stars/lxl141421/awesome-secure-stacks?style=social" alt="Stars">
   </a>
 </p>
 
@@ -536,8 +536,8 @@ This project would not be possible without:
 <p align="center">
   <sub>
     Made with 🔒 by the security community.<br>
-    <a href="https://github.com/awesome-secure-stacks/awesome-secure-stacks">GitHub</a> · 
-    <a href="https://github.com/awesome-secure-stacks/awesome-secure-stacks/issues">Issues</a> · 
-    <a href="https://github.com/awesome-secure-stacks/awesome-secure-stacks/discussions">Discussions</a>
+    <a href="https://github.com/lxl141421/awesome-secure-stacks">GitHub</a> · 
+    <a href="https://github.com/lxl141421/awesome-secure-stacks/issues">Issues</a> · 
+    <a href="https://github.com/lxl141421/awesome-secure-stacks/discussions">Discussions</a>
   </sub>
 </p>
