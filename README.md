@@ -50,39 +50,92 @@
 
 ## 📖 Table of Contents
 
+- [🚀 Quick Recommendations](#-quick-recommendations)
+- [👤 Who Are You?](#-who-are-you)
 - [🚨 The Problem](#-the-problem)
 - [💡 Our Solution](#-our-solution)
 - [⚔️ How We're Different](#️-how-were-different)
-- [🚀 Quick Start](#-quick-start)
 - [📊 Scoring System](#-scoring-system)
+- [🎯 Version Philosophy](#-version-philosophy)
 - [⭐ Featured Stacks](#-featured-stacks)
-  - [🥇 Full-stack Web: React 18.3 + Next.js 14.2 + TypeScript 5.6](#-full-stack-web-react-183--nextjs-142--typescript-56)
-  - [🥇 Backend API: Go 1.22 + Chi 5.2 + PostgreSQL 16.4](#-backend-api-go-122--chi-52--postgresql-164)
-  - [🥇 Systems Backend: Rust 1.80 + Axum 0.7](#-systems-backend-rust-180--axum-07)
-  - [🥇 DevOps & Infrastructure: Terraform 1.12 + Kubernetes 1.33](#-devops--infrastructure-terraform-112--kubernetes-133)
 - [📚 Stack Categories](#-stack-categories)
-  - [🖥️ Web Frontend](#️-web-frontend)
-  - [⚙️ Backend API](#️-backend-api)
-  - [🗄️ Database](#️-database)
-  - [🔧 DevOps & Infrastructure](#-devops--infrastructure)
-  - [📱 Mobile](#-mobile)
-  - [🤖 Machine Learning & AI](#-machine-learning--ai)
-  - [⚡ Real-time & Messaging](#-real-time--messaging)
-  - [🏗️ Full-stack Combos](#️-full-stack-combos)
-  - [🖥️ Desktop Applications](#️-desktop-applications)
-  - [🌐 Hybrid & WebView](#-hybrid--webview)
-  - [🎮 Game Development](#-game-development)
-  - [🤖 AI-Assisted Development](#-ai-assisted-development)
-  - [🧠 AI/LLM Applications](#-aillm-applications)
-  - [📱 Native Mobile & Cross-Platform Deep Dive](#-native-mobile--cross-platform-deep-dive)
-  - [🔄 Architecture Evolution](#-architecture-evolution)
-  - [🔗 Distributed Systems & Microservices](#-distributed-systems--microservices)
 - [🕘 Supply Chain Attack Timeline](#-supply-chain-attack-timeline)
 - [🔒 Security Advisories](#-security-advisories)
 - [🤝 Contributing](#-contributing)
 - [🗺️ Roadmap](#️-roadmap)
 - [📜 License](#-license)
 - [🙏 Acknowledgments](#-acknowledgments)
+
+---
+
+## 🚀 Quick Recommendations
+
+**Don't know where to start? Pick your situation:**
+
+---
+
+> ### 🛡️ "I want the safest stack"
+>
+> **Go 1.22 + Chi 5.2 + PostgreSQL 16.4**
+>
+> 📊 **Score: 96/100 (A+)** — The gold standard for secure backend development.
+>
+> - ✅ Go's static compilation eliminates runtime dependency attacks
+> - ✅ Chi has **zero external dependencies** — minimal attack surface
+> - ✅ PostgreSQL 16.4 has 30+ years of security hardening
+> - ✅ Go modules provide cryptographic verification by default via sum.golang.org
+>
+> 👉 **Get started:** [`stacks/backend.md`](stacks/backend.md) + [`stacks/database.md`](stacks/database.md)
+
+---
+
+> ### ⚡ "I want to build fast"
+>
+> **React 18.3 + Next.js 14.2 + T3 Stack**
+>
+> 📊 **Score: 95/100 (A+)** — The most battle-tested frontend full-stack available.
+>
+> - ✅ React 18.3 is deployed in **millions** of production applications worldwide
+> - ✅ TypeScript 5.6 has **zero Critical CVEs** in 3+ years
+> - ✅ pnpm's strict dependency resolution eliminates phantom dependencies
+> - ✅ T3 Stack gives you type-safety from database to frontend
+>
+> 👉 **Get started:** [`stacks/fullstack.md`](stacks/fullstack.md) + [`stacks/frontend.md`](stacks/frontend.md)
+
+---
+
+> ### 🤖 "I'm using AI to code"
+>
+> **AI generates code — but can't tell if a dependency has a backdoor.**
+>
+> 📊 You need the **AI safety layer** that this project provides.
+>
+> - ⚠️ AI assistants may suggest **hallucinated package names** — attackers register them
+> - ⚠️ AI-generated code often pulls in **outdated or insecure** dependency versions
+> - ⚠️ Cloud-based AI inference can **leak your code context** to third parties
+>
+> 👉 **Read first:** [`stacks/ai-development.md`](stacks/ai-development.md) + [`stacks/ai-apps.md`](stacks/ai-apps.md)
+
+---
+
+## 👤 Who Are You?
+
+**Find your entry point.** Different roles, different needs. 不同角色，不同需求。
+
+---
+
+| 🎯 Your Role | 👉 Start Here | 📋 What You'll Find |
+|--------------|---------------|---------------------|
+| 🧑‍💻 **Independent Developer** | [`stacks/fullstack.md`](stacks/fullstack.md) | T3 Stack, Django, Rails — complete app blueprints with security scores |
+| 🤖 **AI-Assisted Developer** | [`stacks/ai-development.md`](stacks/ai-development.md) | Verify AI-generated deps, avoid hallucinated packages, secure Copilot/Cursor usage |
+| 🌐 **Web Team** | [`stacks/frontend.md`](stacks/frontend.md) + [`stacks/backend.md`](stacks/backend.md) | React, Vue, Svelte, Angular + Node.js, Go, Rust, Python, Java, .NET |
+| 📱 **Mobile Team** | [`stacks/mobile.md`](stacks/mobile.md) + [`stacks/mobile-native.md`](stacks/mobile-native.md) | React Native, Flutter, uni-app + Kotlin, Swift, HarmonyOS native deep dive |
+| 🏢 **Enterprise / Tech Upgrade** | [`stacks/evolution.md`](stacks/evolution.md) | Migration paths between framework generations with security preserved at each stage |
+| 🔄 **Monolith → Microservices** | [`stacks/distributed.md`](stacks/distributed.md) + [`stacks/evolution.md`](stacks/evolution.md) | Service mesh, API gateway, Saga orchestration — security at every migration stage |
+
+---
+
+**Not sure?** Start with the [Quick Recommendations](#-quick-recommendations) above, or browse the [Stack Categories](#-stack-categories) below.
 
 ---
 
@@ -160,80 +213,6 @@ These are **build-time attestation tools** — they verify *how* software was bu
 ### vs. OpenSSF Scorecard
 
 OpenSSF Scorecard evaluates **individual projects**. We evaluate **stack combinations** — how frameworks, databases, runtimes, and tooling interact. A project with a great Scorecard might still be part of a vulnerable stack if it pulls in risky transitive dependencies. Our stack-level analysis catches what project-level analysis cannot.
-
----
-
-## 🚀 Quick Start
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/lxl141421/awesome-secure-stacks.git
-cd awesome-secure-stacks
-```
-
-### 2. Browse Stacks
-
-```bash
-# List all available stack categories
-ls stacks/
-
-# Search for stacks by technology
-grep -r "react" stacks/ --include="*.md" -l
-grep -r "postgresql" stacks/ --include="*.md" -l
-
-# View a specific category
-cat stacks/frontend.md
-```
-
-### 3. Understand the Score
-
-Every stack entry follows this format:
-
-```
-### 🏷️ React 19.1 + Next.js 15.3 + TypeScript 5.8
-
-| Component | Version | Score |
-|-----------|---------|-------|
-| React     | 19.1    | A+    |
-| Next.js   | 15.3    | A     |
-| TypeScript| 5.8     | A+    |
-| pnpm      | 9.12    | A     |
-
-**Stack Security Score: 93/100 (A)**
-```
-
-See [SCORING.md](SCORING.md) for the complete methodology.
-
-### 4. Use a Stack Template
-
-Each stack category includes **reproduction templates** — lockfiles, Docker Compose files, and setup scripts to get started with the exact verified versions.
-
-```bash
-# Example: bootstrap a verified Django stack
-cd templates/
-cat docker-compose-django.yml
-# Review and customize, then:
-docker compose -f docker-compose-django.yml up -d
-# ✅ Running verified stack with pinned dependencies
-```
-
-Available templates:
-
-```bash
-ls templates/
-# docker-compose-django.yml
-# docker-compose-fastapi.yml
-# docker-compose-t3-stack.yml
-# lockfile-verification.md
-# README.md
-```
-
-### 5. Stay Updated
-
-- ⭐ **Star** this repo to get notified of score changes
-- 👀 **Watch** for security advisory releases
-- 📡 Subscribe to our [RSS feed](https://github.com/lxl141421/awesome-secure-stacks/releases.atom) for monthly score updates
 
 ---
 
@@ -372,9 +351,9 @@ Memory-safe by default. Rust eliminates entire vulnerability classes (buffer ove
 
 | Component | Version | Individual Score | Notes |
 |-----------|---------|------------------|-------|
-| Rust | 1.87 | A+ | Memory safety without GC, ~70% of CVE classes eliminated |
-| Axum | 0.8 | A | Tokio-backed, Tower middleware ecosystem |
-| Actix-web | 4.11 | A | Alternative framework, equally well-audited |
+| Rust | 1.80 | A+ | Memory safety without GC, ~70% of CVE classes eliminated |
+| Axum | 0.7 | A | Tokio-backed, Tower middleware ecosystem |
+| Actix-web | 4.8 | A | Alternative framework, equally well-audited |
 | Cargo | (bundled) | A | Built-in audit, advisory database integration |
 
 **Why it's featured:**
@@ -383,118 +362,90 @@ Memory-safe by default. Rust eliminates entire vulnerability classes (buffer ove
 - 📦 Cargo has built-in audit (`cargo audit`) with RustSec advisory database integration
 - 🔒 `unsafe` usage is explicit, auditable, and flagged in code review
 - 🏛️ Rust Foundation (Mozilla, AWS, Google, Microsoft, Meta) ensures long-term governance
-- 🛡️ Rust 1.87 includes enhanced `unsafe` diagnostics and improved supply chain tooling
+- 🛡️ Rust 1.80 is the proven stable release with extensive production track record
 
 ---
 
-### 🥇 DevOps & Infrastructure: Terraform 1.12 + Kubernetes 1.33
+### 🥇 DevOps & Infrastructure: Terraform 1.7 + Kubernetes 1.30
 
 > **Score: 91/100 (A)** · Category: [DevOps & Infrastructure](stacks/devops.md)
 
-Infrastructure-as-code with container orchestration. Every infrastructure change is version-controlled, reviewed, and auditable. Docker 28.1 provides hardened container runtimes, Kubernetes 1.33 brings enhanced pod security standards, and Terraform 1.12's provider ecosystem is HashiCorp-signed with SLSA provenance.
+Infrastructure-as-code with container orchestration. Every infrastructure change is version-controlled, reviewed, and auditable. Docker 25.0 provides hardened container runtimes, Kubernetes 1.30 brings enhanced pod security standards, and Terraform 1.7's provider ecosystem is HashiCorp-signed with SLSA provenance.
 
 **Components & Versions:**
 
 | Component | Version | Individual Score | Notes |
 |-----------|---------|------------------|-------|
-| Terraform | 1.12 | A | HashiCorp-signed providers, state encryption |
-| Kubernetes | 1.33 | A | Enhanced pod security, signed releases |
-| Docker | 28.1 | A | Content trust, image signing by default |
-| ArgoCD | 2.13 | A | GitOps, declarative auditable deployments |
+| Terraform | 1.7 | A | HashiCorp-signed providers, state encryption |
+| Kubernetes | 1.30 | A | Enhanced pod security, signed releases |
+| Docker | 25.0 | A | Content trust, image signing by default |
+| ArgoCD | 2.12 | A | GitOps, declarative auditable deployments |
 
 **Why it's featured:**
 
 - 🔐 All Terraform providers are signed by HashiCorp — tamper detection at init time
 - 🔄 ArgoCD provides declarative, auditable deployments with drift detection
-- 📦 Kubernetes 1.33 includes enhanced Pod Security Admission and signed container images
+- 📦 Kubernetes 1.30 includes enhanced Pod Security Admission and signed container images
 - 📋 Infrastructure state is fully reproducible from version-controlled configuration
-- 🛡️ Docker 28.1 content trust ensures image integrity from build to runtime
+- 🛡️ Docker 25.0 content trust ensures image integrity from build to runtime
 
 ---
 
 ## 📚 Stack Categories
 
-### 🖥️ Web Frontend
+### Group A: By Framework Ecosystem
+
+Organized by the technology you use every day. 按日常使用的技术分类。
+
+---
+
+#### 🖥️ Web Frontend
 
 **File:** [`stacks/frontend.md`](stacks/frontend.md)
 
 Frameworks, bundlers, CSS solutions, and client-side security tools. Covers React, Vue, Svelte, Angular, and emerging frameworks with their recommended companion tools. Each entry includes CSP configurations, dependency audit results, and XSS mitigation strategies.
 
-> **Featured:** React 19.1 + Next.js 15.3, Vue 3 + Nuxt 3, SvelteKit 2, Angular 19
+> **Featured:** React 18.3 + Next.js 14.2, Vue 3.5 + Nuxt 3, SvelteKit 2, Angular 18 LTS
 
 ---
 
-### ⚙️ Backend API
+#### ⚙️ Backend API
 
 **File:** [`stacks/backend.md`](stacks/backend.md)
 
 Server-side runtimes, web frameworks, ORMs, authentication libraries, and API security tools. Covers Node.js, Go, Rust, Python, Java, and .NET ecosystems with detailed analysis of middleware security, input validation, and authentication patterns.
 
-> **Featured:** Go 1.24 + Chi 5.2 + sqlc, Rust 1.87 + Axum 0.8, Node.js 22 + Fastify 5.3, Python 3.13 + FastAPI 0.115, Java 21 + Spring Boot 3.4, .NET 8 + ASP.NET Core 8.0
+> **Featured:** Go 1.22 + Chi 5.2 + sqlc, Rust 1.80 + Axum 0.7, Node.js 22 + Fastify 5, Python 3.12 + FastAPI 0.115, Java 21 + Spring Boot 3.4, .NET 8 + ASP.NET Core 8.0
 
 ---
 
-### 🗄️ Database
-
-**File:** [`stacks/database.md`](stacks/database.md)
-
-Relational, document, key-value, and time-series databases with their client libraries, migration tools, and connection pooling solutions. Includes analysis of authentication mechanisms, encryption at rest, and network security configurations.
-
-> **Featured:** PostgreSQL 17.5, MySQL 8.4 LTS, MongoDB 8.0, Redis 8.0
-
----
-
-### 🔧 DevOps & Infrastructure
-
-**File:** [`stacks/devops.md`](stacks/devops.md)
-
-Infrastructure-as-code, CI/CD, container orchestration, secret management, observability, and cloud provider tools. Each stack is evaluated for supply chain integrity of the entire deployment pipeline.
-
-> **Featured:** Terraform 1.12 + ArgoCD, Kubernetes 1.33 + Docker 28.1, GitHub Actions, Dagger
-
----
-
-### 📱 Mobile
-
-**File:** [`stacks/mobile.md`](stacks/mobile.md)
-
-Cross-platform and native mobile development frameworks, state management, navigation, and mobile-specific security tooling. Includes analysis of app signing, dependency management, and runtime integrity verification.
-
-> **Featured:** React Native 0.79 + Expo, Flutter 3.32, Kotlin Multiplatform
-
----
-
-### 🤖 Machine Learning & AI
-
-**File:** [`stacks/ml-ai.md`](stacks/ml-ai.md)
-
-ML frameworks, model serving, vector databases, LLM tooling, and data pipeline security. Special focus on model supply chain — provenance verification, adversarial robustness, and training data integrity.
-
-> **Featured:** PyTorch 2.7 + vLLM, LangChain 0.3 + vector stores, JAX + Flax, scikit-learn + ONNX Runtime
-
----
-
-### ⚡ Real-time & Messaging
-
-**File:** [`stacks/realtime.md`](stacks/realtime.md)
-
-WebSockets, SSE, pub/sub, message queues, and real-time collaboration tools with security considerations for persistent connections. Evaluates authentication, message integrity, and denial-of-service resilience.
-
-> **Featured:** Kafka 4.0, RabbitMQ 4.1, NATS 2.11, Socket.IO 4.x, Redis Streams
-
----
-
-### 🏗️ Full-stack Combos
+#### 🏗️ Full-stack Combos
 
 **File:** [`stacks/fullstack.md`](stacks/fullstack.md)
 
 Pre-verified end-to-end combinations spanning frontend, backend, database, and deployment. Complete application blueprints with security scores for the full dependency graph — from browser to database.
 
-> **Featured:** T3 Stack (Next.js + tRPC + Prisma), Rails 8 Full Stack, Django 5.2 + htmx + Alpine.js
+> **Featured:** T3 Stack (Next.js + tRPC + Prisma), Rails 8 Full Stack, Django 5.2 + htmx + Alpine.js, Laravel 11
 
 ---
 
-### 🖥️ Desktop Applications
+### Group B: By Domain
+
+Organized by the type of application you're building. 按应用类型分类。
+
+---
+
+#### 📱 Mobile
+
+**File:** [`stacks/mobile.md`](stacks/mobile.md)
+
+Cross-platform and native mobile development frameworks, state management, navigation, and mobile-specific security tooling. Includes analysis of app signing, dependency management, and runtime integrity verification.
+
+> **Featured:** React Native 0.76 + Expo, Flutter 3.24, uni-app, Kotlin Multiplatform
+
+---
+
+#### 🖥️ Desktop
 
 **File:** [`stacks/desktop.md`](stacks/desktop.md)
 
@@ -504,17 +455,7 @@ Desktop app frameworks with security-first sandboxing. Covers Tauri's Rust-based
 
 ---
 
-### 🌐 Hybrid & WebView
-
-**File:** [`stacks/hybrid.md`](stacks/hybrid.md)
-
-Capacitor, Ionic, and WebView-based apps with JavaScript bridge security hardening. Covers PWA alternatives, hybrid navigation patterns, and the critical attack surface of JS-to-native bridges. Each stack is evaluated for bridge injection resistance and offline integrity.
-
-> **Featured:** Capacitor 6 + Ionic 8, WebView hardening patterns, PWA-first alternatives
-
----
-
-### 🎮 Game Development
+#### 🎮 Games
 
 **File:** [`stacks/gaming.md`](stacks/gaming.md)
 
@@ -524,7 +465,7 @@ Game engines and multiplayer infrastructure with supply chain security focus. Co
 
 ---
 
-### 🤖 AI-Assisted Development
+#### 🤖 AI Development
 
 **File:** [`stacks/ai-development.md`](stacks/ai-development.md)
 
@@ -534,7 +475,7 @@ AI coding assistants and their unique supply chain risks. Covers GitHub Copilot,
 
 ---
 
-### 🧠 AI/LLM Applications
+#### 🧠 AI/LLM Apps
 
 **File:** [`stacks/ai-apps.md`](stacks/ai-apps.md)
 
@@ -544,33 +485,59 @@ LLM orchestration frameworks, vector databases, and AI agent infrastructure. Cov
 
 ---
 
-### 📱 Native Mobile & Cross-Platform Deep Dive
+### Group C: Infrastructure and Architecture
 
-**File:** [`stacks/mobile-native.md`](stacks/mobile-native.md)
-
-Native Android (Kotlin), iOS (Swift), HarmonyOS, and advanced cross-platform frameworks (uni-app, KMP). Covers certificate pinning, secure enclave usage, on-device AI model security, and platform-specific hardening beyond what cross-platform wrappers provide.
-
-> **Featured:** Android 15 (Kotlin), iOS 18 (Swift), HarmonyOS NEXT, Kotlin Multiplatform 2.0
+Organized by the systems that keep your software running. 按基础设施和架构分类。
 
 ---
 
-### 🔄 Architecture Evolution
+#### 🗄️ Database
 
-**File:** [`stacks/evolution.md`](stacks/evolution.md)
+**File:** [`stacks/database.md`](stacks/database.md)
 
-Migration paths from monolith to distributed architectures with security preserved at each stage. Covers Modular Monolith, Service Extraction patterns, Strangler Fig, and event-driven decomposition. Each transition point is evaluated for security regression risk.
+Relational, document, key-value, and time-series databases with their client libraries, migration tools, and connection pooling solutions. Includes analysis of authentication mechanisms, encryption at rest, and network security configurations.
 
-> **Featured:** Monolith → Modular Monolith, Strangler Fig extraction, Event-driven decomposition
+> **Featured:** PostgreSQL 16.4, MySQL 8.0 LTS, MongoDB 7.0, Redis 7.4
 
 ---
 
-### 🔗 Distributed Systems & Microservices
+#### 🔧 DevOps
+
+**File:** [`stacks/devops.md`](stacks/devops.md)
+
+Infrastructure-as-code, CI/CD, container orchestration, secret management, observability, and cloud provider tools. Each stack is evaluated for supply chain integrity of the entire deployment pipeline.
+
+> **Featured:** Terraform 1.7 + ArgoCD, Kubernetes 1.30 + Docker 25.0, GitHub Actions, Dagger
+
+---
+
+#### ⚡ Real-time
+
+**File:** [`stacks/realtime.md`](stacks/realtime.md)
+
+WebSockets, SSE, pub/sub, message queues, and real-time collaboration tools with security considerations for persistent connections. Evaluates authentication, message integrity, and denial-of-service resilience.
+
+> **Featured:** Kafka 3.7, RabbitMQ 3.13, NATS 2.10, Socket.IO 4.x, Redis Streams
+
+---
+
+#### 🔗 Distributed
 
 **File:** [`stacks/distributed.md`](stacks/distributed.md)
 
 Service mesh, API gateways, distributed tracing, and microservice communication patterns. Covers Istio, Linkerd, Kong, and Saga orchestration. Zero-trust networking with mTLS everywhere, circuit breakers, and inter-service authentication are evaluated for each stack.
 
 > **Featured:** Istio 1.22 + Envoy, Kong Gateway 3.x, Saga orchestration patterns
+
+---
+
+#### 🔄 Evolution
+
+**File:** [`stacks/evolution.md`](stacks/evolution.md)
+
+Migration paths from monolith to distributed architectures with security preserved at each stage. Covers Modular Monolith, Service Extraction patterns, Strangler Fig, and event-driven decomposition. Each transition point is evaluated for security regression risk.
+
+> **Featured:** Monolith → Modular Monolith, Strangler Fig extraction, Event-driven decomposition
 
 ---
 
@@ -755,8 +722,6 @@ This project would not be possible without:
 - 🏢 **Enterprises doing tech upgrades** migrating between framework generations safely
 - 🔄 **Teams evolving from monolith to microservices** who need security at every migration stage
 
----
-
 ### Special Thanks
 
 - 🏛️ **[OpenSSF](https://openssf.org/)** — for Scorecard, SLSA, and Sigstore foundations
@@ -768,9 +733,6 @@ This project would not be possible without:
 - 💜 **All contributors** who audit, test, and maintain the stack entries
 - 🦀 **The Rust community** — for proving that memory safety can be the default
 - 🐧 **The Linux kernel community** — for the hard lessons learned from XZ
-
-### Special Thanks
-
 - **XZ Utils incident responders** — whose work highlighted the urgency of supply chain security
 - **The `event-stream` incident reporters** — who first showed the npm ecosystem's vulnerability
 - **Every maintainer** who signs their releases, publishes SBOMs, and responds to CVEs responsibly
