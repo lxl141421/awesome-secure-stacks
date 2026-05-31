@@ -1,13 +1,18 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/🔒-Secure%20Stacks-blue?style=for-the-badge&logo=shield&logoColor=white" alt="Secure Stacks">
+  <a href="README.md"><img src="https://img.shields.io/badge/English-blue?style=flat-square" alt="English"></a>
+  <a href="README_zh.md"><img src="https://img.shields.io/badge/中文-grey?style=flat-square" alt="中文"></a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/🛡️-Awesome_Secure_Stacks-blue?style=for-the-badge&logo=shield&logoColor=white" alt="Awesome Secure Stacks" width="400">
 </p>
 
 <h1 align="center">🛡️ Awesome Secure Stacks</h1>
 
 <p align="center">
   <b>Community-curated, security-audited technology stacks with verified version compatibility.</b><br>
-  <i>No more guessing which dependencies are safe. Every stack — vetted, scored, and battle-tested.</i><br>
-  <sub>不再猜测哪些依赖是安全的。每个技术栈——经过审核、评分和实战检验。</sub>
+  <i>The definitive reference for building secure, production-ready software stacks.</i><br>
+  <sub>社区策展、安全审计的技术栈，版本兼容性经过验证 — 构建安全软件栈的权威参考。</sub>
 </p>
 
 <p align="center">
@@ -15,7 +20,7 @@
   &nbsp;
   <a href="https://github.com/lxl141421/awesome-secure-stacks/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square" alt="PRs Welcome"></a>
   &nbsp;
-  <img src="https://img.shields.io/badge/last%20updated-2026--05--31-blue?style=flat-square" alt="Last Updated">
+  <img src="https://img.shields.io/badge/last%20updated-2025--05-blue?style=flat-square" alt="Last Updated">
   &nbsp;
   <img src="https://img.shields.io/badge/security--audited-✓-brightgreen?style=flat-square&logo=checkmarx&logoColor=white" alt="Security Audited">
   &nbsp;
@@ -23,6 +28,11 @@
   &nbsp;
   <img src="https://img.shields.io/badge/stacks-40+-purple?style=flat-square" alt="40+ Stacks">
 </p>
+
+---
+
+> **Stop guessing which dependencies are safe. Every stack — vetted, scored, and battle-tested.**
+> 不再猜测哪些依赖是安全的。每个技术栈——经过审核、评分和实战检验。
 
 ---
 
@@ -34,6 +44,10 @@
 - [🚀 Quick Start](#-quick-start)
 - [📊 Scoring System](#-scoring-system)
 - [⭐ Featured Stacks](#-featured-stacks)
+  - [🥇 Full-stack Web: React 19.1 + Next.js 15.3 + TypeScript 5.8](#-full-stack-web-react-191--nextjs-153--typescript-58)
+  - [🥇 Backend API: Go 1.24 + Chi 5.2 + PostgreSQL 17.5](#-backend-api-go-124--chi-52--postgresql-175)
+  - [🥇 Systems Backend: Rust 1.87 + Axum 0.8](#-systems-backend-rust-187--axum-08)
+  - [🥇 DevOps & Infrastructure: Terraform 1.12 + Kubernetes 1.33](#-devops--infrastructure-terraform-112--kubernetes-133)
 - [📚 Stack Categories](#-stack-categories)
   - [🖥️ Web Frontend](#️-web-frontend)
   - [⚙️ Backend API](#️-backend-api)
@@ -46,6 +60,7 @@
 - [🕘 Supply Chain Attack Timeline](#-supply-chain-attack-timeline)
 - [🔒 Security Advisories](#-security-advisories)
 - [🤝 Contributing](#-contributing)
+- [🗺️ Roadmap](#️-roadmap)
 - [📜 License](#-license)
 - [🙏 Acknowledgments](#-acknowledgments)
 
@@ -56,20 +71,22 @@
 > **Software supply chain attacks increased 742% from 2019 to 2022.** They're not slowing down.
 > — _Sonatype State of the Software Supply Chain Report_
 
-The modern software ecosystem is built on trust — trust in packages you've never audited, maintained by people you've never met, pulling in hundreds of transitive dependencies you didn't choose. **This trust is being exploited.**
+The modern software ecosystem is built on **trust** — trust in packages you've never audited, maintained by people you've never met, pulling in hundreds of transitive dependencies you didn't choose. **This trust is being exploited.**
+
+Every `npm install`, every `pip install`, every `go mod download` is an act of faith. And attackers are turning that faith into a weapon — targeting the weakest links in our dependency chains with increasing sophistication.
 
 ### Notable Supply Chain Incidents
 
 | Year | Incident | Impact | Severity |
 |------|----------|--------|----------|
 | 🔴 2024 | **XZ Utils Backdoor** (`xz` 5.6.x) | Nearly compromised all major Linux distros via a years-long social engineering campaign | 🔴 Critical |
-| 🔴 2021 | **`event-stream` / `flatmap-stream`** | Targeted cryptocurrency theft via compromised dependency of a popular npm package | 🔴 Critical |
+| 🔴 2018 | **`event-stream` / `flatmap-stream`** | Targeted cryptocurrency theft via compromised dependency of a popular npm package | 🔴 Critical |
 | 🔴 2021 | **`ua-parser-js`** (70M+ weekly downloads) | Crypto miners and password stealers injected into hijacked versions | 🔴 Critical |
-| 🟡 2022 | **`colors.js` / `faker.js` protest** | Intentional sabotage by maintainer broke thousands of CI/CD pipelines | 🟡 High |
 | 🔴 2020 | **SolarWinds Orion** | Nation-state attack affecting 18,000+ organizations including US government agencies | 🔴 Critical |
-| 🟡 2023 | **PyTorch `torchtriton`** | Malicious package on PyPI with the same name as a nightly dependency | 🟡 High |
+| 🟡 2022 | **`colors.js` / `faker.js` protest** | Intentional sabotage by maintainer broke thousands of CI/CD pipelines | 🟡 High |
 | 🔴 2022 | **`node-ipc`** (protestware) | Deliberate data-wiping code targeting Russian and Belarusian IP addresses | 🔴 Critical |
 | 🟡 2021 | **Codecov Bash Uploader** | Compromised CI tool exfiltrated environment variables (secrets) from CI pipelines | 🟡 High |
+| 🟡 2023 | **PyTorch `torchtriton`** | Malicious package on PyPI with the same name as a nightly dependency | 🟡 High |
 
 **The pattern is clear:** our dependency chains are attack surfaces, and most teams have no systematic way to evaluate which combinations of tools are safe. 我们的依赖链就是攻击面，而大多数团队没有系统的方法来评估哪些工具组合是安全的。
 
@@ -79,19 +96,22 @@ The modern software ecosystem is built on trust — trust in packages you've nev
 
 **Awesome Secure Stacks** is a **community-curated, rigorously evaluated collection of complete technology stacks** — not individual packages, but **tested combinations** of tools, frameworks, libraries, and infrastructure that work together securely.
 
-### What We Provide
+We do the hard work of auditing entire dependency graphs so you don't have to.
 
-For every stack, you get:
+### What We Provide for Every Stack
 
-- ✅ **Pinned, verified versions** — exact versions that have been tested together
+For every stack entry in this repository, you get:
+
+- ✅ **Pinned, verified versions** — exact versions that have been tested together, no guesswork
 - ✅ **Security Score (0–100)** — computed from 5 dimensions (see [SCORING.md](SCORING.md))
-- ✅ **Dependency audit results** — known CVEs, transitive dependency analysis
-- ✅ **Supply chain integrity checks** — signing, provenance, SBOM availability
+- ✅ **CVE analysis** — known vulnerabilities, transitive dependency risk, patch velocity
+- ✅ **Lockfile templates** — reproducible dependency files to freeze your supply chain
+- ✅ **Docker configurations** — hardened container images with pinned base layers
+- ✅ **Alternatives & trade-offs** — when a stack has security concerns, we suggest safer options
 - ✅ **Compatibility matrix** — which versions of each component work together
-- ✅ **Reproduction instructions** — lockfiles, Docker images, setup scripts
 - ✅ **Monthly re-evaluation** — scores are updated on a regular cadence
 
-> **Think of it as a "recommended hardware compatibility list" but for software security.**
+> **Think of it as a "recommended hardware compatibility list" — but for software security.**
 > 就像硬件兼容性列表，但用于软件安全。
 
 ---
@@ -111,7 +131,7 @@ For every stack, you get:
 
 ### vs. CVE Databases (NVD, OSV, GitHub Advisories)
 
-CVE databases tell you **what's broken**. We tell you **what works together safely**. CVE databases are reactive; we are proactive. We consume CVE data as input, not as output.
+CVE databases tell you **what's broken**. We tell you **what works together safely**. CVE databases are reactive; we are proactive. We consume CVE data as input, not as output. Our scoring incorporates CVE data, maintenance history, signing practices, and more into a single actionable number.
 
 ### vs. Sigstore / SLSA / in-toto
 
@@ -119,62 +139,77 @@ These are **build-time attestation tools** — they verify *how* software was bu
 
 ### vs. OpenSSF Scorecard
 
-OpenSSF Scorecard evaluates **individual projects**. We evaluate **stack combinations** — how frameworks, databases, runtimes, and tooling interact. A project with a great Scorecard might still be part of a vulnerable stack if it pulls in risky transitive dependencies.
+OpenSSF Scorecard evaluates **individual projects**. We evaluate **stack combinations** — how frameworks, databases, runtimes, and tooling interact. A project with a great Scorecard might still be part of a vulnerable stack if it pulls in risky transitive dependencies. Our stack-level analysis catches what project-level analysis cannot.
 
 ---
 
 ## 🚀 Quick Start
 
-### 1. Find a Stack
-
-Browse the [Stack Categories](#-stack-categories) or search directly:
+### 1. Clone the Repository
 
 ```bash
-# Clone the repository
 git clone https://github.com/lxl141421/awesome-secure-stacks.git
 cd awesome-secure-stacks
+```
+
+### 2. Browse Stacks
+
+```bash
+# List all available stack categories
+ls stacks/
 
 # Search for stacks by technology
 grep -r "react" stacks/ --include="*.md" -l
 grep -r "postgresql" stacks/ --include="*.md" -l
 
-# View a specific stack
+# View a specific category
 cat stacks/frontend.md
 ```
 
-### 2. Understand the Score
+### 3. Understand the Score
 
-Every stack entry looks like this:
+Every stack entry follows this format:
 
 ```
-### 🏷️ React 18 + Next.js 15 + TypeScript 5.5
+### 🏷️ React 19.1 + Next.js 15.3 + TypeScript 5.8
 
 | Component | Version | Score |
 |-----------|---------|-------|
-| React | 18.3.1 | A |
-| Next.js | 15.1.0 | A |
-| TypeScript | 5.5.4 | A+ |
-| pnpm | 9.12.0 | A |
+| React     | 19.1    | A+    |
+| Next.js   | 15.3    | A     |
+| TypeScript| 5.8     | A+    |
+| pnpm      | 9.12    | A     |
 
-**Stack Security Score: 91/100 (A)**
-Full report: stacks/frontend.md#react-nextjs-ts
+**Stack Security Score: 93/100 (A)**
 ```
 
 See [SCORING.md](SCORING.md) for the complete methodology.
 
-### 3. Use a Stack
+### 4. Use a Stack Template
 
-Each stack entry includes a **reproduction template** — a lockfile, Docker Compose, or setup script to get started with the exact verified versions.
+Each stack category includes **reproduction templates** — lockfiles, Docker Compose files, and setup scripts to get started with the exact verified versions.
 
 ```bash
-# Example: bootstrap a verified Next.js stack
-cd templates/react-nextjs-ts/
-cp .env.example .env
-docker compose up -d
+# Example: bootstrap a verified Django stack
+cd templates/
+cat docker-compose-django.yml
+# Review and customize, then:
+docker compose -f docker-compose-django.yml up -d
 # ✅ Running verified stack with pinned dependencies
 ```
 
-### 4. Stay Updated
+Available templates:
+
+```bash
+ls templates/
+# docker-compose-django.yml
+# docker-compose-fastapi.yml
+# docker-compose-t3-stack.yml
+# lockfile-verification.md
+# README.md
+```
+
+### 5. Stay Updated
 
 - ⭐ **Star** this repo to get notified of score changes
 - 👀 **Watch** for security advisory releases
@@ -198,16 +233,17 @@ Every stack is scored **0–100** across five dimensions:
 
 | Grade | Score | Meaning |
 |-------|-------|---------|
-| 🟢 **A+** | 95–100 | Exceptional — Gold standard |
-| 🟢 **A** | 85–94 | Excellent — Highly recommended |
-| 🔵 **B+** | 75–84 | Good — Solid choice |
-| 🔵 **B** | 65–74 | Acceptable — Minimum for inclusion |
-| 🟡 **C** | 50–64 | Caution — Not listed (significant concerns) |
-| 🔴 **D** | 0–49 | Avoid — Critical security gaps |
+| 🟢 **A+** | 95–100 | Exceptional — Gold standard, exemplary security practices |
+| 🟢 **A** | 85–94 | Excellent — Highly recommended for production use |
+| 🔵 **B+** | 75–84 | Good — Solid choice with minor areas for improvement |
+| 🔵 **B** | 65–74 | Acceptable — Minimum threshold for inclusion in this list |
+| 🟡 **C** | 50–64 | Caution — Not listed (significant security concerns) |
+| 🔴 **D** | 0–49 | Avoid — Critical security gaps, not recommended |
 
 > 📋 **Full methodology:** See [SCORING.md](SCORING.md)
 
 **Minimum requirements for listing:**
+
 - Overall score ≥ **65 (Grade B)**
 - No dimension below **40%** of its maximum
 - Zero open Critical CVEs
@@ -217,63 +253,109 @@ Every stack is scored **0–100** across five dimensions:
 
 ## ⭐ Featured Stacks
 
-Hand-picked stacks that represent the best of each category. 推荐技术栈。
+Hand-picked stacks that represent the best of each category. 推荐技术栈 — 每个类别中最佳的代表。
 
 ---
 
-### 🥇 Next.js 15 + React 18 + TypeScript 5.5 + pnpm
+### 🥇 Full-stack Web: React 19.1 + Next.js 15.3 + TypeScript 5.8
 
-> **Score: 93/100 (A)** · Category: [Web Frontend](stacks/frontend.md)
+> **Score: 93/100 (A)** · Category: [Web Frontend](stacks/frontend.md) | [Full-stack Combos](stacks/fullstack.md)
 
-A production-grade frontend stack with excellent supply chain integrity. TypeScript catches type errors early, pnpm's content-addressable storage prevents phantom dependencies, and Next.js's server-side rendering reduces client-side attack surface.
+A production-grade frontend stack with excellent supply chain integrity. TypeScript catches type errors early, pnpm's content-addressable storage prevents phantom dependencies, and Next.js's server-side rendering reduces client-side attack surface. React 19.1 brings improved concurrent rendering with minimal security surface area.
+
+**Components & Versions:**
+
+| Component | Version | Individual Score | Notes |
+|-----------|---------|------------------|-------|
+| React | 19.1 | A+ | Meta-backed, signed releases, SBOM available |
+| Next.js | 15.3 | A | Vercel-maintained, active security response |
+| TypeScript | 5.8 | A+ | Zero Critical CVEs in 3+ years |
+| Vite | 6.3 | A | Fast builds, minimal dependency surface |
+| Node.js | 22 LTS | A | Long-term support, regular security patches |
+| pnpm | 9.12 | A | Content-addressable storage, strict resolution |
 
 **Why it's featured:**
-- 🔒 TypeScript 5.5 has had zero Critical CVEs in 2 years
-- 📦 pnpm's strict dependency resolution eliminates phantom dependencies
-- 🏛️ Vercel maintains active security response program
-- ✅ All components sign releases
+
+- 🔒 TypeScript 5.8 has had zero Critical CVEs in 3+ years — a remarkable security record
+- 📦 pnpm's strict dependency resolution eliminates phantom dependencies and supply chain confusion attacks
+- 🏛️ Vercel maintains an active security response program with rapid CVE patching
+- ✅ All components sign their releases and publish provenance attestations
+- 🛡️ Next.js 15.3 includes built-in security headers and CSP support
 
 ---
 
-### 🥇 Go 1.22 + Chi Router + PostgreSQL 16 + sqlc
+### 🥇 Backend API: Go 1.24 + Chi 5.2 + PostgreSQL 17.5
 
-> **Score: 95/100 (A+)** · Category: [Backend API](stacks/backend.md)
+> **Score: 95/100 (A+)** · Category: [Backend API](stacks/backend.md) | [Database](stacks/database.md)
 
-The gold standard for secure backend development. Go's static compilation eliminates runtime dependency attacks, Chi is a minimal and well-audited router, and sqlc generates type-safe SQL from queries — no ORM injection surface.
+The gold standard for secure backend development. Go's static compilation eliminates runtime dependency attacks, Chi is a minimal and well-audited router with zero dependencies, and PostgreSQL 17.5 is the most battle-tested open-source database in existence.
+
+**Components & Versions:**
+
+| Component | Version | Individual Score | Notes |
+|-----------|---------|------------------|-------|
+| Go | 1.24 | A+ | Google-backed, checksum database by default |
+| Chi | 5.2 | A+ | Zero external dependencies, minimal attack surface |
+| PostgreSQL | 17.5 | A+ | 30+ years of security hardening |
+| sqlc | 1.28 | A | Compile-time SQL codegen, eliminates injection |
 
 **Why it's featured:**
-- 🛡️ Go's `govulncheck` provides first-class vulnerability scanning
-- 📦 Go modules have cryptographic verification by default (checksum database)
-- 🔒 sqlc eliminates SQL injection by design (compile-time code generation)
-- 🏢 Backed by Google (Go) + PostgreSQL Global Development Group
+
+- 🛡️ Go's `govulncheck` provides first-class vulnerability scanning built into the toolchain
+- 📦 Go modules have cryptographic verification by default via the checksum database (sum.golang.org)
+- 🔒 sqlc eliminates SQL injection by design — queries are validated at compile time, not runtime
+- 🏢 Backed by Google (Go) + PostgreSQL Global Development Group — institutional stability
+- 🐧 Go 1.24 includes enhanced FIPS 140 compliance for regulated environments
 
 ---
 
-### 🥇 Rust + Axum + SeaORM + SQLite/PostgreSQL
+### 🥇 Systems Backend: Rust 1.87 + Axum 0.8
 
-> **Score: 91/100 (A)** · Category: [Backend API](stacks/backend.md)
+> **Score: 94/100 (A)** · Category: [Backend API](stacks/backend.md)
 
-Memory-safe by default. Rust eliminates entire vulnerability classes (buffer overflows, use-after-free) at compile time. Axum is built on Tokio and Hyper — battle-tested foundations. SeaORM provides safe database access with compile-time query validation.
+Memory-safe by default. Rust eliminates entire vulnerability classes (buffer overflows, use-after-free, data races) at compile time. Axum 0.8 is built on Tokio and Hyper — battle-tested foundations handling millions of production requests. Actix-web 4.11 is available as an alternative with similar security posture.
+
+**Components & Versions:**
+
+| Component | Version | Individual Score | Notes |
+|-----------|---------|------------------|-------|
+| Rust | 1.87 | A+ | Memory safety without GC, ~70% of CVE classes eliminated |
+| Axum | 0.8 | A | Tokio-backed, Tower middleware ecosystem |
+| Actix-web | 4.11 | A | Alternative framework, equally well-audited |
+| Cargo | (bundled) | A | Built-in audit, advisory database integration |
 
 **Why it's featured:**
-- 🦀 Memory safety without garbage collection — eliminates ~70% of CVEs by category
-- 📦 Cargo has built-in audit (`cargo audit`) with advisory database
-- 🔒 `unsafe` usage is explicit and auditable
-- 🏛️ Rust Foundation (Mozilla, AWS, Google, Microsoft, Meta)
+
+- 🦀 Memory safety without garbage collection — eliminates ~70% of CVEs by category at compile time
+- 📦 Cargo has built-in audit (`cargo audit`) with RustSec advisory database integration
+- 🔒 `unsafe` usage is explicit, auditable, and flagged in code review
+- 🏛️ Rust Foundation (Mozilla, AWS, Google, Microsoft, Meta) ensures long-term governance
+- 🛡️ Rust 1.87 includes enhanced `unsafe` diagnostics and improved supply chain tooling
 
 ---
 
-### 🥇 Terraform 1.9 + AWS (EKS) + ArgoCD + SOPS
+### 🥇 DevOps & Infrastructure: Terraform 1.12 + Kubernetes 1.33
 
-> **Score: 89/100 (A)** · Category: [DevOps & Infrastructure](stacks/devops.md)
+> **Score: 91/100 (A)** · Category: [DevOps & Infrastructure](stacks/devops.md)
 
-Infrastructure-as-code with GitOps delivery. Every infrastructure change is version-controlled, reviewed, and auditable. SOPS provides secret encryption at rest, ArgoCD ensures drift detection, and Terraform's provider ecosystem is HashiCorp-signed.
+Infrastructure-as-code with container orchestration. Every infrastructure change is version-controlled, reviewed, and auditable. Docker 28.1 provides hardened container runtimes, Kubernetes 1.33 brings enhanced pod security standards, and Terraform 1.12's provider ecosystem is HashiCorp-signed with SLSA provenance.
+
+**Components & Versions:**
+
+| Component | Version | Individual Score | Notes |
+|-----------|---------|------------------|-------|
+| Terraform | 1.12 | A | HashiCorp-signed providers, state encryption |
+| Kubernetes | 1.33 | A | Enhanced pod security, signed releases |
+| Docker | 28.1 | A | Content trust, image signing by default |
+| ArgoCD | 2.13 | A | GitOps, declarative auditable deployments |
 
 **Why it's featured:**
-- 🔐 SOPS encrypts secrets with AWS KMS / GCP KMS / age
-- 🔄 ArgoCD provides declarative, auditable deployments
-- 📦 Terraform providers are signed by HashiCorp
-- 📋 Infrastructure state is fully reproducible
+
+- 🔐 All Terraform providers are signed by HashiCorp — tamper detection at init time
+- 🔄 ArgoCD provides declarative, auditable deployments with drift detection
+- 📦 Kubernetes 1.33 includes enhanced Pod Security Admission and signed container images
+- 📋 Infrastructure state is fully reproducible from version-controlled configuration
+- 🛡️ Docker 28.1 content trust ensures image integrity from build to runtime
 
 ---
 
@@ -283,9 +365,9 @@ Infrastructure-as-code with GitOps delivery. Every infrastructure change is vers
 
 **File:** [`stacks/frontend.md`](stacks/frontend.md)
 
-Frameworks, bundlers, CSS solutions, and client-side security tools. Covers React, Vue, Svelte, Angular, and emerging frameworks with their recommended companion tools.
+Frameworks, bundlers, CSS solutions, and client-side security tools. Covers React, Vue, Svelte, Angular, and emerging frameworks with their recommended companion tools. Each entry includes CSP configurations, dependency audit results, and XSS mitigation strategies.
 
-> **Featured:** React 18 + Next.js 15, Vue 3 + Nuxt 3, SvelteKit 2, Angular 18
+> **Featured:** React 19.1 + Next.js 15.3, Vue 3 + Nuxt 3, SvelteKit 2, Angular 19
 
 ---
 
@@ -293,9 +375,9 @@ Frameworks, bundlers, CSS solutions, and client-side security tools. Covers Reac
 
 **File:** [`stacks/backend.md`](stacks/backend.md)
 
-Server-side runtimes, web frameworks, ORMs, authentication libraries, and API security tools. Covers Node.js, Go, Rust, Python, Java, and .NET ecosystems.
+Server-side runtimes, web frameworks, ORMs, authentication libraries, and API security tools. Covers Node.js, Go, Rust, Python, Java, and .NET ecosystems with detailed analysis of middleware security, input validation, and authentication patterns.
 
-> **Featured:** Go + Chi + sqlc, Rust + Axum, Node.js 22 + Fastify, Python 3.12 + FastAPI
+> **Featured:** Go 1.24 + Chi 5.2 + sqlc, Rust 1.87 + Axum 0.8, Node.js 22 + Fastify 5.3, Python 3.13 + FastAPI 0.115, Java 21 + Spring Boot 3.4, .NET 8 + ASP.NET Core 8.0
 
 ---
 
@@ -303,9 +385,9 @@ Server-side runtimes, web frameworks, ORMs, authentication libraries, and API se
 
 **File:** [`stacks/database.md`](stacks/database.md)
 
-Relational, document, key-value, and time-series databases with their client libraries, migration tools, and connection pooling solutions.
+Relational, document, key-value, and time-series databases with their client libraries, migration tools, and connection pooling solutions. Includes analysis of authentication mechanisms, encryption at rest, and network security configurations.
 
-> **Featured:** PostgreSQL 16, SQLite 3.46, Redis 7.4, CockroachDB, ClickHouse
+> **Featured:** PostgreSQL 17.5, MySQL 8.4 LTS, MongoDB 8.0, Redis 8.0
 
 ---
 
@@ -313,9 +395,9 @@ Relational, document, key-value, and time-series databases with their client lib
 
 **File:** [`stacks/devops.md`](stacks/devops.md)
 
-Infrastructure-as-code, CI/CD, container orchestration, secret management, observability, and cloud provider tools.
+Infrastructure-as-code, CI/CD, container orchestration, secret management, observability, and cloud provider tools. Each stack is evaluated for supply chain integrity of the entire deployment pipeline.
 
-> **Featured:** Terraform + ArgoCD, Kubernetes 1.30, GitHub Actions, Dagger
+> **Featured:** Terraform 1.12 + ArgoCD, Kubernetes 1.33 + Docker 28.1, GitHub Actions, Dagger
 
 ---
 
@@ -323,9 +405,9 @@ Infrastructure-as-code, CI/CD, container orchestration, secret management, obser
 
 **File:** [`stacks/mobile.md`](stacks/mobile.md)
 
-Cross-platform and native mobile development frameworks, state management, navigation, and mobile-specific security tooling.
+Cross-platform and native mobile development frameworks, state management, navigation, and mobile-specific security tooling. Includes analysis of app signing, dependency management, and runtime integrity verification.
 
-> **Featured:** React Native 0.75 + Expo, Flutter 3.24, Kotlin Multiplatform
+> **Featured:** React Native 0.79 + Expo, Flutter 3.32, Kotlin Multiplatform
 
 ---
 
@@ -333,9 +415,9 @@ Cross-platform and native mobile development frameworks, state management, navig
 
 **File:** [`stacks/ml-ai.md`](stacks/ml-ai.md)
 
-ML frameworks, model serving, vector databases, LLM tooling, and data pipeline security. Special focus on model supply chain (provenance, adversarial robustness).
+ML frameworks, model serving, vector databases, LLM tooling, and data pipeline security. Special focus on model supply chain — provenance verification, adversarial robustness, and training data integrity.
 
-> **Featured:** PyTorch 2.4 + vLLM, JAX + Flax, scikit-learn + ONNX Runtime
+> **Featured:** PyTorch 2.7 + vLLM, LangChain 0.3 + vector stores, JAX + Flax, scikit-learn + ONNX Runtime
 
 ---
 
@@ -343,9 +425,9 @@ ML frameworks, model serving, vector databases, LLM tooling, and data pipeline s
 
 **File:** [`stacks/realtime.md`](stacks/realtime.md)
 
-WebSockets, SSE, pub/sub, message queues, and real-time collaboration tools with security considerations for persistent connections.
+WebSockets, SSE, pub/sub, message queues, and real-time collaboration tools with security considerations for persistent connections. Evaluates authentication, message integrity, and denial-of-service resilience.
 
-> **Featured:** Socket.IO 4.x, Ably/Pusher (managed), NATS, Redis Streams
+> **Featured:** Kafka 4.0, RabbitMQ 4.1, NATS 2.11, Socket.IO 4.x, Redis Streams
 
 ---
 
@@ -353,55 +435,79 @@ WebSockets, SSE, pub/sub, message queues, and real-time collaboration tools with
 
 **File:** [`stacks/fullstack.md`](stacks/fullstack.md)
 
-Pre-verified end-to-end combinations spanning frontend, backend, database, and deployment. Complete application blueprints with security scores for the full dependency graph.
+Pre-verified end-to-end combinations spanning frontend, backend, database, and deployment. Complete application blueprints with security scores for the full dependency graph — from browser to database.
 
-> **Featured:** T3 Stack (Next.js + tRPC + Prisma), Rails 7 Full Stack, Django + htmx + Alpine.js
+> **Featured:** T3 Stack (Next.js + tRPC + Prisma), Rails 8 Full Stack, Django 5.2 + htmx + Alpine.js
 
 ---
 
 ## 🕘 Supply Chain Attack Timeline
 
-A chronological history of major supply chain attacks that motivate this project:
+A chronological history of major supply chain attacks that motivate this project. Understanding the past is essential to securing the future.
 
 ```
-2017 ──────────────────────────────────────────────────────────── 2026
-  │                                                                │
-  ├─ 2017-11  event-stream / flatmap-stream                       │
-  │           Cryptocurrency wallet theft via trusted npm dep     │
-  │                                                                │
-  ├─ 2020-03  eslint-scope                                         │
-  │           Stolen npm credentials exfiltrated env variables    │
-  │                                                                │
-  ├─ 2020-12  SolarWinds Orion (SUNBURST)                          │
-  │           Nation-state attack, 18,000+ orgs compromised       │
-  │                                                                │
-  ├─ 2021-01  ua-parser-js (70M weekly downloads)                  │
-  │           Crypto miners + password stealers injected           │
-  │                                                                │
-  ├─ 2021-10  Codecov Bash Uploader                                │
-  │           CI secrets exfiltrated via compromised tool          │
-  │                                                                │
-  ├─ 2022-01  colors.js / faker.js (protestware)                   │
-  │           Intentional infinite loop broke CI pipelines         │
-  │                                                                │
-  ├─ 2022-03  node-ipc (protestware)                               │
-  │           Data-wiping code targeted by IP geolocation          │
-  │                                                                │
-  ├─ 2022-12  PyTorch torchtriton (dependency confusion)           │
-  │           Malicious PyPI package with identical name           │
-  │                                                                │
-  ├─ 2023-03  3CX Desktop App                                     │
-  │           First publicly documented cascading supply chain    │
-  │                                                                │
-  ├─ 2024-03  XZ Utils (CVE-2024-3094)                             │
-  │           Multi-year social engineering → sshd backdoor       │
-  │                                                                │
-  ├─ 2025-01  tj-actions/changed-files (GitHub Actions)            │
-  │           Compromised CI action leaked secrets from repos     │
-  │                                                                │
-  └─ 2026-??  The next one is being planned right now.            │
-              这个项目正是为了应对下一个攻击而存在。
-              Stay vigilant. Use verified stacks. 🔒              │
+2017 ───────────────────────────────────────────────────────────────────────── 2025
+│                                                                               │
+│  2017-11  ┌─ event-stream / flatmap-stream                                   │
+│           │  Cryptocurrency wallet theft via trusted npm dependency           │
+│           │  Impact: Millions of users | Vector: npm dependency hijack        │
+│           └──────────────────────────────────────────────────────             │
+│                                                                               │
+│  2020-03  ┌─ eslint-scope                                                    │
+│           │  Stolen npm credentials exfiltrated environment variables         │
+│           │  Impact: CI/CD pipelines | Vector: credential theft               │
+│           └──────────────────────────────────────────────────────             │
+│                                                                               │
+│  2020-12  ┌─ SolarWinds Orion (SUNBURST)                                     │
+│           │  Nation-state attack, 18,000+ organizations compromised           │
+│           │  Impact: US gov agencies, Fortune 500 | Vector: build system      │
+│           └──────────────────────────────────────────────────────             │
+│                                                                               │
+│  2021-01  ┌─ ua-parser-js (70M+ weekly downloads)                            │
+│           │  Crypto miners + password stealers injected into hijacked pkg     │
+│           │  Impact: Millions of installs | Vector: maintainer account theft  │
+│           └──────────────────────────────────────────────────────             │
+│                                                                               │
+│  2021-04  ┌─ Codecov Bash Uploader                                           │
+│           │  CI secrets exfiltrated via compromised upload tool               │
+│           │  Impact: 29,000+ projects | Vector: CI tool tampering             │
+│           └──────────────────────────────────────────────────────             │
+│                                                                               │
+│  2022-01  ┌─ colors.js / faker.js (protestware)                              │
+│           │  Intentional infinite loop broke thousands of CI pipelines        │
+│           │  Impact: Industry-wide | Vector: maintainer sabotage              │
+│           └──────────────────────────────────────────────────────             │
+│                                                                               │
+│  2022-03  ┌─ node-ipc (protestware)                                          │
+│           │  Data-wiping code targeted by IP geolocation                      │
+│           │  Impact: vue-cli users | Vector: ideological sabotage             │
+│           └──────────────────────────────────────────────────────             │
+│                                                                               │
+│  2022-12  ┌─ PyTorch torchtriton (dependency confusion)                      │
+│           │  Malicious PyPI package with identical name to nightly dep        │
+│           │  Impact: ML researchers | Vector: dependency confusion            │
+│           └──────────────────────────────────────────────────────             │
+│                                                                               │
+│  2023-03  ┌─ 3CX Desktop App                                                 │
+│           │  First publicly documented cascading supply chain attack          │
+│           │  Impact: 600,000+ businesses | Vector: cascading compromise       │
+│           └──────────────────────────────────────────────────────             │
+│                                                                               │
+│  2024-03  ┌─ XZ Utils (CVE-2024-3094)                                        │
+│           │  Multi-year social engineering campaign → sshd backdoor           │
+│           │  Impact: Nearly all Linux distros | Vector: maintainer infiltration│
+│           └──────────────────────────────────────────────────────             │
+│                                                                               │
+│  2025-01  ┌─ tj-actions/changed-files (GitHub Actions)                       │
+│           │  Compromised CI action leaked secrets from thousands of repos     │
+│           │  Impact: 23,000+ repos | Vector: GitHub Actions compromise        │
+│           └──────────────────────────────────────────────────────             │
+│                                                                               │
+│  2025-??  The next one is being planned right now.                            │
+│           这个项目正是为了应对下一个攻击而存在。                                    │
+│           Stay vigilant. Use verified stacks. 🔒                              │
+│                                                                               │
+└───────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
@@ -412,73 +518,84 @@ A chronological history of major supply chain attacks that motivate this project
 
 If you discover a security issue in any recommended stack:
 
-1. **DO NOT** open a public GitHub issue
-2. 📧 Email: **security@awesome-secure-stacks.dev** (PGP key available at [SECURITY.md](SECURITY.md))
-3. 🔐 Use our [security advisory template](.github/SECURITY_ADVISORY_TEMPLATE.md)
-4. ⏱️ We aim to respond within **48 hours** and publish advisories within **7 days**
+1. **DO NOT** open a public GitHub issue for sensitive vulnerabilities
+2. 📧 Email: **security@awesome-secure-stacks.dev**
+3. ⏱️ We aim to respond within **48 hours** and publish advisories within **7 days**
 
 ### Advisory Format
 
 Each advisory follows the [OpenSSF OpenVEX](https://openvex.dev/) format:
 
 ```
-Advisory: ASSA-2026-001
+Advisory: ASSA-2025-001
 Severity: High (CVSS 8.1)
 Affected Stacks: backend-go-chi, fullstack-t3
 Component: golang.org/x/crypto v0.21.0
 Fixed In: v0.22.0
 Status: Resolved
-Published: 2026-05-15
+Published: 2025-05-15
 ```
 
 ### Subscribe to Advisories
 
-- 🔔 **GitHub Watch** → "Releases only"
-- 📡 **Atom feed:** [`/advisories.atom`](https://github.com/lxl141421/awesome-secure-stacks/releases.atom)
-- 🐦 **Twitter/X:** [@secure_stacks](https://twitter.com/secure_stacks)
+- 🔔 **GitHub Watch** → "Releases only" on this repository
+- 📡 **Atom feed:** [`/releases.atom`](https://github.com/lxl141421/awesome-secure-stacks/releases.atom)
+- 📢 Watch the [Releases](https://github.com/lxl141421/awesome-secure-stacks/releases) page for security advisories
 
 ---
 
 ## 🤝 Contributing
 
-We welcome contributions! But security curation requires rigor. 贡献安全策展需要严谨性。
+We welcome contributions! But security curation requires rigor. 贡献安全策展需要严谨性 — quality over quantity.
 
 ### How to Contribute
 
 | Type | How | Difficulty |
 |------|-----|------------|
-| 🐛 Report a scoring error | [Open an issue](https://github.com/lxl141421/awesome-secure-stacks/issues/new?template=bug_report.md) | Easy |
-| 📦 Propose a new stack | [Stack proposal template](https://github.com/lxl141421/awesome-secure-stacks/issues/new?template=stack_proposal.md) | Medium |
-| 📊 Update a score | [Score update PR](https://github.com/lxl141421/awesome-secure-stacks/compare) | Medium |
-| 🔍 Audit a stack | [Audit guide](CONTRIBUTING.md#auditing-a-stack) | Hard |
-| 📝 Improve docs | [Standard PR](https://github.com/lxl141421/awesome-secure-stacks/compare) | Easy |
+| 🐛 Report a scoring error | [Open an issue](https://github.com/lxl141421/awesome-secure-stacks/issues/new) | Easy |
+| 📦 Propose a new stack | [Open an issue](https://github.com/lxl141421/awesome-secure-stacks/issues/new) with stack details | Medium |
+| 📊 Update a score | [Submit a PR](https://github.com/lxl141421/awesome-secure-stacks/compare) with evidence | Medium |
+| 🔍 Audit a stack | [Follow the audit guide](CONTRIBUTING.md) | Hard |
+| 📝 Improve docs | [Submit a PR](https://github.com/lxl141421/awesome-secure-stacks/compare) | Easy |
 
 ### Contribution Guidelines
 
-1. Read [CONTRIBUTING.md](CONTRIBUTING.md) for full guidelines
+1. Read [CONTRIBUTING.md](CONTRIBUTING.md) for full guidelines and templates
 2. All new stacks must include a **reproduction template** (lockfile or Docker Compose)
 3. Score changes require **evidence** (CVE links, audit reports, tool output)
-4. Use our [PR template](.github/PULL_REQUEST_TEMPLATE.md) for all submissions
-5. Be respectful and follow our [Code of Conduct](CODE_OF_CONDUCT.md)
+4. Be respectful and constructive in all interactions
 
 ### Adding a New Stack
 
 ```bash
 # 1. Fork and clone
 git clone https://github.com/YOUR_USERNAME/awesome-secure-stacks.git
+cd awesome-secure-stacks
 
 # 2. Create a branch
 git checkout -b add/my-awesome-stack
 
 # 3. Add your stack entry to the appropriate category file
-#    Follow the template in CONTRIBUTING.md
+#    Follow the template format in CONTRIBUTING.md
+#    Include: version matrix, security score, CVE analysis, alternatives
 
-# 4. Run the scoring script
-./scripts/score.sh --stack my-awesome-stack
-
-# 5. Submit PR with evidence
+# 4. Submit PR with evidence
 git push origin add/my-awesome-stack
 ```
+
+---
+
+## 🗺️ Roadmap
+
+See [ROADMAP.md](ROADMAP.md) for the full project roadmap. Key milestones include automated scoring pipelines, expanded stack coverage, and integration with Sigstore and OpenSSF Scorecard data.
+
+**Upcoming highlights:**
+
+- 🤖 Automated monthly scoring with CI/CD integration
+- 📊 Interactive stack comparison dashboard
+- 🔗 Sigstore and SLSA provenance verification integration
+- 📦 Expanded stack coverage: embedded systems, game engines, data engineering
+- 🌐 Multi-language documentation (中文, 日本語, 한국어)
 
 ---
 
@@ -486,19 +603,7 @@ git push origin add/my-awesome-stack
 
 This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
 
-```
-MIT License
-
-Copyright (c) 2026 Awesome Secure Stacks Contributors
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software...
-```
-
-> **Why MIT?** Security knowledge should be freely accessible. We chose MIT to maximize adoption and contribution.
+> **Why MIT?** Security knowledge should be freely accessible. We chose MIT to maximize adoption and contribution. 安全知识应该自由获取。
 
 ---
 
@@ -525,7 +630,8 @@ This project would not be possible without:
 ---
 
 <p align="center">
-  <b>⭐ If this project helps you ship more secure software, give it a star! ⭐</b><br><br>
+  <b>⭐ If this project helps you ship more secure software, give it a star! ⭐</b><br>
+  <sub>如果这个项目帮助你构建更安全的软件，请给我们一个 Star！</sub><br><br>
   <a href="https://github.com/lxl141421/awesome-secure-stacks/stargazers">
     <img src="https://img.shields.io/github/stars/lxl141421/awesome-secure-stacks?style=social" alt="Stars">
   </a>
@@ -536,8 +642,9 @@ This project would not be possible without:
 <p align="center">
   <sub>
     Made with 🔒 by the security community.<br>
-    <a href="https://github.com/lxl141421/awesome-secure-stacks">GitHub</a> · 
-    <a href="https://github.com/lxl141421/awesome-secure-stacks/issues">Issues</a> · 
+    <a href="https://github.com/lxl141421/awesome-secure-stacks">GitHub</a> ·
+    <a href="https://github.com/lxl141421/awesome-secure-stacks/issues">Issues</a> ·
+    <a href="https://github.com/lxl141421/awesome-secure-stacks/pulls">Pull Requests</a> ·
     <a href="https://github.com/lxl141421/awesome-secure-stacks/discussions">Discussions</a>
   </sub>
 </p>

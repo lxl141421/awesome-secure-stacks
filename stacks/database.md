@@ -5,13 +5,13 @@
 
 ---
 
-## 1. PostgreSQL 16.x ⭐ Primary Recommendation
+## 1. PostgreSQL 17.x ⭐ Primary Recommendation
 
 **Security Grade: A+**
 
 | Attribute | Value |
 |-----------|-------|
-| Version | 16.4 |
+| Version | 17.5 |
 | License | PostgreSQL License (permissive) |
 | CVEs (2024-2026) | 0 critical, 2 low (patched) |
 
@@ -35,8 +35,8 @@ hostssl  all  all  10.0.0.0/8  scram-sha-256
 ```
 
 **Known CVEs:**
-- CVE-2024-10978: pg_dump privilege escalation (patched in 16.4)
-- CVE-2024-10979: PL/pgSQL injection (patched in 16.4)
+- CVE-2024-10978: pg_dump privilege escalation (patched in 16.4+)
+- CVE-2024-10979: PL/pgSQL injection (patched in 16.4+)
 
 **Recommended Drivers:**
 | Language | Driver | Version | Notes |
@@ -50,13 +50,13 @@ hostssl  all  all  10.0.0.0/8  scram-sha-256
 
 ---
 
-## 2. MySQL 8.x
+## 2. MySQL 8.4 LTS / 9.x
 
 **Security Grade: B+**
 
 | Attribute | Value |
 |-----------|-------|
-| Version | 8.0.40 (or 8.4 LTS) |
+| Version | 8.4.4 LTS (9.2 Innovation) |
 | License | GPL-2.0 (caution for SaaS) |
 | CVEs (2024-2026) | 3 moderate (patched) |
 
@@ -71,7 +71,7 @@ hostssl  all  all  10.0.0.0/8  scram-sha-256
 - Keyring plugin for key management
 
 **Known CVEs:**
-- CVE-2024-21096: mysqldump privilege escalation (patched in 8.0.37)
+- CVE-2024-21096: mysqldump privilege escalation (patched in 8.0.37+)
 - Multiple Oracle CPU patches — track quarterly
 
 **Recommended Drivers:**
@@ -87,13 +87,13 @@ hostssl  all  all  10.0.0.0/8  scram-sha-256
 
 ---
 
-## 3. MongoDB 7.x
+## 3. MongoDB 8.x
 
 **Security Grade: B**
 
 | Attribute | Value |
 |-----------|-------|
-| Version | 7.0.15 |
+| Version | 8.0.10 |
 | License | SSPL (not OSI-approved — caution) |
 | CVEs (2024-2026) | 2 moderate |
 
@@ -121,19 +121,19 @@ hostssl  all  all  10.0.0.0/8  scram-sha-256
 
 ---
 
-## 4. Redis 7.x
+## 4. Redis 8.x
 
-**Security Grade: B+**
+**Security Grade: B**
 
 | Attribute | Value |
 |-----------|-------|
-| Version | 7.4.1 |
-| License | Redis Source Available + SSPL (dual) |
+| Version | 8.0.2 |
+| License | RSALv2 + SSPLv1 (dual — **not OSI-approved open source**) |
 | CVEs (2024-2026) | 1 critical (patched) |
 
 **Security Features:**
 - ACL (Access Control Lists) since Redis 6
-- TLS support (must be compiled in or use Redis Stack)
+- TLS support
 - Command renaming/disabling for dangerous commands
 - `protected-mode` enabled by default
 
@@ -142,7 +142,7 @@ hostssl  all  all  10.0.0.0/8  scram-sha-256
 - Use: dm-crypt, AWS ElastiCache encryption, or Valkey fork
 
 **Known CVEs:**
-- CVE-2024-31449: Lua scripting heap overflow (patched in 7.2.6 / 7.4.1)
+- CVE-2024-31449: Lua scripting heap overflow (patched in 7.2.6+ / 7.4.1+)
 
 **Recommended Drivers:**
 | Language | Driver | Version |
@@ -155,13 +155,13 @@ hostssl  all  all  10.0.0.0/8  scram-sha-256
 
 ---
 
-## 5. SQLite 3.45.x
+## 5. SQLite 3.49.x
 
-**Security Grade: A-**
+**Security Grade: A**
 
 | Attribute | Value |
 |-----------|-------|
-| Version | 3.45.3 |
+| Version | 3.49.1 |
 | License | Public Domain |
 | CVEs (2024-2026) | 0 critical |
 
@@ -243,6 +243,6 @@ hostssl  all  all  10.0.0.0/8  scram-sha-256
 | Row-Level Security | ✅ | ❌ | ✅ | N/A | ❌ | ✅ | ❌ |
 | Audit Logging | ✅ | ⚠️ | ✅ | ❌ | ❌ | ✅ | ⚠️ |
 | Open License | ✅ | ⚠️ | ❌ | ❌ | ✅ | ✅ | ⚠️ |
-| **Security Grade** | **A+** | **B+** | **B** | **B+** | **A-** | **B+** | **B+** |
+| **Security Grade** | **A+** | **B+** | **B** | **B** | **A** | **B+** | **B+** |
 
 ✅ = Native support | ⚠️ = Partial/Extension | ❌ = Not available

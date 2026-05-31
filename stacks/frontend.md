@@ -11,10 +11,10 @@
 
 | Component | Pinned Version | License | CVEs (2024-2026) |
 |-----------|---------------|---------|-------------------|
-| React | 18.3.1 | MIT | 0 critical |
-| Next.js | 14.2.15 | MIT | 2 moderate (patched) |
-| TypeScript | 5.4.5 | Apache-2.0 | N/A (compiler) |
-| Vite | 5.4.11 | MIT | 1 low |
+| React | 19.1.0 | MIT | 0 critical |
+| Next.js | 15.3.2 | MIT | 0 critical |
+| TypeScript | 5.8.3 | Apache-2.0 | N/A (compiler) |
+| Vite | 6.3.5 | MIT | 0 critical |
 | Node.js runtime | 20.18.0 | MIT | See backend.md |
 
 **Known Vulnerabilities (patched):**
@@ -31,14 +31,14 @@ sha256sum package-lock.json
 **Key Dependencies (pinned):**
 ```json
 {
-  "react": "18.3.1",
-  "react-dom": "18.3.1",
-  "next": "14.2.15",
-  "typescript": "5.4.5",
-  "vite": "5.4.11",
+  "react": "19.1.0",
+  "react-dom": "19.1.0",
+  "next": "15.3.2",
+  "typescript": "5.8.3",
+  "vite": "6.3.5",
   "@types/react": "18.3.12",
   "eslint": "8.57.1",
-  "eslint-config-next": "14.2.15"
+  "eslint-config-next": "15.3.2"
 }
 ```
 
@@ -58,10 +58,10 @@ sha256sum package-lock.json
 
 | Component | Pinned Version | License | CVEs |
 |-----------|---------------|---------|------|
-| Vue | 3.4.38 | MIT | 0 |
-| Nuxt | 3.13.2 | MIT | 1 low |
-| TypeScript | 5.4.5 | Apache-2.0 | N/A |
-| Vite | 5.4.11 | MIT | 1 low |
+| Vue | 3.5.16 | MIT | 0 |
+| Nuxt | 3.16.2 | MIT | 0 |
+| TypeScript | 5.8.3 | Apache-2.0 | N/A |
+| Vite | 6.3.5 | MIT | 0 critical |
 | Pinia | 2.2.4 | MIT | 0 |
 
 **Known Issues:**
@@ -71,44 +71,44 @@ sha256sum package-lock.json
 **Lockfile Template:**
 ```json
 {
-  "vue": "3.4.38",
-  "nuxt": "3.13.2",
-  "typescript": "5.4.5",
-  "vite": "5.4.11",
+  "vue": "3.5.16",
+  "nuxt": "3.16.2",
+  "typescript": "5.8.3",
+  "vite": "6.3.5",
   "@pinia/nuxt": "0.5.5",
   "pinia": "2.2.4"
 }
 ```
 
 **Compatibility Notes:**
-- Nuxt 3.13 requires Node >= 18.0.0
-- Vue 3.4 uses Vapor Mode preview — avoid in production until 3.5 stable
+- Nuxt 3.16 requires Node >= 18.0.0
+- Vue 3.5 includes stable Vapor Mode — safe for production use
 
 ---
 
 ## 3. Svelte Stack
 
-**Security Grade: A-**
+**Security Grade: A**
 
 | Component | Pinned Version | License | CVEs |
 |-----------|---------------|---------|------|
-| Svelte | 4.2.19 | MIT | 0 |
-| SvelteKit | 2.7.3 | MIT | 0 |
-| TypeScript | 5.4.5 | Apache-2.0 | N/A |
-| Vite | 5.4.11 | MIT | 1 low |
+| Svelte | 5.33.1 | MIT | 0 |
+| SvelteKit | 2.21.1 | MIT | 0 |
+| TypeScript | 5.8.3 | Apache-2.0 | N/A |
+| Vite | 6.3.5 | MIT | 0 critical |
 
 **Known Issues:**
-- Svelte 5 (runes) released but still stabilizing — stay on 4.x for production
+- Svelte 5 (runes) is now stable — recommended for production
 - SvelteKit adapter-node has had minor SSR bypass reports (patched in 2.5+)
 
 **Recommended Pins:**
 ```json
 {
-  "svelte": "4.2.19",
-  "@sveltejs/kit": "2.7.3",
+  "svelte": "5.33.1",
+  "@sveltejs/kit": "2.21.1",
   "@sveltejs/adapter-node": "5.2.9",
-  "vite": "5.4.11",
-  "typescript": "5.4.5"
+  "vite": "6.3.5",
+  "typescript": "5.8.3"
 }
 ```
 
@@ -122,8 +122,8 @@ sha256sum package-lock.json
 
 | Component | Pinned Version | License | CVEs |
 |-----------|---------------|---------|------|
-| Angular | 17.3.12 | MIT | 1 moderate (patched) |
-| TypeScript | 5.4.5 | Apache-2.0 | N/A |
+| Angular | 19.2.13 | MIT | 0 critical |
+| TypeScript | 5.8.3 | Apache-2.0 | N/A |
 | RxJS | 7.8.1 | Apache-2.0 | 0 |
 | Angular CLI | 17.3.11 | MIT | 0 |
 
@@ -138,9 +138,9 @@ sha256sum package-lock.json
 **Recommended Pins:**
 ```json
 {
-  "@angular/core": "17.3.12",
-  "@angular/cli": "17.3.11",
-  "typescript": "5.4.5",
+  "@angular/core": "19.2.13",
+  "@angular/cli": "19.2.13",
+  "typescript": "5.8.3",
   "rxjs": "7.8.1",
   "zone.js": "0.14.10"
 }
@@ -170,4 +170,4 @@ sha256sum package-lock.json
 | SSG Support | ✅ | ✅ | ✅ | Limited |
 | SSR | ✅ | ✅ | ✅ | ✅ |
 | Ecosystem | Largest | Large | Growing | Large |
-| Security Grade | A | A | A- | B+ |
+| Security Grade | A | A | A | B+ |

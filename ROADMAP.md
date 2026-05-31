@@ -16,7 +16,7 @@ templates that developers can deploy with confidence — reducing the gap betwee
 
 ## 2025 Roadmap
 
-### Q1 2025 — Foundation (Jan–Mar)
+### Q1 2025 — Foundation (Jan–Mar) ✅
 
 **Theme:** Core stacks and project infrastructure
 
@@ -25,25 +25,47 @@ templates that developers can deploy with confidence — reducing the gap betwee
 - [x] Establish project structure and governance
 - [x] Define security audit checklist (25+ items)
 - [x] Create contribution guidelines and templates
-- [x] Build validation tooling (`validate-stack.py`)
+- [x] Define scoring methodology (5 dimensions, 0–100 scale)
+- [x] Set up CI/CD pipeline with automated security scanning
+- [x] Create project policies (SECURITY.md, CODE_OF_CONDUCT.md)
+
+#### Deliverables
+
+- Project governance and documentation foundation
+- Scoring methodology documented in SCORING.md
+- Security policy and code of conduct
+
+---
+
+### Q2 2025 — Templates & Audits (Apr–Jun) 🔄
+
+**Theme:** Ship audited stack templates and build validation tooling
+
+#### Goals
+
+- [x] Create Docker Compose templates with security hardening:
+  - [x] Docker Compose template for Django + PostgreSQL
+  - [x] Docker Compose template for T3 Stack (Next.js + tRPC)
+  - [x] Docker Compose template for FastAPI + PostgreSQL
 - [ ] Publish first 5 audited stacks:
   - [ ] Next.js + tRPC (T3 Stack)
   - [ ] Django + PostgreSQL
   - [ ] FastAPI + PostgreSQL
   - [ ] Express.js + MongoDB
   - [ ] Rails + PostgreSQL
-- [ ] Set up CI/CD pipeline with automated security scanning
+- [ ] Build validation tooling (`validate-stack.py`)
+- [ ] Run initial security audits on all template stacks
 - [ ] Establish review process with volunteer security reviewers
 
 #### Deliverables
 
 - 5 production-ready, audited stacks
 - Automated validation in CI
-- Public documentation site (initial version)
+- Initial audit reports in `audits/`
 
 ---
 
-### Q2 2025 — Expansion (Apr–Jun)
+### Q3 2025 — Expansion (Jul–Sep) ⬜
 
 **Theme:** Broaden stack coverage and automate audits
 
@@ -65,8 +87,8 @@ templates that developers can deploy with confidence — reducing the gap betwee
   - [ ] Dependency vulnerability scanning
   - [ ] Configuration analysis (Docker Bench)
   - [ ] SBOM generation for every stack
-- [ ] Launch community Discord/forum for support
-- [ ] Implement stack scoring system (0–100 security score)
+- [ ] Implement community feedback channels (Discussions, Issues)
+- [ ] Launch public documentation site (initial version)
 
 #### Deliverables
 
@@ -76,7 +98,7 @@ templates that developers can deploy with confidence — reducing the gap betwee
 
 ---
 
-### Q3 2025 — Intelligence (Jul–Sep)
+### Q4 2025 — Intelligence & Scale (Oct–Dec) ⬜
 
 **Theme:** Smart tooling and ecosystem integration
 
@@ -97,7 +119,6 @@ templates that developers can deploy with confidence — reducing the gap betwee
   - [ ] SBOM diff tool for tracking changes
   - [ ] License compliance checking
 - [ ] Add Kubernetes deployment templates alongside Docker Compose
-- [ ] Publish first advisory when CVEs affect stack dependencies
 
 #### Deliverables
 
@@ -108,54 +129,24 @@ templates that developers can deploy with confidence — reducing the gap betwee
 
 ---
 
-### Q4 2025 — Scale (Oct–Dec)
-
-**Theme:** Enterprise features and community growth
-
-#### Goals
-
-- [ ] Build real-time monitoring templates:
-  - [ ] Prometheus + Grafana dashboards
-  - [ ] Security event alerting
-  - [ ] Anomaly detection for common attack patterns
-- [ ] Launch advisory database:
-  - [ ] Automated CVE tracking for all stack dependencies
-  - [ ] Email/webhook notifications for affected stacks
-  - [ ] Remediation guides for each advisory
-- [ ] Enterprise features:
-  - [ ] Compliance report generation (SOC 2, ISO 27001 mapping)
-  - [ ] Custom policy enforcement (OPA/Rego)
-  - [ ] Private registry support for internal stacks
-- [ ] Community milestones:
-  - [ ] 50+ stacks available
-  - [ ] 100+ contributors
-  - [ ] First annual security audit by external firm
-
-#### Deliverables
-
-- Monitoring templates
-- Advisory database (beta)
-- 50+ audited stacks
-- External security audit published
-
----
-
 ## Beyond 2026
 
 ### Long-Term Vision
 
-- **AI-assisted stack generation** — LLM-powered tool to generate hardened
-  configurations from natural language requirements
+- **Real-time monitoring templates** — Prometheus + Grafana dashboards with
+  security event alerting
+- **Advisory database** — Automated CVE tracking for all stack dependencies
+  with email/webhook notifications
 - **Compliance frameworks** — Pre-built templates that satisfy specific
   regulatory requirements (HIPAA, PCI-DSS, FedRAMP)
+- **AI-assisted stack generation** — LLM-powered tool to generate hardened
+  configurations from natural language requirements
 - **Supply chain trust** — Signed images, reproducible builds, transparent
   provenance
-- **Stack marketplace** — Community-submitted stacks with automated quality
-  gates
-- **Real-time threat integration** — Automatic stack updates when new
-  vulnerabilities are discovered
-- **Multi-cloud deployment** — One stack definition, deploy to AWS/GCP/Azure
-  with cloud-native security features
+- **Enterprise features** — Compliance report generation (SOC 2, ISO 27001),
+  custom policy enforcement (OPA/Rego), private registry support
+- **Community milestones** — 50+ stacks, 100+ contributors, external security
+  audit published
 
 ---
 
@@ -164,9 +155,9 @@ templates that developers can deploy with confidence — reducing the gap betwee
 This roadmap is a living document. We welcome input:
 
 - **Vote on priorities** — React to roadmap items in
-  [Discussions](https://github.com/secure-stacks/secure-stacks/discussions)
+  [Discussions](https://github.com/lxl141421/awesome-secure-stacks/discussions)
 - **Propose new stacks** — Use the
-  [Stack Request](https://github.com/secure-stacks/secure-stacks/issues/new?template=stack_request.md)
+  [Stack Request](https://github.com/lxl141421/awesome-secure-stacks/issues/new?template=stack_request.md)
   template
 - **Sponsor development** — Reach out to sponsor specific stack development or
   audits
@@ -191,5 +182,5 @@ This roadmap is a living document. We welcome input:
 
 ---
 
-*Last updated: January 2025*
-*Next review: April 2025*
+*Last updated: May 2025*
+*Next review: August 2025*

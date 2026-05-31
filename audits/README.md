@@ -54,10 +54,12 @@ Each stack receives a security score from 0–100:
 
 | Score | Grade | Status |
 |-------|-------|--------|
-| 90–100 | A | Excellent — Published |
-| 80–89 | B | Good — Published with notes |
-| 70–79 | C | Acceptable — Published with improvement plan |
-| Below 70 | F | Failing — Not published |
+| 95–100 | A+ | Exceptional — Gold standard, recommended for high-security contexts |
+| 85–94 | A | Excellent — Published |
+| 75–84 | B+ | Good — Published with notes |
+| 65–74 | B | Acceptable — Minimum tier for inclusion |
+| 50–64 | C | Caution — Not listed; significant security concerns |
+| Below 50 | D | Avoid — Critical security gaps; actively discouraged |
 
 ### Score Calculation
 

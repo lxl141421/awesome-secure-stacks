@@ -67,7 +67,7 @@ services:
       postgres:
         condition: service_healthy
     environment:
-      DATABASE_URL: postgresql://${POSTGRES_USER:-app}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-app}
+      DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-app}
       NEXTAUTH_SECRET: ${NEXTAUTH_SECRET:?NEXTAUTH_SECRET is required}
       NEXTAUTH_URL: ${NEXTAUTH_URL:-http://localhost:3000}
       NODE_ENV: production
@@ -99,7 +99,7 @@ services:
 
   # ─── Nginx Reverse Proxy ─────────────────────────────────────────────
   nginx:
-    image: nginx:1.25-alpine
+    image: nginx:1.27-alpine
     restart: unless-stopped
     ports:
       - "${BIND_ADDRESS:-127.0.0.1}:${PORT:-3000}:8080"

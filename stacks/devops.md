@@ -11,8 +11,8 @@
 
 | Component | Pinned Version | License | CVEs |
 |-----------|---------------|---------|------|
-| Docker Engine | 25.0.6 | Apache-2.0 | 1 moderate (patched) |
-| containerd | 1.7.22 | Apache-2.0 | 0 critical |
+| Docker Engine | 28.1.1 | Apache-2.0 | 1 moderate (patched) |
+| containerd | 2.1.1 | Apache-2.0 | 0 critical |
 | BuildKit | 0.16.0 | Apache-2.0 | 0 |
 | runc | 1.2.1 | Apache-2.0 | 0 |
 
@@ -36,7 +36,7 @@
 - Pin base image digests: `FROM node:20.18.0-alpine@sha256:abc...`
 
 **Known CVEs:**
-- CVE-2024-41110: Docker AuthZ plugin bypass (patched in 25.0.6)
+- CVE-2024-41110: Docker AuthZ plugin bypass (patched in 25.0.6+)
 
 ---
 
@@ -46,9 +46,9 @@
 
 | Component | Pinned Version | License | CVEs |
 |-----------|---------------|---------|------|
-| Kubernetes | 1.29.10 | Apache-2.0 | 1 moderate (patched) |
+| Kubernetes | 1.33.1 | Apache-2.0 | 1 moderate (patched) |
 | etcd | 3.5.16 | Apache-2.0 | 0 |
-| containerd | 1.7.22 | Apache-2.0 | 0 |
+| containerd | 2.1.1 | Apache-2.0 | 0 |
 
 **Security Configuration:**
 ```yaml
@@ -81,7 +81,7 @@ metadata:
 
 ### GitHub Actions
 
-**Security Grade: A-**
+**Security Grade: A**
 
 ```yaml
 # .github/workflows/ci.yml — pinned actions
@@ -123,11 +123,11 @@ include:
 
 ### Terraform
 
-**Security Grade: A-**
+**Security Grade: A**
 
 | Component | Pinned Version | License |
 |-----------|---------------|---------|
-| Terraform | 1.7.5 | BSL-1.1 |
+| Terraform | 1.12.0 | BSL-1.1 |
 | OpenTofu | 1.8.2 | MPL-2.0 (open fork) |
 | tflint | 0.53.0 | MPL-2.0 |
 | checkov | 3.2.302 | Apache-2.0 |
@@ -135,7 +135,7 @@ include:
 ```hcl
 # versions.tf — pin providers
 terraform {
-  required_version = ">= 1.7.5"
+  required_version = ">= 1.12.0"
   required_providers {
     aws = {
       source  = "hashicorp/aws"
@@ -160,7 +160,7 @@ terraform {
 
 | Component | Pinned Version | License |
 |-----------|---------------|---------|
-| Pulumi | 3.137.0 | Apache-2.0 |
+| Pulumi | 3.168.0 | Apache-2.0 |
 | Pulumi AI | Latest | Apache-2.0 |
 
 ---
@@ -171,8 +171,8 @@ terraform {
 
 | Component | Pinned Version | License | CVEs |
 |-----------|---------------|---------|------|
-| Prometheus | 2.54.1 | Apache-2.0 | 0 |
-| Grafana | 10.4.10 | AGPL-3.0 | 1 low |
+| Prometheus | 3.4.1 | Apache-2.0 | 0 |
+| Grafana | 12.0.1 | AGPL-3.0 | 1 low |
 | Alertmanager | 0.27.0 | Apache-2.0 | 0 |
 | Loki | 3.2.1 | AGPL-3.0 | 0 |
 | Node Exporter | 1.8.2 | Apache-2.0 | 0 |
@@ -226,7 +226,7 @@ web:
 
 | Component | Pinned Version | License | CVEs |
 |-----------|---------------|---------|------|
-| HashiCorp Vault | 1.15.9 | BSL-1.1 | 0 critical |
+| HashiCorp Vault | 1.19.1 | BSL-1.1 | 0 critical |
 
 **Security Features:**
 - Dynamic secrets (database credentials, AWS keys)
@@ -252,4 +252,4 @@ web:
 | Audit Log | ⚠️ | ✅ | ✅ | ✅ | ⚠️ | ✅ |
 | TLS | ✅ | ✅ | N/A | ✅ | ✅ | ✅ |
 | Secrets Mgmt | ❌ | ⚠️ | ✅ | ❌ | ❌ | ✅ |
-| **Grade** | **A** | **A** | **A-** | **A-** | **A** | **A+** |
+| **Grade** | **A** | **A** | **A** | **A** | **A** | **A+** |

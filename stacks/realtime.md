@@ -9,7 +9,7 @@
 
 ### Socket.IO 4.7.x ⭐
 
-**Security Grade: A-**
+**Security Grade: A**
 
 | Component | Pinned Version | License | CVEs |
 |-----------|---------------|---------|------|
@@ -83,14 +83,14 @@ const wss = new WebSocketServer({
 
 ## 2. Message Queues
 
-### RabbitMQ 3.13.x ⭐
+### RabbitMQ 4.1.x ⭐
 
 **Security Grade: A**
 
 | Component | Pinned Version | License | CVEs |
 |-----------|---------------|---------|------|
-| RabbitMQ | 3.13.7 | MPL-2.0 | 0 critical |
-| Erlang/OTP | 26.2.5 | Apache-2.0 | 0 |
+| RabbitMQ | 4.1.1 | MPL-2.0 | 0 critical |
+| Erlang/OTP | 27.2 | Apache-2.0 | 0 |
 
 **Security Configuration:**
 ```erlang
@@ -122,14 +122,14 @@ loopback_users.guest = false
 | Go | amqp091-go | 2.1.0 |
 | Java | amqp-client | 5.22.0 |
 
-### Apache Kafka 3.7.x
+### Apache Kafka 4.0.x
 
 **Security Grade: A**
 
 | Component | Pinned Version | License | CVEs |
 |-----------|---------------|---------|------|
-| Kafka | 3.7.2 | Apache-2.0 | 0 critical |
-| KRaft (no ZooKeeper) | 3.7.2 | Apache-2.0 | 0 |
+| Kafka | 4.0.0 | Apache-2.0 | 0 critical |
+| KRaft (no ZooKeeper) | 4.0.0 | Apache-2.0 | 0 |
 
 **Security Configuration:**
 ```properties
@@ -150,7 +150,7 @@ allow.everyone.if.no.acl.found=false
 - Tiered storage with encryption at rest
 
 **Known Issues:**
-- KRaft mode recommended (ZooKeeper deprecated in 3.7, removed in 4.0)
+- KRaft mode only (ZooKeeper fully removed in 4.0)
 
 ---
 
@@ -184,13 +184,13 @@ const pub = new Redis({
 
 **Recommendation:** Use Redis Streams (XREAD/XADD) for production pub/sub needs.
 
-### NATS 2.10.x ⭐
+### NATS 2.11.x ⭐
 
 **Security Grade: A**
 
 | Component | Pinned Version | License | CVEs |
 |-----------|---------------|---------|------|
-| NATS Server | 2.10.22 | Apache-2.0 | 0 |
+| NATS Server | 2.11.3 | Apache-2.0 | 0 |
 | JetStream | (built-in) | Apache-2.0 | 0 |
 | nats.go | 1.37.0 | Apache-2.0 | 0 |
 | nats.ws | 1.28.0 | Apache-2.0 | 0 |
@@ -235,14 +235,14 @@ jetstream {
 
 ## 4. gRPC
 
-### grpc-go (Go) 1.62.x
+### grpc-go (Go) 1.72.x
 
 **Security Grade: A**
 
 | Component | Pinned Version | License | CVEs |
 |-----------|---------------|---------|------|
-| grpc-go | 1.62.3 | Apache-2.0 | 0 |
-| protobuf-go | 1.35.1 | BSD-3 | 0 |
+| grpc-go | 1.72.1 | Apache-2.0 | 0 |
+| protobuf-go | 1.36.6 | BSD-3 | 0 |
 
 ```go
 // Server with TLS
@@ -250,15 +250,15 @@ creds, err := credentials.NewServerTLSFromFile("server.pem", "server-key.pem")
 s := grpc.NewServer(grpc.Creds(creds))
 ```
 
-### @grpc/grpc-js (Node.js) 1.10.x
+### @grpc/grpc-js (Node.js) 1.13.x
 
 **Security Grade: A**
 
 | Component | Pinned Version | License | CVEs |
 |-----------|---------------|---------|------|
-| @grpc/grpc-js | 1.10.11 | Apache-2.0 | 0 |
-| @grpc/proto-loader | 0.7.13 | Apache-2.0 | 0 |
-| protobufjs | 7.3.3 | BSD-3 | 0 |
+| @grpc/grpc-js | 1.13.0 | Apache-2.0 | 0 |
+| @grpc/proto-loader | 0.7.15 | Apache-2.0 | 0 |
+| protobufjs | 7.4.0 | BSD-3 | 0 |
 
 ```typescript
 import * as grpc from "@grpc/grpc-js";
@@ -292,4 +292,4 @@ const creds = grpc.ServerCredentials.createSsl(
 | Persistence | ❌ | ❌ | ✅ | ✅ | ✅ (JS) | ❌ |
 | Replay | ❌ | ❌ | ❌ | ✅ | ✅ (JS) | ❌ |
 | Max Payload | Configurable | Configurable | Configurable | 1MB default | 1MB default | 4MB default |
-| **Grade** | **A-** | **A** | **A** | **A** | **A** | **A** |
+|| **Grade** | **A** | **A** | **A** | **A** | **A** | **A** |

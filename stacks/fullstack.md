@@ -15,9 +15,9 @@
 | Component | Pinned Version | License | CVEs |
 |-----------|---------------|---------|------|
 | Next.js | 14.2.15 | MIT | 0 (patched) |
-| tRPC | 11.0.0 | MIT | 0 |
-| Prisma | 5.21.1 | Apache-2.0 | 0 |
-| NextAuth.js | 4.24.8 | ISC | 0 |
+|| tRPC | 11.1.3 | MIT | 0 |
+|| Prisma | 6.8.2 | Apache-2.0 | 0 |
+|| Auth.js | 5.0.0-beta.25 | ISC | 0 |
 | Tailwind CSS | 3.4.14 | MIT | 0 |
 | TypeScript | 5.4.5 | Apache-2.0 | N/A |
 | Zod | 3.23.8 | MIT | 0 |
@@ -30,19 +30,19 @@
   "packageManager": "pnpm@9.12.3",
   "dependencies": {
     "next": "14.2.15",
-    "@trpc/server": "11.0.0",
-    "@trpc/client": "11.0.0",
-    "@trpc/next": "11.0.0",
-    "@trpc/react-query": "11.0.0",
-    "@prisma/client": "5.21.1",
-    "next-auth": "4.24.8",
+    "@trpc/server": "11.1.3",
+    "@trpc/client": "11.1.3",
+    "@trpc/next": "11.1.3",
+    "@trpc/react-query": "11.1.3",
+    "@prisma/client": "6.8.2",
+    "next-auth": "5.0.0-beta.25",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "zod": "3.23.8",
     "superjson": "2.2.1"
   },
   "devDependencies": {
-    "prisma": "5.21.1",
+    "prisma": "6.8.2",
     "typescript": "5.4.5",
     "tailwindcss": "3.4.14",
     "postcss": "8.4.47",
@@ -76,8 +76,8 @@
 
 | Component | Pinned Version | License | CVEs |
 |-----------|---------------|---------|------|
-| Django | 5.0.9 | BSD-3 | 0 critical |
-| Python | 3.12.7 | PSF | 0 critical |
+|| Django | 5.2 LTS | BSD-3 | 0 critical |
+|| Python | 3.13.3 | PSF | 0 critical |
 | HTMX | 2.0.3 | BSD-0 | 0 |
 | Alpine.js | 3.14.3 | MIT | 0 |
 | django-allauth | 65.1.0 | MIT | 0 |
@@ -94,7 +94,7 @@
 name = "django-app"
 requires-python = ">=3.12"
 dependencies = [
-    "django==5.0.9",
+    "django==5.2",
     "django-allauth==65.1.0",
     "django-htmx==1.19.0",
     "gunicorn==22.0.0",
@@ -146,10 +146,10 @@ X_FRAME_OPTIONS = "DENY"
 
 | Component | Pinned Version | License | CVEs |
 |-----------|---------------|---------|------|
-| Ruby | 3.3.6 | Ruby | 0 critical |
-| Rails | 7.1.5 | MIT | 1 moderate (patched) |
-| PostgreSQL | 16.4 | PostgreSQL | 0 |
-| Puma | 6.4.3 | BSD-3 | 0 |
+|| Ruby | 3.4.2 | Ruby | 0 critical |
+|| Rails | 8.0.2 | MIT | 0 |
+|| PostgreSQL | 16.4 | PostgreSQL | 0 |
+|| Puma | 6.6.0 | BSD-3 | 0 |
 | Devise | 4.9.4 | MIT | 0 |
 | Turbo | 2.0.11 | MIT | 0 |
 | Stimulus | 3.2.2 | MIT | 0 |
@@ -160,9 +160,9 @@ X_FRAME_OPTIONS = "DENY"
 # Gemfile
 source "https://rubygems.org"
 
-gem "rails", "~> 7.1.5"
+gem "rails", "~> 8.0.2"
 gem "pg", "~> 1.5.8"
-gem "puma", "~> 6.4.3"
+gem "puma", "~> 6.6.0"
 gem "devise", "~> 4.9.4"
 gem "turbo-rails", "~> 2.0.11"
 gem "stimulus-rails", "~> 3.2.2"
@@ -185,7 +185,7 @@ bundle exec brakeman --no-pager
 - `bundler-audit`: dependency vulnerability scanner
 
 ### Known CVEs (patched)
-- CVE-2024-47889: Action Pack content type header injection (patched in 7.1.5)
+- None in current version
 
 ---
 
@@ -197,8 +197,8 @@ bundle exec brakeman --no-pager
 
 | Component | Pinned Version | License | CVEs |
 |-----------|---------------|---------|------|
-| PHP | 8.3.13 | PHP-3.01 | 0 critical |
-| Laravel | 11.31.0 | MIT | 0 |
+|| PHP | 8.4.6 | PHP-3.01 | 0 critical |
+|| Laravel | 12.7.2 | MIT | 0 |
 | Livewire | 3.5.12 | MIT | 0 |
 | Pest | 3.5.1 | MIT | 0 |
 | Laravel Sanctum | 4.0.2 | MIT | 0 |
@@ -210,7 +210,7 @@ bundle exec brakeman --no-pager
 {
   "require": {
     "php": ">=8.3",
-    "laravel/framework": "11.31.0",
+    "laravel/framework": "12.7.2",
     "livewire/livewire": "3.5.12",
     "laravel/sanctum": "4.0.2",
     "laravel/pint": "1.18.1"

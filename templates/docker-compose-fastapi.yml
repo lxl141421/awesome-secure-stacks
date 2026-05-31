@@ -221,7 +221,7 @@ services:
 
   # ─── Nginx Reverse Proxy ─────────────────────────────────────────────
   nginx:
-    image: nginx:1.25-alpine
+    image: nginx:1.27-alpine
     restart: unless-stopped
     ports:
       - "${BIND_ADDRESS:-127.0.0.1}:${PORT:-8000}:8080"

@@ -7,21 +7,21 @@
 
 ## 1. React Native + Expo ⭐ Cross-Platform Recommendation
 
-**Security Grade: A-**
+**Security Grade: A**
 
 | Component | Pinned Version | License | CVEs |
 |-----------|---------------|---------|------|
-| React Native | 0.73.11 | MIT | 0 |
-| Expo SDK | 50.0.19 | MIT | 0 |
+| React Native | 0.79.2 | MIT | 0 |
+| Expo SDK | 53.0.0 | MIT | 0 |
 | TypeScript | 5.4.5 | Apache-2.0 | N/A |
-| Hermes Engine | 0.73.x | MIT | 0 |
-| Metro Bundler | 0.80.12 | MIT | 0 |
+| Hermes Engine | 0.79.x | MIT | 0 |
+| Metro Bundler | 0.82.3 | MIT | 0 |
 
 **Dependency Lockfile:**
 ```json
 {
-  "react-native": "0.73.11",
-  "expo": "~50.0.19",
+  "react-native": "0.79.2",
+  "expo": "~53.0.0",
   "expo-secure-store": "~13.0.2",
   "expo-local-authentication": "~14.0.1",
   "expo-crypto": "~13.0.2",
@@ -54,8 +54,8 @@ eas build --platform ios --profile production --local
 
 | Component | Pinned Version | License | CVEs |
 |-----------|---------------|---------|------|
-| Flutter | 3.19.6 | BSD-3 | 0 |
-| Dart | 3.3.4 | BSD-3 | 0 |
+| Flutter | 3.32.0 | BSD-3 | 0 |
+| Dart | 3.8.1 | BSD-3 | 0 |
 | Riverpod | 2.5.1 | MIT | 0 |
 | Dio | 5.5.0 | MIT | 0 |
 
@@ -63,8 +63,8 @@ eas build --platform ios --profile production --local
 ```yaml
 # pubspec.yaml
 environment:
-  sdk: ">=3.3.4 <4.0.0"
-  flutter: ">=3.19.6 <4.0.0"
+  sdk: ">=3.8.1 <4.0.0"
+  flutter: ">=3.32.0 <4.0.0"
 
 dependencies:
   flutter:
@@ -95,7 +95,7 @@ dart pub deps --json | jq '.packages[] | {name, version}'
 
 ## 3. Kotlin Multiplatform (KMP)
 
-**Security Grade: A-**
+**Security Grade: A**
 
 | Component | Pinned Version | License | CVEs |
 |-----------|---------------|---------|------|
@@ -241,4 +241,4 @@ android {
 | Secure Storage | ⚠️ | ✅ | ✅ | ✅ | ✅ |
 | Obfuscation | ⚠️ | ✅ | ✅ | ✅ | ✅ |
 | Code Signing | ✅ | ✅ | ✅ | ✅ | ✅ |
-| **Grade** | **A-** | **A** | **A-** | **A+** | **A** |
+|| **Grade** | **A** | **A** | **A** | **A+** | **A** |

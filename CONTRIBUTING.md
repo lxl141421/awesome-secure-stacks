@@ -52,7 +52,7 @@ environment. Report unacceptable behavior to **security@secure-stacks.dev**.
 
 ### Step 1: Propose the Stack
 
-Open a [Stack Request](https://github.com/secure-stacks/secure-stacks/issues/new?template=stack_request.md)
+Open a [Stack Request](https://github.com/lxl141421/awesome-secure-stacks/issues/new?template=stack_request.md)
 issue before starting work. This avoids duplicate effort and allows early feedback
 on scope and approach.
 
@@ -268,7 +268,7 @@ For new stack submissions, a security-focused reviewer performs:
 - [ ] At least 1 maintainer approval
 - [ ] At least 1 security reviewer approval (new stacks)
 - [ ] All review comments resolved
-- [ ] Audit score ≥ 80/100 (new stacks)
+- [ ] Audit score ≥ 65/100 (new stacks)
 - [ ] No critical or high severity findings unresolved
 
 ---
@@ -355,8 +355,8 @@ docker compose up -d
 
 ## Questions?
 
-- **General questions** — Open a [Discussion](https://github.com/secure-stacks/secure-stacks/discussions)
-- **Bug reports** — Open an [Issue](https://github.com/secure-stacks/secure-stacks/issues/new?template=bug_report.md)
+- **General questions** — Open a [Discussion](https://github.com/lxl141421/awesome-secure-stacks/discussions)
+- **Bug reports** — Open an [Issue](https://github.com/lxl141421/awesome-secure-stacks/issues/new?template=bug_report.md)
 - **Security concerns** — Email **security@secure-stacks.dev** (do NOT open a
   public issue for security vulnerabilities)
 

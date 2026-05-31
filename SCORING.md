@@ -228,7 +228,7 @@ Scores are partially automated:
 
 - **Automated data collection:** CVE feeds (NVD, GitHub Advisories, OSV), download stats, commit frequency
 - **Human evaluation:** Audit quality, governance assessment, documentation review
-- **CI pipeline:** `scripts/score.sh` pulls automated metrics; maintainers fill in human-scored fields
+- **CI pipeline:** Automated metrics are collected via CI workflows; maintainers fill in human-scored fields
 
 ---
 
@@ -246,5 +246,5 @@ Scores are partially automated:
 
 <p align="center">
   <i>This scoring methodology is versioned and open for community feedback.<br>
-  Propose changes via <a href="https://github.com/awesome-secure-stacks/awesome-secure-stacks/issues">GitHub Issues</a>.</i>
+  Propose changes via <a href="https://github.com/lxl141421/awesome-secure-stacks/issues">GitHub Issues</a>.</i>
 </p>
