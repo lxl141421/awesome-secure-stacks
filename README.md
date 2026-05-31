@@ -26,7 +26,7 @@
   &nbsp;
   <a href="https://github.com/lxl141421/awesome-secure-stacks/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="MIT License"></a>
   &nbsp;
-  <img src="https://img.shields.io/badge/stacks-40+-purple?style=flat-square" alt="40+ Stacks">
+  <img src="https://img.shields.io/badge/stacks-60+-purple?style=flat-square" alt="60+ Stacks">
 </p>
 
 ---
@@ -58,6 +58,14 @@
   - [🤖 Machine Learning & AI](#-machine-learning--ai)
   - [⚡ Real-time & Messaging](#-real-time--messaging)
   - [🏗️ Full-stack Combos](#️-full-stack-combos)
+  - [🖥️ Desktop Applications](#️-desktop-applications)
+  - [🌐 Hybrid & WebView](#-hybrid--webview)
+  - [🎮 Game Development](#-game-development)
+  - [🤖 AI-Assisted Development](#-ai-assisted-development)
+  - [🧠 AI/LLM Applications](#-aillm-applications)
+  - [📱 Native Mobile & Cross-Platform Deep Dive](#-native-mobile--cross-platform-deep-dive)
+  - [🔄 Architecture Evolution](#-architecture-evolution)
+  - [🔗 Distributed Systems & Microservices](#-distributed-systems--microservices)
 - [🕘 Supply Chain Attack Timeline](#-supply-chain-attack-timeline)
 - [🔒 Security Advisories](#-security-advisories)
 - [🤝 Contributing](#-contributing)
@@ -475,6 +483,86 @@ Pre-verified end-to-end combinations spanning frontend, backend, database, and d
 
 ---
 
+### 🖥️ Desktop Applications
+
+**File:** [`stacks/desktop.md`](stacks/desktop.md)
+
+Desktop app frameworks with security-first sandboxing. Covers Tauri's Rust-based process isolation, Electron's CSP hardening, Qt native modules, and .NET MAUI cross-platform deployment. Auto-update security, native module audit pipelines, and IPC boundary protection are evaluated for each.
+
+> **Featured:** Tauri 2.x (Rust sandbox), Electron 33 + secure defaults, Qt 6.8, .NET MAUI 9.0
+
+---
+
+### 🌐 Hybrid & WebView
+
+**File:** [`stacks/hybrid.md`](stacks/hybrid.md)
+
+Capacitor, Ionic, and WebView-based apps with JavaScript bridge security hardening. Covers PWA alternatives, hybrid navigation patterns, and the critical attack surface of JS-to-native bridges. Each stack is evaluated for bridge injection resistance and offline integrity.
+
+> **Featured:** Capacitor 6 + Ionic 8, WebView hardening patterns, PWA-first alternatives
+
+---
+
+### 🎮 Game Development
+
+**File:** [`stacks/gaming.md`](stacks/gaming.md)
+
+Game engines and multiplayer infrastructure with supply chain security focus. Covers Unity, Godot, Unreal Engine, and Bevy (Rust). Asset pipeline security, multiplayer networking protocols, mod/UGC sandboxing, and anti-cheat integration are evaluated for each.
+
+> **Featured:** Unity 2022 LTS, Godot 4.2, Unreal Engine 5.4, Bevy 0.14
+
+---
+
+### 🤖 AI-Assisted Development
+
+**File:** [`stacks/ai-development.md`](stacks/ai-development.md)
+
+AI coding assistants and their unique supply chain risks. Covers GitHub Copilot, Cursor, Aider, and related tools. AI-generated code introduces novel attack vectors: hallucinated package names, insecure patterns from training data, and context leakage through cloud inference.
+
+> **Featured:** GitHub Copilot Enterprise, Cursor + local models, Aider + offline LLMs
+
+---
+
+### 🧠 AI/LLM Applications
+
+**File:** [`stacks/ai-apps.md`](stacks/ai-apps.md)
+
+LLM orchestration frameworks, vector databases, and AI agent infrastructure. Covers LangChain, vLLM, LlamaIndex, and agent frameworks. Special focus on prompt injection defense, model supply chain verification, RAG pipeline security, and inference endpoint hardening.
+
+> **Featured:** LangChain 0.3 + guardrails, vLLM + model provenance, Vector DB security (Qdrant, Weaviate)
+
+---
+
+### 📱 Native Mobile & Cross-Platform Deep Dive
+
+**File:** [`stacks/mobile-native.md`](stacks/mobile-native.md)
+
+Native Android (Kotlin), iOS (Swift), HarmonyOS, and advanced cross-platform frameworks (uni-app, KMP). Covers certificate pinning, secure enclave usage, on-device AI model security, and platform-specific hardening beyond what cross-platform wrappers provide.
+
+> **Featured:** Android 15 (Kotlin), iOS 18 (Swift), HarmonyOS NEXT, Kotlin Multiplatform 2.0
+
+---
+
+### 🔄 Architecture Evolution
+
+**File:** [`stacks/evolution.md`](stacks/evolution.md)
+
+Migration paths from monolith to distributed architectures with security preserved at each stage. Covers Modular Monolith, Service Extraction patterns, Strangler Fig, and event-driven decomposition. Each transition point is evaluated for security regression risk.
+
+> **Featured:** Monolith → Modular Monolith, Strangler Fig extraction, Event-driven decomposition
+
+---
+
+### 🔗 Distributed Systems & Microservices
+
+**File:** [`stacks/distributed.md`](stacks/distributed.md)
+
+Service mesh, API gateways, distributed tracing, and microservice communication patterns. Covers Istio, Linkerd, Kong, and Saga orchestration. Zero-trust networking with mTLS everywhere, circuit breakers, and inter-service authentication are evaluated for each stack.
+
+> **Featured:** Istio 1.22 + Envoy, Kong Gateway 3.x, Saga orchestration patterns
+
+---
+
 ## 🕘 Supply Chain Attack Timeline
 
 A chronological history of major supply chain attacks that motivate this project. Understanding the past is essential to securing the future.
@@ -644,6 +732,21 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 ## 🙏 Acknowledgments
 
 This project would not be possible without:
+
+### Who Is This For?
+
+- 🧑‍💻 **Independent developers** building solo projects who need vetted stacks without a security team
+- 🤖 **AI-assisted developers** using Copilot/Cursor/Aider who want to verify generated dependency choices
+- 🌐 **Web teams** shipping React/Vue/Angular apps with production-grade security
+- 📱 **Mobile teams** building iOS/Android/cross-platform apps with hardened native bridges
+- ⚙️ **Backend teams** running Go/Rust/Python/Java services behind API gateways
+- 🎮 **Game studios** securing multiplayer infrastructure and mod ecosystems
+- 🏢 **Enterprises doing tech upgrades** migrating between framework generations safely
+- 🔄 **Teams evolving from monolith to microservices** who need security at every migration stage
+
+---
+
+### Special Thanks
 
 - 🏛️ **[OpenSSF](https://openssf.org/)** — for Scorecard, SLSA, and Sigstore foundations
 - 🔍 **[Sonatype](https://www.sonatype.com/)** — for State of the Software Supply Chain reports
