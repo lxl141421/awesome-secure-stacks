@@ -1,21 +1,41 @@
-<div align="center">
+<p align="center">
+  <a href="README.md"><img src="https://img.shields.io/badge/English-blue?style=flat-square" alt="English"></a>
+  <a href="README_zh.md"><img src="https://img.shields.io/badge/中文-grey?style=flat-square" alt="中文"></a>
+</p>
 
-[English](README.md) | **中文**
+<p align="center">
+  <img src="https://img.shields.io/badge/🛡️-Awesome_Secure_Stacks-blue?style=for-the-badge&logo=shield&logoColor=white" alt="Awesome Secure Stacks" width="400">
+</p>
 
-# 🛡️ 精选安全技术栈 (Awesome Secure Stacks)
+<h1 align="center">🛡️ 精选安全技术栈 (Awesome Secure Stacks)</h1>
 
-**社区策展、安全审计的技术栈版本兼容性推荐**
+<p align="center">
+  <b>社区策展、安全审计的技术栈，版本兼容性经过验证。</b><br>
+  <i>构建安全、生产就绪软件栈的权威参考。</i><br>
+  <sub>Community-curated, security-audited technology stacks with verified version compatibility.</sub>
+</p>
 
-*Community-curated, security-audited technology stacks with verified version compatibility.*
+<p align="center">
+  <a href="https://github.com/lxl141421/awesome-secure-stacks/stargazers"><img src="https://img.shields.io/github/stars/lxl141421/awesome-secure-stacks?style=social" alt="Stars"></a>
+  &nbsp;
+  <a href="https://github.com/lxl141421/awesome-secure-stacks/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square" alt="PRs Welcome"></a>
+  &nbsp;
+  <img src="https://img.shields.io/badge/last%20updated-2025--05-blue?style=flat-square" alt="Last Updated">
+  &nbsp;
+  <img src="https://img.shields.io/badge/security--audited-✓-brightgreen?style=flat-square&logo=checkmarx&logoColor=white" alt="Security Audited">
+  &nbsp;
+  <a href="https://github.com/lxl141421/awesome-secure-stacks/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="MIT License"></a>
+  &nbsp;
+  <img src="https://img.shields.io/badge/stacks-60+-purple?style=flat-square" alt="60+ Stacks">
+</p>
 
-[![GitHub Stars](https://img.shields.io/github/stars/lxl141421/awesome-secure-stacks?style=social)](https://github.com/lxl141421/awesome-secure-stacks)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+---
 
-*帮助开发者在供应链攻击日益猖獗的今天，构建安全、可审计、版本兼容的技术栈。*
-
-> 🤖 **用 AI 写代码？** AI 能生成代码，但分不清依赖包有没有后门。
-> 本项目就是 AI 开发的**供应链安全层**。
+> **别再猜哪些依赖是安全的。每个技术栈 — 经过审核、评分和生产验证。**
+> 我们不追最新版本。我们推荐每个组件**最安全、最稳定、Bug 最少**的版本。
+>
+> 🤖 **用 AI 写代码？** AI 能生成代码 — 但分不清依赖包有没有后门。
+> 这个项目就是 AI 开发的**供应链安全层**。
 >
 > 💀 **本项目能防住的真实威胁：**
 > - 窃取**钱包私钥**、助记词（`~/.ssh`、MetaMask 等）
@@ -26,340 +46,539 @@
 >
 > 不追最新，只推最稳。不给攻击者任何机会。
 
-</div>
-
 ---
 
 ## 📖 目录
 
-- [为什么需要这个项目？](#为什么需要这个项目)
-- [安全评分体系](#安全评分体系)
-- [版本选择哲学](#版本选择哲学)
-- [推荐技术栈](#推荐技术栈)
-  - [前端开发](#前端开发)
-  - [后端开发](#后端开发)
-  - [数据库与存储](#数据库与存储)
-  - [基础设施与容器](#基础设施与容器)
-  - [AI/机器学习](#ai机器学习)
-  - [移动开发](#移动开发)
-  - [消息与流处理](#消息与流处理)
-- [供应链安全核心原则](#供应链安全核心原则)
-- [依赖链审计指南](#依赖链审计指南)
-- [锁文件最佳实践](#锁文件最佳实践)
-- [可重现构建](#可重现构建)
-- [历史重大事件回顾](#历史重大事件回顾)
-- [安全工具链推荐](#安全工具链推荐)
-- [企业级安全栈](#企业级安全栈)
-- [社区贡献指南](#社区贡献指南)
-- [致谢](#致谢)
+- [🚀 快速推荐](#-快速推荐)
+- [👤 你是谁？](#-你是谁)
+- [🚨 问题背景](#-问题背景)
+- [💡 我们的解决方案](#-我们的解决方案)
+- [📊 安全评分体系](#-安全评分体系)
+- [🎯 版本选择哲学](#-版本选择哲学)
+- [⭐ 推荐技术栈](#-推荐技术栈)
+- [📚 技术栈分类](#-技术栈分类)
+- [🕘 供应链攻击时间线](#-供应链攻击时间线)
+- [🔒 安全公告](#-安全公告)
+- [🤝 社区贡献指南](#-社区贡献指南)
+- [🗺️ 路线图](#️-路线图)
+- [📜 许可证](#-许可证)
+- [🙏 致谢](#-致谢)
 
 ---
 
-## 为什么需要这个项目？
+## 🚀 快速推荐
 
-### 问题背景
-
-近年来，软件供应链攻击呈指数级增长。从 **SolarWinds** 事件到 **XZ Utils** 后门植入，攻击者已经将目光从直接攻击转向了更加隐蔽的**供应链投毒**手段。
-
-- 📈 2023年至2025年间，npm 生态系统中检测到的恶意包数量增长了 **430%**
-- 🔗 平均每个 Node.js 项目依赖 **超过 700 个**传递性依赖
-- ⏱️ 从漏洞披露到被利用的平均时间已缩短至 **不到 24 小时**
-
-### 我们的解决方案
-
-本项目为每一种主流技术栈提供：
-
-1. **经安全审计的版本兼容性矩阵** — 明确标注哪些版本组合经过验证
-2. **依赖链深度分析** — 追踪到最后一层传递性依赖
-3. **已知漏洞态势评估** — 实时更新的 CVE 数据库
-4. **社区驱动的持续更新** — 由数百名安全研究者共同维护
+**不知道从哪里开始？选择你的情况：**
 
 ---
 
-## 安全评分体系
-
-我们采用 A+ 到 D 的五级评分体系，综合考量以下维度：
-
-| 等级 | 分数范围 | 含义 |
-|------|---------|------|
-| **A+** | 95–100 | 卓越 — 最高安全标准，零已知重大漏洞 |
-| **A** | 85–94 | 优秀 — 安全状况良好，仅有低风险问题 |
-| **B+** | 75–84 | 良好 — 安全基线达标，存在可管理的风险 |
-| **B** | 65–74 | 合格 — 基本安全要求满足，但需要注意 |
-| **C** | 50–64 | 警告 — 存在中等风险，建议尽快升级 |
-| **D** | <50 | 不推荐 — 存在严重安全风险，不应在生产环境使用 |
-
-### 评分维度
-
-- **漏洞密度**（40%）：已知 CVE 数量及严重程度
-- **维护活跃度**（20%）：补丁发布频率与响应速度
-- **依赖链健康度**（20%）：传递性依赖的安全状况
-- **社区信任度**（10%）：下载量、采用率、企业使用情况
-- **可审计性**（10%）：源代码开放程度、构建可重现性
+> ### 🛡️ "我要最安全的方案"
+>
+> **Go 1.22 + Chi 5.2 + PostgreSQL 16.4**
+>
+> 📊 **评分: 96/100 (A+)** — 安全后端开发的黄金标准。
+>
+> - ✅ Go 的静态编译消除了运行时依赖攻击
+> - ✅ Chi **零外部依赖** — 最小攻击面
+> - ✅ PostgreSQL 16.4 拥有 30+ 年的安全加固经验
+> - ✅ Go 模块默认通过 sum.golang.org 提供加密验证
+>
+> 👉 **开始使用：** [`stacks/backend.md`](stacks/backend.md) + [`stacks/database.md`](stacks/database.md)
 
 ---
 
-## 版本选择哲学
-
-> **不追最新，只推最稳。**
-
-本项目的核心理念是：**稳定性优先于一切**。我们不推荐最新版本，而是推荐经过充分生产验证、拥有最少已知缺陷的版本。
-
-### 为什么选择旧版本？
-
-1. **更少的未知漏洞** — 新版本的初始发布往往伴随着尚未发现的安全问题，而经过数月甚至数年维护的版本已修复了绝大多数已知漏洞
-2. **更成熟的生态系统** — 配套工具、第三方库、社区文档均已完善，降低了集成风险
-3. **更稳定的 API** — 减少因 API 变动导致的兼容性问题和意外行为
-4. **更广泛的生产验证** — 全球数以万计的生产环境已在使用这些版本，问题早被发现并修复
-
-### 我们的选择标准
-
-- 优先选择 **LTS（长期支持）** 版本
-- 版本必须经过 **至少 3 个月** 的生产环境验证
-- 已知高危 CVE 必须已被修复
-- 社区和维护者活跃度达标
-- 依赖链健康，无已知供应链风险
-
-### 不追最新，只推最稳
-
-| 策略 | ❌ 追新 | ✅ 求稳 |
-|------|---------|---------|
-| 版本选择 | 最新发布版 | 经验证的稳定版 |
-| 升级时机 | 版本发布即升级 | 等待至少 3 个月生产验证 |
-| 风险评估 | 接受未知风险 | 最小化已知与未知风险 |
-| 生态兼容 | 可能存在工具链不兼容 | 生态完善，工具链成熟 |
+> ### ⚡ "我要快速出活"
+>
+> **React 18.3 + Next.js 14.2 + T3 Stack**
+>
+> 📊 **评分: 95/100 (A+)** — 最久经考验的前端全栈方案。
+>
+> - ✅ React 18.3 已部署在**数百万**生产应用中
+> - ✅ TypeScript 5.6 三年来**零 Critical CVE**
+> - ✅ pnpm 严格依赖解析消除幽灵依赖
+> - ✅ T3 Stack 提供从数据库到前端的完整类型安全
+>
+> 👉 **开始使用：** [`stacks/fullstack.md`](stacks/fullstack.md) + [`stacks/frontend.md`](stacks/frontend.md)
 
 ---
 
-## 推荐技术栈
+> ### 🤖 "我在用 AI 写代码"
+>
+> **AI 能生成代码 — 但分不清依赖包有没有后门。**
+>
+> 📊 你需要本项目提供的 **AI 安全层**。
+>
+> - ⚠️ AI 助手可能推荐**幻觉包名** — 攻击者会注册这些包
+> - ⚠️ AI 生成的代码经常引入**过时或不安全**的依赖版本
+> - ⚠️ 云端 AI 推理可能**泄露你的代码上下文**给第三方
+>
+> 👉 **先看这里：** [`stacks/ai-development.md`](stacks/ai-development.md) + [`stacks/ai-apps.md`](stacks/ai-apps.md)
 
-### 前端开发
+---
 
-#### React 全栈方案
+## 👤 你是谁？
 
-| 组件 | 推荐版本 | 安全评分 | 备注 |
-|------|---------|---------|------|
-| React | **18.3** | A+ | 并发渲染模式成熟稳定 |
-| Next.js | **14.2** | A+ | 经充分生产验证，App Router 成熟 |
-| TypeScript | **5.8** | A+ | 严格类型检查可防止整类运行时错误 |
-| Vite | **6.3** | A | 热更新性能大幅提升 |
+**找到你的入口。** 不同角色，不同需求。
 
-**核心安全配置：**
+---
 
-```json
-// next.config.mjs
-{
-  "poweredByHeader": false,
-  "reactStrictMode": true,
-  "headers": [
-    { "key": "X-Content-Type-Options", "value": "nosniff" },
-    { "key": "X-Frame-Options", "value": "DENY" },
-    { "key": "Content-Security-Policy", "value": "default-src 'self'" }
-  ]
-}
+| 🎯 你的角色 | 👉 从这里开始 | 📋 你会找到什么 |
+|--------------|---------------|---------------------|
+| 🧑‍💻 **独立开发者** | [`stacks/fullstack.md`](stacks/fullstack.md) | T3 Stack、Django、Rails — 完整应用蓝图与安全评分 |
+| 🤖 **AI 辅助开发** | [`stacks/ai-development.md`](stacks/ai-development.md) | 验证 AI 生成的依赖、避免幻觉包、安全使用 Copilot/Cursor |
+| 🌐 **Web 团队** | [`stacks/frontend.md`](stacks/frontend.md) + [`stacks/backend.md`](stacks/backend.md) | React、Vue、Svelte、Angular + Node.js、Go、Rust、Python、Java、.NET |
+| 📱 **移动端团队** | [`stacks/mobile.md`](stacks/mobile.md) + [`stacks/mobile-native.md`](stacks/mobile-native.md) | React Native、Flutter、uni-app + Kotlin、Swift、鸿蒙原生深度解析 |
+| 🏢 **企业/技术升级** | [`stacks/evolution.md`](stacks/evolution.md) | 框架代际迁移路径，每个阶段保持安全性 |
+| 🔄 **单体→微服务** | [`stacks/distributed.md`](stacks/distributed.md) + [`stacks/evolution.md`](stacks/evolution.md) | 服务网格、API 网关、Saga 编排 — 每个迁移阶段的安全保障 |
+
+---
+
+**不确定？** 从上面的[快速推荐](#-快速推荐)开始，或浏览下方的[技术栈分类](#-技术栈分类)。
+
+---
+
+## 🚨 问题背景
+
+> **软件供应链攻击从 2019 到 2022 年增长了 742%。** 它们没有放缓的迹象。
+> — _Sonatype 软件供应链状况报告_
+
+现代软件生态建立在**信任**之上 — 信任你从未审计过的包，由你从未见过的人维护，引入你从未选择的数百个传递依赖。**这种信任正在被利用。**
+
+每一次 `npm install`、`pip install`、`go mod download` 都是一次信仰之跃。攻击者正将这种信仰变成武器 — 以越来越复杂的方式瞄准依赖链中最薄弱的环节。
+
+### 重大供应链事件
+
+| 年份 | 事件 | 影响 | 严重性 |
+|------|----------|--------|----------|
+| 🔴 2024 | **XZ Utils 后门** (`xz` 5.6.x) | 通过多年社会工程几乎攻陷所有主流 Linux 发行版 | 🔴 严重 |
+| 🔴 2018 | **`event-stream` / `flatmap-stream`** | 通过入侵流行 npm 包的依赖窃取加密货币 | 🔴 严重 |
+| 🔴 2021 | **`ua-parser-js`**（每周 7000 万+ 下载） | 劫持版本注入挖矿程序和密码窃取器 | 🔴 严重 |
+| 🔴 2020 | **SolarWinds Orion** | 国家级攻击，影响 18,000+ 组织包括美国政府机构 | 🔴 严重 |
+| 🟡 2022 | **`colors.js` / `faker.js` 抗议** | 维护者蓄意破坏导致数千 CI/CD 流水线中断 | 🟡 高危 |
+| 🔴 2022 | **`node-ipc`**（抗议软件） | 故意擦除针对俄罗斯和白俄罗斯 IP 地址的数据 | 🔴 严重 |
+| 🟡 2021 | **Codecov Bash Uploader** | 被入侵的 CI 工具泄露环境变量（密钥） | 🟡 高危 |
+| 🟡 2023 | **PyTorch `torchtriton`** | PyPI 上同名恶意包冒充 nightly 依赖 | 🟡 高危 |
+
+**模式很明确：** 我们的依赖链就是攻击面，而大多数团队没有系统的方法来评估哪些工具组合是安全的。
+
+---
+
+## 💡 我们的解决方案
+
+**Awesome Secure Stacks** 是一个**社区策展、严格评估的完整技术栈集合** — 不是单个包，而是**经过测试的工具、框架、库和基础设施组合**，确保它们能安全地协同工作。
+
+我们替你完成审计整个依赖图的繁重工作。
+
+### 每个技术栈提供什么
+
+对于本仓库中的每个技术栈条目，你将获得：
+
+- ✅ **锁定的、经验证的版本** — **最安全、最稳定**的版本，不一定是最新的
+- ✅ **安全评分 (0–100)** — 从 5 个维度计算（参见 [SCORING.md](SCORING.md)）
+- ✅ **CVE 分析** — 已知漏洞、传递依赖风险、补丁速度
+- ✅ **锁文件模板** — 可重现的依赖文件，冻结你的供应链
+- ✅ **Docker 配置** — 加固的容器镜像，锁定基础层
+- ✅ **替代方案与权衡** — 当技术栈存在安全顾虑时，我们推荐更安全的选择
+- ✅ **兼容性矩阵** — 每个组件的哪些版本可以协同工作
+- ✅ **月度重新评估** — 评分定期更新
+
+> **把它想象成"推荐的硬件兼容性列表" — 但用于软件安全。**
+
+---
+
+## 📊 安全评分体系
+
+每个技术栈按五个维度评分 **0–100**：
+
+| 维度 | 权重 | 衡量内容 |
+|-----------|--------|------------------|
+| 🛡️ **漏洞态势** | 30 分 | 已知 CVE、补丁速度、审计历史 |
+| 🔗 **供应链完整性** | 25 分 | 签名、溯源、SBOM、仿冒包防护 |
+| 🔧 **维护健康度** | 20 分 | 发布节奏、LTS 政策、Issue 分拣 |
+| 👥 **社区信任度** | 15 分 | 治理、审计、采用规模 |
+| 📦 **可重现性** | 10 分 | 锁文件、确定性构建、校验和 |
+
+### 等级标准
+
+| 等级 | 分数 | 含义 |
+|-------|-------|---------|
+| 🟢 **A+** | 95–100 | 卓越 — 金标准，示范性安全实践 |
+| 🟢 **A** | 85–94 | 优秀 — 强烈推荐用于生产 |
+| 🔵 **B+** | 75–84 | 良好 — 可靠选择，有小幅改进空间 |
+| 🔵 **B** | 65–74 | 合格 — 入选本列表的最低门槛 |
+| 🟡 **C** | 50–64 | 警告 — 未收录（存在显著安全顾虑） |
+| 🔴 **D** | 0–49 | 不推荐 — 存在严重安全缺口 |
+
+> 📋 **完整方法论：** 参见 [SCORING.md](SCORING.md)
+
+**收录最低要求：**
+
+- 总分 ≥ **65 (B 级)**
+- 任何维度不低于其满分的 **40%**
+- 零未修复的 Critical CVE
+- 至少有一次独立安全审计记录
+
+---
+
+## 🎯 版本选择哲学：稳定性优先于新奇
+
+> **"最新"不等于"最安全"。上周发布的版本没有任何生产记录。**
+
+我们的版本选择遵循严格的**稳定性优先**原则：
+
+### 选择规则
+
+| 规则 | 理由 |
+|------|-----------|
+| 🏆 **优先 LTS 而非 Current** | LTS 版本获得多年安全修复回移 |
+| ⏳ **优先 .2+ 而非 .0** | 第一个补丁版本证明主版本稳定 |
+| 🔍 **6+ 个月生产记录** | 足够的时间让社区发现真实问题 |
+| 🚫 **避免已知回退** | 我们跟踪 Issue 追踪器 — 有确认回退的版本会被标记 |
+| 🛡️ **优先有安全审计的版本** | 经独立审计的版本评分更高 |
+| 📦 **最小化传递依赖** | 更少依赖 = 更小攻击面 |
+
+### 实际含义
+
+| ❌ 我们不会做 | ✅ 我们会做 |
+|---------------------|---------------|
+| 推荐 Node.js 24（几周前发布） | 推荐 **Node.js 22 LTS**（久经考验，2 年支持） |
+| 推荐 React 19（新主版本，破坏性变更） | 推荐 **React 18.3**（数百万应用验证） |
+| 推荐 PostgreSQL 17（新主版本） | 推荐 **PostgreSQL 16.x**（多年生产加固） |
+| 推荐 Svelte 5（完全重写） | 推荐 **Svelte 4.x**（稳定，充分理解） |
+| 推荐 Redis 8.0（许可证争议） | 推荐 **Redis 7.4**（OSS 许可，经验证） |
+| 推荐 Angular 19（刚发布） | 推荐 **Angular 18 LTS**（官方长期支持） |
+
+> **我们的座右铭：宁可无聊但安全，也不要炫酷但有漏洞。**
+
+---
+
+## ⭐ 推荐技术栈
+
+精选技术栈 — 每个类别中最佳的代表。
+
+---
+
+### 🥇 全栈 Web：React 18.3 + Next.js 14.2 + TypeScript 5.6
+
+> **评分: 95/100 (A+)** · 分类：[Web 前端](stacks/frontend.md) | [全栈组合](stacks/fullstack.md)
+
+最久经考验的前端技术栈。React 18.3 已部署在数百万生产应用中。Next.js 14.2 经过大量安全补丁，是推荐的生产版本。TypeScript 5.6 零 Critical CVE，多年稳定验证。
+
+**组件与版本：**
+
+| 组件 | 版本 | 评分 | 备注 |
+|-----------|---------|------------------|-------|
+| React | 18.3 | A+ | Meta 支持，签名发布，SBOM，数百万生产应用 |
+| Next.js | 14.2 | A | Vercel 维护，14.x 是经验证的生产版本 |
+| TypeScript | 5.6 | A+ | 3+ 年零 Critical CVE |
+| Vite | 5.6 | A | 稳定 5.x 线，广泛生产使用 |
+| Node.js | 22 LTS | A+ | 长期支持至 2027，定期安全补丁 |
+| pnpm | 9.12 | A | 内容寻址存储，严格解析 |
+
+---
+
+### 🥇 后端 API：Go 1.22 + Chi 5.2 + PostgreSQL 16.4
+
+> **评分: 96/100 (A+)** · 分类：[后端 API](stacks/backend.md) | [数据库](stacks/database.md)
+
+安全后端开发的黄金标准。Go 的静态编译消除了运行时依赖攻击，Chi 是零依赖的极简路由器，PostgreSQL 16.4 拥有多年生产加固经验。
+
+**组件与版本：**
+
+| 组件 | 版本 | 评分 | 备注 |
+|-----------|---------|------------------|-------|
+| Go | 1.22 | A+ | Google 支持，默认校验和数据库，经验证稳定 |
+| Chi | 5.2 | A+ | 零外部依赖，最小攻击面 |
+| PostgreSQL | 16.4 | A+ | 30+ 年安全加固，16.x 是经验证的生产版本 |
+| sqlc | 1.28 | A | 编译期 SQL 代码生成，消除注入 |
+
+---
+
+### 🥇 系统后端：Rust 1.80 + Axum 0.7
+
+> **评分: 95/100 (A+)** · 分类：[后端 API](stacks/backend.md)
+
+默认内存安全。Rust 在编译期消除了整类漏洞（缓冲区溢出、释放后使用、数据竞争）。Axum 0.7 基于 Tokio 和 Hyper — 处理数百万生产请求的久经考验的基础。
+
+**组件与版本：**
+
+| 组件 | 版本 | 评分 | 备注 |
+|-----------|---------|------------------|-------|
+| Rust | 1.80 | A+ | 无 GC 内存安全，消除约 70% CVE 类别 |
+| Axum | 0.7 | A | Tokio 支持，Tower 中间件生态 |
+| Actix-web | 4.8 | A | 替代框架，同等安全水平 |
+| Cargo | （内置） | A | 内置审计，安全公告数据库集成 |
+
+---
+
+### 🥇 DevOps 与基础设施：Terraform 1.7 + Kubernetes 1.30
+
+> **评分: 91/100 (A)** · 分类：[DevOps 与基础设施](stacks/devops.md)
+
+基础设施即代码与容器编排。每个基础设施变更都经过版本控制、审查和审计。Docker 25.0 提供加固的容器运行时，Kubernetes 1.30 增强了 Pod 安全标准。
+
+**组件与版本：**
+
+| 组件 | 版本 | 评分 | 备注 |
+|-----------|---------|------------------|-------|
+| Terraform | 1.7 | A | HashiCorp 签名的 Provider，状态加密 |
+| Kubernetes | 1.30 | A | 增强 Pod 安全，签名发布 |
+| Docker | 25.0 | A | 内容信任，默认镜像签名 |
+| ArgoCD | 2.12 | A | GitOps，声明式可审计部署 |
+
+---
+
+## 📚 技术栈分类
+
+### A 组：按框架生态
+
+按日常使用的技术分类。
+
+---
+
+#### 🖥️ Web 前端
+
+**文件：** [`stacks/frontend.md`](stacks/frontend.md)
+
+框架、打包工具、CSS 方案和客户端安全工具。涵盖 React、Vue、Svelte、Angular 及新兴框架及其推荐配套工具。每个条目包含 CSP 配置、依赖审计结果和 XSS 缓解策略。
+
+> **精选：** React 18.3 + Next.js 14.2、Vue 3.5 + Nuxt 3、SvelteKit 2、Angular 18 LTS
+
+---
+
+#### ⚙️ 后端 API
+
+**文件：** [`stacks/backend.md`](stacks/backend.md)
+
+服务端运行时、Web 框架、ORM、认证库和 API 安全工具。涵盖 Node.js、Go、Rust、Python、Java 和 .NET 生态，详细分析中间件安全、输入验证和认证模式。
+
+> **精选：** Go 1.22 + Chi 5.2 + sqlc、Rust 1.80 + Axum 0.7、Node.js 22 + Fastify 5、Python 3.12 + FastAPI 0.115、Java 21 + Spring Boot 3.4、.NET 8 + ASP.NET Core 8.0
+
+---
+
+#### 🏗️ 全栈组合
+
+**文件：** [`stacks/fullstack.md`](stacks/fullstack.md)
+
+经验证的端到端组合，涵盖前端、后端、数据库和部署。完整的应用蓝图，包含从浏览器到数据库的全依赖图安全评分。
+
+> **精选：** T3 Stack (Next.js + tRPC + Prisma)、Rails 8 全栈、Django 5.2 + htmx + Alpine.js、Laravel 11
+
+---
+
+### B 组：按领域
+
+按应用类型分类。
+
+---
+
+#### 📱 移动端
+
+**文件：** [`stacks/mobile.md`](stacks/mobile.md)
+
+跨平台和原生移动开发框架、状态管理、导航和移动端专用安全工具。包含应用签名、依赖管理和运行时完整性验证分析。
+
+> **精选：** React Native 0.76 + Expo、Flutter 3.24、uni-app、Kotlin Multiplatform
+
+---
+
+#### 🖥️ 桌面端
+
+**文件：** [`stacks/desktop.md`](stacks/desktop.md)
+
+安全优先的桌面应用框架沙箱。涵盖 Tauri 基于 Rust 的进程隔离、Electron 的 CSP 加固、Qt 原生模块和 .NET MAUI 跨平台部署。评估自动更新安全、原生模块审计流水线和 IPC 边界保护。
+
+> **精选：** Tauri 2.x (Rust 沙箱)、Electron 33 + 安全默认配置、Qt 6.8、.NET MAUI 9.0
+
+---
+
+#### 🎮 游戏
+
+**文件：** [`stacks/gaming.md`](stacks/gaming.md)
+
+游戏引擎和多人游戏基础设施，重点关注供应链安全。涵盖 Unity、Godot、Unreal Engine 和 Bevy (Rust)。评估资产流水线安全、多人网络协议、Mod/UGC 沙箱和反作弊集成。
+
+> **精选：** Unity 2022 LTS、Godot 4.2、Unreal Engine 5.4、Bevy 0.14
+
+---
+
+#### 🤖 AI 开发
+
+**文件：** [`stacks/ai-development.md`](stacks/ai-development.md)
+
+AI 编程助手及其独特的供应链风险。涵盖 GitHub Copilot、Cursor、Aider 及相关工具。AI 生成的代码引入新型攻击向量：幻觉包名、训练数据中的不安全模式、云端推理的上下文泄露。
+
+> **精选：** GitHub Copilot Enterprise、Cursor + 本地模型、Aider + 离线 LLM
+
+---
+
+#### 🧠 AI/LLM 应用
+
+**文件：** [`stacks/ai-apps.md`](stacks/ai-apps.md)
+
+LLM 编排框架、向量数据库和 AI Agent 基础设施。涵盖 LangChain、vLLM、LlamaIndex 和 Agent 框架。重点关注提示注入防御、模型供应链验证、RAG 流水线安全和推理端点加固。
+
+> **精选：** LangChain 0.3 + guardrails、vLLM + 模型溯源、向量数据库安全 (Qdrant, Weaviate)
+
+---
+
+### C 组：基础设施与架构
+
+按基础设施和架构分类。
+
+---
+
+#### 🗄️ 数据库
+
+**文件：** [`stacks/database.md`](stacks/database.md)
+
+关系型、文档型、键值和时序数据库及其客户端库、迁移工具和连接池方案。包含认证机制、静态加密和网络安全配置分析。
+
+> **精选：** PostgreSQL 16.4、MySQL 8.0 LTS、MongoDB 7.0、Redis 7.4
+
+---
+
+#### 🔧 DevOps
+
+**文件：** [`stacks/devops.md`](stacks/devops.md)
+
+基础设施即代码、CI/CD、容器编排、密钥管理、可观测性和云服务商工具。评估整个部署流水线的供应链完整性。
+
+> **精选：** Terraform 1.7 + ArgoCD、Kubernetes 1.30 + Docker 25.0、GitHub Actions、Dagger
+
+---
+
+#### ⚡ 实时通信
+
+**文件：** [`stacks/realtime.md`](stacks/realtime.md)
+
+WebSocket、SSE、发布/订阅、消息队列和实时协作工具，关注持久连接的安全考量。评估认证、消息完整性和拒绝服务韧性。
+
+> **精选：** Kafka 3.7、RabbitMQ 3.13、NATS 2.10、Socket.IO 4.x、Redis Streams
+
+---
+
+#### 🔗 分布式
+
+**文件：** [`stacks/distributed.md`](stacks/distributed.md)
+
+服务网格、API 网关、分布式追踪和微服务通信模式。涵盖 Istio、Linkerd、Kong 和 Saga 编排。评估零信任网络（全链路 mTLS）、熔断器和服务间认证。
+
+> **精选：** Istio 1.22 + Envoy、Kong Gateway 3.x、Saga 编排模式
+
+---
+
+#### 🔄 架构演进
+
+**文件：** [`stacks/evolution.md`](stacks/evolution.md)
+
+从单体到分布式架构的迁移路径，每个阶段保持安全性。涵盖模块化单体、服务提取模式、绞杀者无花果和事件驱动分解。评估每个转换点的安全回退风险。
+
+> **精选：** 单体 → 模块化单体、绞杀者无花果提取、事件驱动分解
+
+---
+
+## 🕘 供应链攻击时间线
+
+按时间顺序回顾重大供应链攻击事件，这些事件正是本项目存在的原因。了解过去，才能守护未来。
+
+```
+2017 ───────────────────────────────────────────────────────────────────────── 2025
+│                                                                               │
+│  2017-11  ┌─ event-stream / flatmap-stream                                   │
+│           │  通过受信 npm 依赖窃取加密货币钱包                                  │
+│           │  影响: 数百万用户 | 攻击向量: npm 依赖劫持                           │
+│           └──────────────────────────────────────────────────────             │
+│                                                                               │
+│  2020-03  ┌─ eslint-scope                                                    │
+│           │  被盗 npm 凭据导致环境变量泄露                                      │
+│           │  影响: CI/CD 流水线 | 攻击向量: 凭据盗窃                            │
+│           └──────────────────────────────────────────────────────             │
+│                                                                               │
+│  2020-12  ┌─ SolarWinds Orion (SUNBURST)                                     │
+│           │  国家级攻击，18,000+ 组织受影响                                     │
+│           │  影响: 美国政府机构、财富 500 强 | 攻击向量: 构建系统                 │
+│           └──────────────────────────────────────────────────────             │
+│                                                                               │
+│  2021-01  ┌─ ua-parser-js (每周 7000 万+ 下载)                               │
+│           │  劫持版本注入挖矿程序和密码窃取器                                   │
+│           │  影响: 数百万安装 | 攻击向量: 维护者账户被盗                         │
+│           └──────────────────────────────────────────────────────             │
+│                                                                               │
+│  2021-04  ┌─ Codecov Bash Uploader                                           │
+│           │  被篡改的 CI 工具泄露环境变量（密钥）                               │
+│           │  影响: 29,000+ 项目 | 攻击向量: CI 工具篡改                         │
+│           └──────────────────────────────────────────────────────             │
+│                                                                               │
+│  2022-01  ┌─ colors.js / faker.js (抗议软件)                                  │
+│           │  故意死循环导致数千 CI 流水线中断                                   │
+│           │  影响: 全行业 | 攻击向量: 维护者蓄意破坏                             │
+│           └──────────────────────────────────────────────────────             │
+│                                                                               │
+│  2022-03  ┌─ node-ipc (抗议软件)                                              │
+│           │  按 IP 地理位置定向擦除数据                                         │
+│           │  影响: vue-cli 用户 | 攻击向量: 意识形态破坏                         │
+│           └──────────────────────────────────────────────────────             │
+│                                                                               │
+│  2022-12  ┌─ PyTorch torchtriton (依赖混淆)                                   │
+│           │  PyPI 上同名恶意包冒充 nightly 依赖                                │
+│           │  影响: ML 研究者 | 攻击向量: 依赖混淆                               │
+│           └──────────────────────────────────────────────────────             │
+│                                                                               │
+│  2023-03  ┌─ 3CX 桌面应用                                                     │
+│           │  首个公开记录的级联供应链攻击                                       │
+│           │  影响: 600,000+ 企业 | 攻击向量: 级联入侵                           │
+│           └──────────────────────────────────────────────────────             │
+│                                                                               │
+│  2024-03  ┌─ XZ Utils (CVE-2024-3094)                                        │
+│           │  多年社会工程 → sshd 后门                                          │
+│           │  影响: 几乎所有 Linux 发行版 | 攻击向量: 维护者渗透                  │
+│           └──────────────────────────────────────────────────────             │
+│                                                                               │
+│  2025-01  ┌─ tj-actions/changed-files (GitHub Actions)                       │
+│           │  被入侵的 CI Action 泄露数千仓库的密钥                              │
+│           │  影响: 23,000+ 仓库 | 攻击向量: GitHub Actions 入侵                 │
+│           └──────────────────────────────────────────────────────             │
+│                                                                               │
+│  2025-??  下一个攻击正在策划中。                                                │
+│           这个项目正是为了应对下一个攻击而存在。                                  │
+│           保持警惕。使用经验证的技术栈。🔒                                      │
+│                                                                               │
+└───────────────────────────────────────────────────────────────────────────────┘
 ```
 
-**依赖管理建议：**
-
-```bash
-# 使用 npm audit 检查已知漏洞
-npm audit --audit-level=high
-
-# 启用严格锁文件模式
-npm ci --strict-peer-deps
-
-# 使用 Socket.dev 检测供应链风险
-npx socket npm install
-```
-
-**版本兼容性矩阵：**
-
-- React 18.3 + Next.js 14.2 + TypeScript 5.8 ✅ 经验证
-- React 18.3 + Vite 6.3 + TypeScript 5.8 ✅ 经验证
-- React 18.3 + Next.js 15.x + TypeScript 5.8 ⚠️ Next.js 15.x 尚未充分验证，建议使用 14.2
-
 ---
 
-### 后端开发
+## 🔒 安全公告
 
-#### Node.js 方案
+### 报告技术栈漏洞
 
-| 组件 | 推荐版本 | 安全评分 | 备注 |
-|------|---------|---------|------|
-| Node.js | **22 LTS** | A | 长期支持版本，持续安全补丁 |
-| Express | **5.x** | A | 修复了多个原型污染漏洞 |
-| Prisma | **6.x** | A+ | 参数化查询防止 SQL 注入 |
+如果你在推荐的技术栈中发现安全问题：
 
-```javascript
-// 安全中间件配置示例
-import helmet from 'helmet';
-import rateLimit from 'express-rate-limit';
+1. **不要**为敏感漏洞创建公开 GitHub Issue
+2. 📧 邮箱：**security@awesome-secure-stacks.dev**
+3. ⏱️ 我们承诺 **48 小时**内响应，**7 天**内发布公告
 
-app.use(helmet());
-app.use(rateLimit({
-  windowMs: 15 * 60 * 1000,
-  max: 100
-}));
+### 公告格式
+
+每份公告遵循 [OpenSSF OpenVEX](https://openvex.dev/) 格式：
+
+```
+公告: ASSA-2025-001
+严重性: 高 (CVSS 8.1)
+受影响技术栈: backend-go-chi, fullstack-t3
+组件: golang.org/x/crypto v0.21.0
+修复版本: v0.22.0
+状态: 已解决
+发布日期: 2025-05-15
 ```
 
-#### Python 方案
+### 订阅公告
 
-| 组件 | 推荐版本 | 安全评分 | 备注 |
-|------|---------|---------|------|
-| Python | **3.12** | A | 稳定版本，内存安全持续改进 |
-| FastAPI | **0.115+** | A | 自动输入验证与 OpenAPI 文档 |
-| Django | **5.2** | A+ | 内置 CSRF、XSS、SQL 注入防护 |
-
-```python
-# Python 依赖安全检查
-# requirements.txt 示例
-fastapi==0.115.0
-uvicorn==0.34.0
-pydantic==2.10.0  # 严格数据验证
-
-# 使用 pip-audit 检查漏洞
-# $ pip-audit --strict --desc
-```
-
-#### Go 方案
-
-| 组件 | 推荐版本 | 安全评分 | 备注 |
-|------|---------|---------|------|
-| Go | **1.22** | A+ | 稳定版本，内存安全语言特性 |
-| Gin | **1.10+** | A | 高性能 HTTP 框架 |
-| Fiber | **2.52+** | A | 基于 fasthttp，零内存分配路由 |
-
-#### Rust 方案
-
-| 组件 | 推荐版本 | 安全评分 | 备注 |
-|------|---------|---------|------|
-| Rust | **1.80** | A+ | 稳定版本，编译期内存安全保证 |
-| Actix-web | **4.x** | A+ | 极致性能，内存安全 |
-| Axum | **0.8+** | A+ | Tokio 团队维护 |
-
----
-
-### 数据库与存储
-
-| 组件 | 推荐版本 | 安全评分 | 备注 |
-|------|---------|---------|------|
-| PostgreSQL | **16.4** | A+ | 长期支持版本，业界最安全的开源关系型数据库 |
-| Redis | **7.4+** | A | 新增 ACL 细粒度权限控制 |
-| MongoDB | **7.0** | A | 稳定版本，字段级加密 (FLE) |
-
-**PostgreSQL 安全加固清单：**
-
-```sql
--- 1. 禁用默认超级用户远程登录
-ALTER ROLE postgres WITH NOLOGIN;
-
--- 2. 启用行级安全策略
-ALTER TABLE sensitive_data ENABLE ROW LEVEL SECURITY;
-
--- 3. 配置 SSL 强制连接
-ALTER SYSTEM SET ssl = on;
-ALTER SYSTEM SET ssl_min_protocol_version = 'TLSv1.3';
-
--- 4. 审计日志
-ALTER SYSTEM SET log_statement = 'mod';
-```
-
----
-
-### 基础设施与容器
-
-| 组件 | 推荐版本 | 安全评分 | 备注 |
-|------|---------|---------|------|
-| Docker | **27.5** | A | 稳定版本，镜像签名验证完善 |
-| Kubernetes | **1.30** | A | LTS 版本，Pod 安全准入控制器成熟 |
-| Terraform | **1.7** | A+ | 稳定版本，基础设施即代码，审计友好 |
-
-**Docker 安全最佳实践：**
-
-```dockerfile
-# ✅ 使用最小基础镜像
-FROM cgr.dev/chainguard/python:latest
-
-# ✅ 创建非 root 用户
-RUN adduser --disabled-password --gecos '' appuser
-USER appuser
-
-# ✅ 固定依赖版本
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-
-# ✅ 只读文件系统
-VOLUME ["/tmp"]
-```
-
-**Kubernetes 安全策略：**
-
-```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: secure-pod
-spec:
-  securityContext:
-    runAsNonRoot: true
-    seccompProfile:
-      type: RuntimeDefault
-  containers:
-    - name: app
-      image: myapp@sha256:abc123...  # 使用摘要而非标签
-      securityContext:
-        allowPrivilegeEscalation: false
-        readOnlyRootFilesystem: true
-        capabilities:
-          drop: ["ALL"]
-```
-
----
-
-### AI/机器学习
-
-| 组件 | 推荐版本 | 安全评分 | 备注 |
-|------|---------|---------|------|
-| PyTorch | **2.3** | A | 稳定版本，安全模型加载，safetensors 支持 |
-| TensorFlow | **2.18+** | A | SavedModel 格式更安全 |
-| Hugging Face Transformers | **4.48+** | A | 安全的模型序列化 |
-
-**⚠️ ML 供应链特别警告：**
-
-机器学习生态系统是供应链投毒的重灾区。恶意模型文件（.pkl、.pt）可执行任意代码。
-
-```python
-# ❌ 危险：不要这样做
-import pickle
-model = pickle.load(open('model.pkl', 'rb'))
-
-# ✅ 安全：使用 safetensors 格式
-from safetensors.torch import load_file
-tensors = load_file("model.safetensors")
-
-# ✅ 安全：使用 torch.load 的 weights_only 参数
-model = torch.load('model.pt', weights_only=True)
-```
-
----
-
-### 移动开发
-
-| 组件 | 推荐版本 | 安全评分 | 备注 |
-|------|---------|---------|------|
-| Flutter | **3.22** | A | 稳定版本，Dart 语言内存安全 |
-| React Native | **0.74** | A | 稳定版本，新架构渐趋成熟 |
-| Kotlin Multiplatform | **2.1+** | A+ | 空安全特性 |
-
----
-
-### 消息与流处理
-
-| 组件 | 推荐版本 | 安全评分 | 备注 |
-|------|---------|---------|------|
-| Apache Kafka | **3.7** | A | 稳定版本，KRaft 模式成熟可用 |
-| RabbitMQ | **3.13** | A | 稳定版本，OAuth 2.0 支持 |
-| NATS | **2.11+** | A+ | 内置 TLS，零依赖 |
+- 🔔 **GitHub Watch** → 选择本仓库的 "Releases only"
+- 📡 **Atom 订阅：** [`/releases.atom`](https://github.com/lxl141421/awesome-secure-stacks/releases.atom)
+- 📢 关注 [Releases](https://github.com/lxl141421/awesome-secure-stacks/releases) 页面获取安全公告
 
 ---
 
@@ -512,45 +731,6 @@ DOCKER_BUILDKIT=1 docker build --no-cache .
 
 ---
 
-## 历史重大事件回顾
-
-### 🔴 XZ Utils 后门事件 (2024)
-
-**事件概述：** 攻击者 "Jia Tan" 花费近两年时间逐步取得 XZ Utils 项目的维护者信任，最终在 5.6.0 和 5.6.1 版本中植入后门，影响几乎所有 Linux 发行版的 SSH 服务。
-
-**教训：**
-- 单人维护的关键基础设施极其危险
-- 社会工程学攻击极难防范
-- 需要建立维护者身份验证机制
-
-### 🔴 SolarWinds 供应链攻击 (2020)
-
-**事件概述：** 攻击者入侵了 SolarWinds 的构建系统，在 Orion 平台的更新包中植入恶意代码（SUNBURST），影响了约 18,000 个组织，包括多个美国政府机构。
-
-**教训：**
-- 构建环境必须与开发环境隔离
-- 需要完整的构建审计日志
-- 软件物料清单 (SBOM) 至关重要
-
-### 🟡 event-stream 事件 (2018)
-
-**事件概述：** 攻击者通过社工手段接管了广泛使用的 `event-stream` npm 包，注入窃取加密货币钱包的恶意代码。
-
-**教训：**
-- 不能仅凭下载量判断包的可信度
-- 维护者变更需要严格审查
-
-### 🟡 Log4Shell (2021)
-
-**事件概述：** Apache Log4j 2 的 JNDI 注入漏洞 (CVE-2021-44228)，CVSS 评分 10.0，影响全球数十万应用程序。
-
-**教训：**
-- 日志库这类基础设施也会成为攻击目标
-- 传递性依赖风险不可忽视
-- 需要快速响应机制
-
----
-
 ## 安全工具链推荐
 
 ### 软件组成分析 (SCA)
@@ -613,55 +793,98 @@ DOCKER_BUILDKIT=1 docker build --no-cache .
 
 ---
 
-## 社区贡献指南
+## 🤝 社区贡献指南
 
-我们欢迎社区的每一份贡献！参与方式：
+我们欢迎贡献！但安全策展需要严谨。质量优先于数量。
 
 ### 如何贡献
 
-1. **Fork** 本仓库
-2. 创建特性分支：`git checkout -b feat/add-new-stack`
-3. 按照模板提交新的技术栈推荐
-4. 提交 Pull Request
+| 类型 | 方式 | 难度 |
+|------|-----|------|
+| 🐛 报告评分错误 | [创建 Issue](https://github.com/lxl141421/awesome-secure-stacks/issues/new) | 简单 |
+| 📦 提议新技术栈 | [创建 Issue](https://github.com/lxl141421/awesome-secure-stacks/issues/new) 并附上详情 | 中等 |
+| 📊 更新评分 | [提交 PR](https://github.com/lxl141421/awesome-secure-stacks/compare) 并附上证据 | 中等 |
+| 🔍 审计技术栈 | [按照审计指南](CONTRIBUTING.md) | 困难 |
+| 📝 改进文档 | [提交 PR](https://github.com/lxl141421/awesome-secure-stacks/compare) | 简单 |
 
-### 推荐模板
+### 贡献指南
 
-```markdown
-## [技术栈名称]
+1. 阅读 [CONTRIBUTING.md](CONTRIBUTING.md) 获取完整指南和模板
+2. 所有新技术栈必须包含**复现模板**（锁文件或 Docker Compose）
+3. 评分变更需要**证据**（CVE 链接、审计报告、工具输出）
+4. 在所有交互中保持尊重和建设性
 
-| 组件 | 推荐版本 | 安全评分 | 备注 |
-|------|---------|---------|------|
-| ... | ... | ... | ... |
+### 添加新技术栈
 
-### 安全审计信息
-- 审计日期：YYYY-MM-DD
-- 审计工具：...
-- 发现问题：...
+```bash
+# 1. Fork 并克隆
+git clone https://github.com/YOUR_USERNAME/awesome-secure-stacks.git
+cd awesome-secure-stacks
 
-### 版本兼容性验证
-- [ ] 全新安装测试通过
-- [ ] 升级路径测试通过
-- [ ] CI/CD 集成测试通过
-- [ ] 生产环境验证通过
+# 2. 创建分支
+git checkout -b add/my-awesome-stack
+
+# 3. 在对应分类文件中添加技术栈条目
+#    按照 CONTRIBUTING.md 中的模板格式
+#    包含: 版本矩阵、安全评分、CVE 分析、替代方案
+
+# 4. 提交 PR 并附上证据
+git push origin add/my-awesome-stack
 ```
-
-### 贡献质量要求
-
-- ✅ 必须提供至少两个版本组合的兼容性验证
-- ✅ 必须包含安全评分及评分依据
-- ✅ 必须使用推荐的锁文件配置
-- ✅ 必须注明审计日期和审计范围
 
 ---
 
-## 致谢
+## 🗺️ 路线图
 
-感谢以下组织和个人对本项目的支持：
+完整项目路线图请参阅 [ROADMAP.md](ROADMAP.md)。关键里程碑包括自动化评分流水线、扩展技术栈覆盖范围，以及与 Sigstore 和 OpenSSF Scorecard 数据的集成。
 
-- [OpenSSF](https://openssf.org) — 开源安全基金会
-- [Sigstore](https://sigstore.dev) — 软件签名基础设施
-- [SLSA Framework](https://slsa.dev) — 供应链安全等级标准
-- 所有贡献者和安全研究者 ❤️
+**即将推出：**
+
+- 🤖 CI/CD 集成的自动化月度评分
+- 📊 交互式技术栈对比面板
+- 🔗 Sigstore 和 SLSA 溯源验证集成
+- 📦 扩展技术栈覆盖：嵌入式系统、游戏引擎、数据工程
+- 🌐 多语言文档（中文、日本語、한국어）
+
+---
+
+## 📜 许可证
+
+本项目采用 **MIT 许可证** — 详见 [LICENSE](LICENSE) 文件。
+
+> **为什么选择 MIT？** 安全知识应该自由获取。我们选择 MIT 以最大化采用和贡献。
+
+---
+
+## 🙏 致谢
+
+本项目离不开以下支持：
+
+### 这个项目适合谁？
+
+- 🧑‍💻 **独立开发者** — 没有安全团队，需要经过审核的技术栈
+- 🤖 **AI 辅助开发者** — 使用 Copilot/Cursor/Aider，需要验证 AI 生成的依赖选择
+- 🌐 **Web 团队** — 构建 React/Vue/Angular 应用，需要生产级安全
+- 📱 **移动端团队** — 构建 iOS/Android/跨平台应用，需要加固的原生桥接
+- ⚙️ **后端团队** — 运行 Go/Rust/Python/Java 服务，在 API 网关之后
+- 🎮 **游戏工作室** — 保护多人游戏基础设施和 Mod 生态
+- 🏢 **企业技术升级** — 在框架代际间安全迁移
+- 🔄 **单体→微服务团队** — 需要每个迁移阶段的安全保障
+
+### 特别致谢
+
+- 🏛️ **[OpenSSF](https://openssf.org/)** — Scorecard、SLSA 和 Sigstore 基础
+- 🔍 **[Sonatype](https://www.sonatype.com/)** — 软件供应链状况报告
+- 🛡️ **[Snyk](https://snyk.io/)** — 漏洞数据库和研究
+- 📦 **[npm](https://www.npmjs.com/)、[PyPI](https://pypi.org/)、[crates.io](https://crates.io/)** — 包管理生态
+- 🐙 **[GitHub Security](https://github.com/security)** — 安全公告数据库和 Dependabot
+- 🌐 **[CISA](https://www.cisa.gov/)** — SBOM 指南和供应链安全倡导
+- 💜 **所有贡献者** — 审计、测试和维护技术栈条目
+- 🦀 **Rust 社区** — 证明内存安全可以成为默认
+- 🐧 **Linux 内核社区** — 从 XZ 事件中汲取的深刻教训
+- **XZ Utils 事件响应者** — 他们的工作凸显了供应链安全的紧迫性
+- **`event-stream` 事件报告者** — 首次揭示了 npm 生态的脆弱性
+- **每一位维护者** — 签名发布、发布 SBOM、负责任地响应 CVE
 
 ---
 
