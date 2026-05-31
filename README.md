@@ -33,7 +33,9 @@
 
 > **Stop guessing which dependencies are safe. Every stack — vetted, scored, and proven in production.**
 > We don't chase the latest version. We recommend the **safest, most stable, fewest-bug** version of every component.
-> 不追最新，只推最稳。每个技术栈——经过审核、评分，生产环境验证。
+>
+> 🤖 **Using AI to build software?** AI generates code — but it can't tell if a dependency has a backdoor.
+> This project is your AI's **supply chain safety layer**. 不追最新，只推最稳。
 
 ---
 
