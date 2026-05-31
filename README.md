@@ -35,7 +35,16 @@
 > We don't chase the latest version. We recommend the **safest, most stable, fewest-bug** version of every component.
 >
 > 🤖 **Using AI to build software?** AI generates code — but it can't tell if a dependency has a backdoor.
-> This project is your AI's **supply chain safety layer**. 不追最新，只推最稳。
+> This project is your AI's **supply chain safety layer**.
+>
+> 💀 **Real threats this project prevents:**
+> - Stealing **wallet keys**, private keys, seed phrases from `~/.ssh`, MetaMask, etc.
+> - Exfiltrating **`.env` files** with database passwords, API tokens, cloud credentials
+> - Harvesting **SSH keys**, GPG keys, CI/CD secrets from your machine
+> - **Crypto miners** silently installed as postinstall scripts
+> - **Ransomware** payloads hidden in transitive dependencies
+>
+> 不追最新，只推最稳。不给攻击者任何机会。
 
 ---
 
