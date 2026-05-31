@@ -11,20 +11,20 @@
 
 | Component | Pinned Version | License | CVEs |
 |-----------|---------------|---------|------|
-| React Native | 0.79.2 | MIT | 0 |
-| Expo SDK | 53.0.0 | MIT | 0 |
-| TypeScript | 5.4.5 | Apache-2.0 | N/A |
-| Hermes Engine | 0.79.x | MIT | 0 |
-| Metro Bundler | 0.82.3 | MIT | 0 |
+|| React Native | 0.74.4 | MIT | 0 |
+|| Expo SDK | 50.0.0 | MIT | 0 |
+|| TypeScript | 5.4.5 | Apache-2.0 | N/A |
+|| Hermes Engine | 0.74.x | MIT | 0 |
+|| Metro Bundler | 0.80.5 | MIT | 0 |
 
 **Dependency Lockfile:**
 ```json
 {
-  "react-native": "0.79.2",
-  "expo": "~53.0.0",
-  "expo-secure-store": "~13.0.2",
-  "expo-local-authentication": "~14.0.1",
-  "expo-crypto": "~13.0.2",
+  "react-native": "0.74.4",
+  "expo": "~50.0.0",
+  "expo-secure-store": "~12.8.1",
+  "expo-local-authentication": "~13.8.0",
+  "expo-crypto": "~12.8.1",
   "typescript": "5.4.5"
 }
 ```
@@ -54,8 +54,8 @@ eas build --platform ios --profile production --local
 
 | Component | Pinned Version | License | CVEs |
 |-----------|---------------|---------|------|
-| Flutter | 3.32.0 | BSD-3 | 0 |
-| Dart | 3.8.1 | BSD-3 | 0 |
+|| Flutter | 3.22.3 | BSD-3 | 0 |
+|| Dart | 3.4.4 | BSD-3 | 0 |
 | Riverpod | 2.5.1 | MIT | 0 |
 | Dio | 5.5.0 | MIT | 0 |
 
@@ -63,8 +63,8 @@ eas build --platform ios --profile production --local
 ```yaml
 # pubspec.yaml
 environment:
-  sdk: ">=3.8.1 <4.0.0"
-  flutter: ">=3.32.0 <4.0.0"
+  sdk: ">=3.4.4 <4.0.0"
+  flutter: ">=3.22.3 <4.0.0"
 
 dependencies:
   flutter:

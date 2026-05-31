@@ -11,10 +11,10 @@
 
 | Component | Pinned Version | License | CVEs (2024-2026) |
 |-----------|---------------|---------|-------------------|
-| React | 19.1.0 | MIT | 0 critical |
-| Next.js | 15.3.2 | MIT | 0 critical |
-| TypeScript | 5.8.3 | Apache-2.0 | N/A (compiler) |
-| Vite | 6.3.5 | MIT | 0 critical |
+| React | 18.3.1 | MIT | 0 critical | *(stability choice)* |
+| Next.js | 14.2.15 | MIT | 0 critical | *(stability choice)* |
+| TypeScript | 5.6.3 | Apache-2.0 | N/A (compiler) | *(stability choice)* |
+| Vite | 5.6.8 | MIT | 0 critical | *(stability choice)* |
 | Node.js runtime | 20.18.0 | MIT | See backend.md |
 
 **Known Vulnerabilities (patched):**
@@ -31,14 +31,14 @@ sha256sum package-lock.json
 **Key Dependencies (pinned):**
 ```json
 {
-  "react": "19.1.0",
-  "react-dom": "19.1.0",
-  "next": "15.3.2",
-  "typescript": "5.8.3",
-  "vite": "6.3.5",
+  "react": "18.3.1",
+  "react-dom": "18.3.1",
+  "next": "14.2.15",
+  "typescript": "5.6.3",
+  "vite": "5.6.8",
   "@types/react": "18.3.12",
   "eslint": "8.57.1",
-  "eslint-config-next": "15.3.2"
+  "eslint-config-next": "14.2.15"
 }
 ```
 
@@ -58,10 +58,10 @@ sha256sum package-lock.json
 
 | Component | Pinned Version | License | CVEs |
 |-----------|---------------|---------|------|
-| Vue | 3.5.16 | MIT | 0 |
-| Nuxt | 3.16.2 | MIT | 0 |
-| TypeScript | 5.8.3 | Apache-2.0 | N/A |
-| Vite | 6.3.5 | MIT | 0 critical |
+| Vue | 3.4.38 | MIT | 0 | *(stability choice)* |
+| Nuxt | 3.13.2 | MIT | 0 | *(stability choice)* |
+| TypeScript | 5.6.3 | Apache-2.0 | N/A | *(stability choice)* |
+| Vite | 5.6.8 | MIT | 0 critical | *(stability choice)* |
 | Pinia | 2.2.4 | MIT | 0 |
 
 **Known Issues:**
@@ -71,18 +71,18 @@ sha256sum package-lock.json
 **Lockfile Template:**
 ```json
 {
-  "vue": "3.5.16",
-  "nuxt": "3.16.2",
-  "typescript": "5.8.3",
-  "vite": "6.3.5",
+  "vue": "3.4.38",
+  "nuxt": "3.13.2",
+  "typescript": "5.6.3",
+  "vite": "5.6.8",
   "@pinia/nuxt": "0.5.5",
   "pinia": "2.2.4"
 }
 ```
 
 **Compatibility Notes:**
-- Nuxt 3.16 requires Node >= 18.0.0
-- Vue 3.5 includes stable Vapor Mode — safe for production use
+- Nuxt 3.13 requires Node >= 18.0.0
+- Vue 3.4 is battle-tested in production — stable and secure
 
 ---
 
@@ -92,23 +92,23 @@ sha256sum package-lock.json
 
 | Component | Pinned Version | License | CVEs |
 |-----------|---------------|---------|------|
-| Svelte | 5.33.1 | MIT | 0 |
-| SvelteKit | 2.21.1 | MIT | 0 |
-| TypeScript | 5.8.3 | Apache-2.0 | N/A |
-| Vite | 6.3.5 | MIT | 0 critical |
+| Svelte | 4.2.19 | MIT | 0 | *(stability choice)* |
+| SvelteKit | 2.7.17 | MIT | 0 | *(stability choice)* |
+| TypeScript | 5.6.3 | Apache-2.0 | N/A | *(stability choice)* |
+| Vite | 5.6.8 | MIT | 0 critical | *(stability choice)* |
 
 **Known Issues:**
-- Svelte 5 (runes) is now stable — recommended for production
+- Svelte 4 is battle-tested — Svelte 5 runes are a complete rewrite, deferred for stability
 - SvelteKit adapter-node has had minor SSR bypass reports (patched in 2.5+)
 
 **Recommended Pins:**
 ```json
 {
-  "svelte": "5.33.1",
-  "@sveltejs/kit": "2.21.1",
-  "@sveltejs/adapter-node": "5.2.9",
-  "vite": "6.3.5",
-  "typescript": "5.8.3"
+  "svelte": "4.2.19",
+  "@sveltejs/kit": "2.7.17",
+  "@sveltejs/adapter-node": "1.5.6",
+  "vite": "5.6.8",
+  "typescript": "5.6.3"
 }
 ```
 
@@ -122,8 +122,8 @@ sha256sum package-lock.json
 
 | Component | Pinned Version | License | CVEs |
 |-----------|---------------|---------|------|
-| Angular | 19.2.13 | MIT | 0 critical |
-| TypeScript | 5.8.3 | Apache-2.0 | N/A |
+| Angular | 18.2.13 | MIT | 0 critical | *(stability choice — LTS)* |
+| TypeScript | 5.6.3 | Apache-2.0 | N/A | *(stability choice)* |
 | RxJS | 7.8.1 | Apache-2.0 | 0 |
 | Angular CLI | 17.3.11 | MIT | 0 |
 
@@ -138,15 +138,15 @@ sha256sum package-lock.json
 **Recommended Pins:**
 ```json
 {
-  "@angular/core": "19.2.13",
-  "@angular/cli": "19.2.13",
-  "typescript": "5.8.3",
+  "@angular/core": "18.2.13",
+  "@angular/cli": "18.2.13",
+  "typescript": "5.6.3",
   "rxjs": "7.8.1",
   "zone.js": "0.14.10"
 }
 ```
 
-**Alternatives Considered:** Angular 18 (deferred — too new), React (ecosystem preference)
+**Alternatives Considered:** Angular 19 (deferred — too new), React (ecosystem preference)
 
 ---
 

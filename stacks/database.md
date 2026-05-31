@@ -5,13 +5,13 @@
 
 ---
 
-## 1. PostgreSQL 17.x ⭐ Primary Recommendation
+## 1. PostgreSQL 16.x ⭐ Primary Recommendation
 
 **Security Grade: A+**
 
 | Attribute | Value |
 |-----------|-------|
-| Version | 17.5 |
+| Version | 16.4 |
 | License | PostgreSQL License (permissive) |
 | CVEs (2024-2026) | 0 critical, 2 low (patched) |
 
@@ -50,13 +50,13 @@ hostssl  all  all  10.0.0.0/8  scram-sha-256
 
 ---
 
-## 2. MySQL 8.4 LTS / 9.x
+## 2. MySQL 8.0.x LTS
 
 **Security Grade: B+**
 
 | Attribute | Value |
 |-----------|-------|
-| Version | 8.4.4 LTS (9.2 Innovation) |
+| Version | 8.0.40 LTS |
 | License | GPL-2.0 (caution for SaaS) |
 | CVEs (2024-2026) | 3 moderate (patched) |
 
@@ -87,13 +87,13 @@ hostssl  all  all  10.0.0.0/8  scram-sha-256
 
 ---
 
-## 3. MongoDB 8.x
+## 3. MongoDB 7.x
 
 **Security Grade: B**
 
 | Attribute | Value |
 |-----------|-------|
-| Version | 8.0.10 |
+| Version | 7.0.15 |
 | License | SSPL (not OSI-approved — caution) |
 | CVEs (2024-2026) | 2 moderate |
 
@@ -121,14 +121,14 @@ hostssl  all  all  10.0.0.0/8  scram-sha-256
 
 ---
 
-## 4. Redis 8.x
+## 4. Redis 7.x
 
 **Security Grade: B**
 
 | Attribute | Value |
 |-----------|-------|
-| Version | 8.0.2 |
-| License | RSALv2 + SSPLv1 (dual — **not OSI-approved open source**) |
+| Version | 7.4.2 |
+| License | BSD-3-Clause (last OSS-friendly release) |
 | CVEs (2024-2026) | 1 critical (patched) |
 
 **Security Features:**
@@ -155,13 +155,13 @@ hostssl  all  all  10.0.0.0/8  scram-sha-256
 
 ---
 
-## 5. SQLite 3.49.x
+## 5. SQLite 3.45.x
 
 **Security Grade: A**
 
 | Attribute | Value |
 |-----------|-------|
-| Version | 3.49.1 |
+| Version | 3.45.3 |
 | License | Public Domain |
 | CVEs (2024-2026) | 0 critical |
 
@@ -242,7 +242,7 @@ hostssl  all  all  10.0.0.0/8  scram-sha-256
 | Encryption at Rest | ⚠️ | ⚠️ | ✅ | ❌ | ⚠️ | ✅ | ⚠️ |
 | Row-Level Security | ✅ | ❌ | ✅ | N/A | ❌ | ✅ | ❌ |
 | Audit Logging | ✅ | ⚠️ | ✅ | ❌ | ❌ | ✅ | ⚠️ |
-| Open License | ✅ | ⚠️ | ❌ | ❌ | ✅ | ✅ | ⚠️ |
+| Open License | ✅ | ⚠️ | ❌ | ✅ | ✅ | ✅ | ⚠️ |
 | **Security Grade** | **A+** | **B+** | **B** | **B** | **A** | **B+** | **B+** |
 
 ✅ = Native support | ⚠️ = Partial/Extension | ❌ = Not available

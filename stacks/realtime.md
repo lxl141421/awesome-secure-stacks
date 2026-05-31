@@ -83,14 +83,14 @@ const wss = new WebSocketServer({
 
 ## 2. Message Queues
 
-### RabbitMQ 4.1.x ⭐
+### RabbitMQ 3.13.x ⭐
 
 **Security Grade: A**
 
 | Component | Pinned Version | License | CVEs |
 |-----------|---------------|---------|------|
-| RabbitMQ | 4.1.1 | MPL-2.0 | 0 critical |
-| Erlang/OTP | 27.2 | Apache-2.0 | 0 |
+| RabbitMQ | 3.13.7 | MPL-2.0 | 0 critical |
+| Erlang/OTP | 26.2.5 | Apache-2.0 | 0 |
 
 **Security Configuration:**
 ```erlang
@@ -122,14 +122,14 @@ loopback_users.guest = false
 | Go | amqp091-go | 2.1.0 |
 | Java | amqp-client | 5.22.0 |
 
-### Apache Kafka 4.0.x
+### Apache Kafka 3.7.x
 
 **Security Grade: A**
 
 | Component | Pinned Version | License | CVEs |
 |-----------|---------------|---------|------|
-| Kafka | 4.0.0 | Apache-2.0 | 0 critical |
-| KRaft (no ZooKeeper) | 4.0.0 | Apache-2.0 | 0 |
+| Kafka | 3.7.2 | Apache-2.0 | 0 critical |
+| KRaft (no ZooKeeper) | 3.7.2 | Apache-2.0 | 0 |
 
 **Security Configuration:**
 ```properties
@@ -147,10 +147,10 @@ allow.everyone.if.no.acl.found=false
 - ACL-based authorization
 - TLS encryption in transit
 - KRaft mode (no ZooKeeper dependency — reduced attack surface)
-- Tiered storage with encryption at rest
 
 **Known Issues:**
-- KRaft mode only (ZooKeeper fully removed in 4.0)
+- KRaft mode only (ZooKeeper fully removed in 4.0; using KRaft since 3.3+)
+- Prefer KRaft mode for reduced attack surface
 
 ---
 
@@ -184,13 +184,13 @@ const pub = new Redis({
 
 **Recommendation:** Use Redis Streams (XREAD/XADD) for production pub/sub needs.
 
-### NATS 2.11.x ⭐
+### NATS 2.10.x ⭐
 
 **Security Grade: A**
 
 | Component | Pinned Version | License | CVEs |
 |-----------|---------------|---------|------|
-| NATS Server | 2.11.3 | Apache-2.0 | 0 |
+|| NATS Server | 2.10.22 | Apache-2.0 | 0 |
 | JetStream | (built-in) | Apache-2.0 | 0 |
 | nats.go | 1.37.0 | Apache-2.0 | 0 |
 | nats.ws | 1.28.0 | Apache-2.0 | 0 |

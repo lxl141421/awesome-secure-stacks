@@ -12,8 +12,8 @@
 
 | Component | Pinned Version | License | CVEs |
 |-----------|---------------|---------|------|
-|| PyTorch | 2.7.0 | BSD-3 | 0 critical |
-|| Python | 3.13.3 | PSF | 0 critical |
+|| PyTorch | 2.3.1 | BSD-3 | 0 critical |
+|| Python | 3.12.4 | PSF | 0 critical |
 | CUDA | 12.4.1 | NVIDIA EULA | N/A |
 | cuDNN | 8.9.7 | NVIDIA EULA | N/A |
 | NumPy | 1.26.4 | BSD-3 | 0 |
@@ -23,7 +23,7 @@
 **Lockfile (pip):**
 ```
 # requirements-lock.txt (generate with pip-compile or uv)
-torch==2.7.0+cu124
+torch==2.3.1+cu124
 numpy==1.26.4
 pandas==2.2.3
 transformers==4.44.3
@@ -52,14 +52,14 @@ pip install --require-hashes -r requirements-lock.txt
 
 | Component | Pinned Version | License | CVEs |
 |-----------|---------------|---------|------|
-|| vLLM | 0.8.5 | Apache-2.0 | 0 |
+|| vLLM | 0.6.3 | Apache-2.0 | 0 |
 | TGI (Text Generation Inference) | 2.2.0 | Apache-2.0 (HF) | 0 |
 | Triton Inference Server | 24.08 | BSD-3 | 0 |
 | ONNX Runtime | 1.19.2 | MIT | 0 |
 
 **vLLM Deployment:**
 ```bash
-pip install vllm==0.8.5
+pip install vllm==0.6.3
 vllm serve meta-llama/Llama-3-8B-Instruct \
   --dtype auto \
   --api-key sk-secret-here \
@@ -125,8 +125,8 @@ mlflow server \
 
 | Component | Pinned Version | License | CVEs |
 |-----------|---------------|---------|------|
-|| LangChain | 0.3.25 | MIT | 0 |
-|| LlamaIndex | 0.12.36 | MIT | 0 |
+|| LangChain | 0.2.16 | MIT | 0 |
+|| LlamaIndex | 0.10.68 | MIT | 0 |
 | OpenAI SDK | 1.51.0 | Apache-2.0 | 0 |
 | Ollama | 0.3.14 | MIT | 0 |
 | LiteLLM | 1.50.4 | MIT | 0 |
@@ -142,7 +142,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
 
 # Pinned versions
-# langchain==0.3.25, langchain-openai==0.3.12, openai==1.51.0
+# langchain==0.2.16, langchain-openai==0.2.4, openai==1.51.0
 llm = ChatOpenAI(model="gpt-4o", temperature=0)
 # Never enable: llm_math PALChain, shell tools, arbitrary Python execution
 ```

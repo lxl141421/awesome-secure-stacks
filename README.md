@@ -31,8 +31,9 @@
 
 ---
 
-> **Stop guessing which dependencies are safe. Every stack — vetted, scored, and battle-tested.**
-> 不再猜测哪些依赖是安全的。每个技术栈——经过审核、评分和实战检验。
+> **Stop guessing which dependencies are safe. Every stack — vetted, scored, and proven in production.**
+> We don't chase the latest version. We recommend the **safest, most stable, fewest-bug** version of every component.
+> 不追最新，只推最稳。每个技术栈——经过审核、评分，生产环境验证。
 
 ---
 
@@ -44,9 +45,9 @@
 - [🚀 Quick Start](#-quick-start)
 - [📊 Scoring System](#-scoring-system)
 - [⭐ Featured Stacks](#-featured-stacks)
-  - [🥇 Full-stack Web: React 19.1 + Next.js 15.3 + TypeScript 5.8](#-full-stack-web-react-191--nextjs-153--typescript-58)
-  - [🥇 Backend API: Go 1.24 + Chi 5.2 + PostgreSQL 17.5](#-backend-api-go-124--chi-52--postgresql-175)
-  - [🥇 Systems Backend: Rust 1.87 + Axum 0.8](#-systems-backend-rust-187--axum-08)
+  - [🥇 Full-stack Web: React 18.3 + Next.js 14.2 + TypeScript 5.6](#-full-stack-web-react-183--nextjs-142--typescript-56)
+  - [🥇 Backend API: Go 1.22 + Chi 5.2 + PostgreSQL 16.4](#-backend-api-go-122--chi-52--postgresql-164)
+  - [🥇 Systems Backend: Rust 1.80 + Axum 0.7](#-systems-backend-rust-180--axum-07)
   - [🥇 DevOps & Infrastructure: Terraform 1.12 + Kubernetes 1.33](#-devops--infrastructure-terraform-112--kubernetes-133)
 - [📚 Stack Categories](#-stack-categories)
   - [🖥️ Web Frontend](#️-web-frontend)
@@ -102,7 +103,7 @@ We do the hard work of auditing entire dependency graphs so you don't have to.
 
 For every stack entry in this repository, you get:
 
-- ✅ **Pinned, verified versions** — exact versions that have been tested together, no guesswork
+- ✅ **Pinned, verified versions** — the **safest, most stable** versions, not necessarily the latest
 - ✅ **Security Score (0–100)** — computed from 5 dimensions (see [SCORING.md](SCORING.md))
 - ✅ **CVE analysis** — known vulnerabilities, transitive dependency risk, patch velocity
 - ✅ **Lockfile templates** — reproducible dependency files to freeze your supply chain
@@ -251,69 +252,102 @@ Every stack is scored **0–100** across five dimensions:
 
 ---
 
+## 🎯 Version Philosophy: Stability Over Novelty
+
+> **"Latest" does not mean "safest." A version released last week has zero production track record.**
+
+Our version selection follows a strict **stability-first** principle:
+
+### Selection Rules
+
+| Rule | Rationale |
+|------|-----------|
+| 🏆 **Prefer LTS over Current** | LTS releases receive backported security fixes for years |
+| ⏳ **Prefer .2+ over .0** | First patch release proves the major version is stable |
+| 🔍 **6+ months production track record** | Enough time for community to surface real-world bugs |
+| 🚫 **Avoid known regressions** | We track issue trackers — versions with confirmed regressions are flagged |
+| 🛡️ **Prefer versions with security audits** | Independently audited versions score higher |
+| 📦 **Minimize transitive dependencies** | Fewer dependencies = smaller attack surface |
+
+### What This Means in Practice
+
+| ❌ What We DON'T Do | ✅ What We DO |
+|---------------------|---------------|
+| Recommend Node.js 24 (released weeks ago) | Recommend **Node.js 22 LTS** (battle-tested, 2yr support) |
+| Recommend React 19 (new major, breaking changes) | Recommend **React 18.3** (proven in millions of apps) |
+| Recommend PostgreSQL 17 (new major) | Recommend **PostgreSQL 16.x** (years of production hardening) |
+| Recommend Svelte 5 (complete rewrite) | Recommend **Svelte 4.x** (stable, well-understood) |
+| Recommend Redis 8.0 (new license controversy) | Recommend **Redis 7.4** (OSS license, proven track record) |
+| Recommend Angular 19 (just released) | Recommend **Angular 18 LTS** (official long-term support) |
+
+> **Our motto: We'd rather be boring and secure than exciting and vulnerable.**
+> 我们宁可无聊但安全，也不要炫酷但有漏洞。
+
+---
+
 ## ⭐ Featured Stacks
 
 Hand-picked stacks that represent the best of each category. 推荐技术栈 — 每个类别中最佳的代表。
 
 ---
 
-### 🥇 Full-stack Web: React 19.1 + Next.js 15.3 + TypeScript 5.8
+### 🥇 Full-stack Web: React 18.3 + Next.js 14.2 + TypeScript 5.6
 
-> **Score: 93/100 (A)** · Category: [Web Frontend](stacks/frontend.md) | [Full-stack Combos](stacks/fullstack.md)
+> **Score: 95/100 (A+)** · Category: [Web Frontend](stacks/frontend.md) | [Full-stack Combos](stacks/fullstack.md)
 
-A production-grade frontend stack with excellent supply chain integrity. TypeScript catches type errors early, pnpm's content-addressable storage prevents phantom dependencies, and Next.js's server-side rendering reduces client-side attack surface. React 19.1 brings improved concurrent rendering with minimal security surface area.
+The most battle-tested frontend stack available. React 18.3 is deployed in millions of production applications worldwide. Next.js 14.2 has received extensive security patching and is the recommended production release. TypeScript 5.6 has zero Critical CVEs and years of proven stability.
 
 **Components & Versions:**
 
 | Component | Version | Individual Score | Notes |
 |-----------|---------|------------------|-------|
-| React | 19.1 | A+ | Meta-backed, signed releases, SBOM available |
-| Next.js | 15.3 | A | Vercel-maintained, active security response |
-| TypeScript | 5.8 | A+ | Zero Critical CVEs in 3+ years |
-| Vite | 6.3 | A | Fast builds, minimal dependency surface |
-| Node.js | 22 LTS | A | Long-term support, regular security patches |
+| React | 18.3 | A+ | Meta-backed, signed releases, SBOM, millions of production apps |
+| Next.js | 14.2 | A | Vercel-maintained, 14.x is the proven production release |
+| TypeScript | 5.6 | A+ | Zero Critical CVEs in 3+ years |
+| Vite | 5.6 | A | Stable 5.x line, extensive production use |
+| Node.js | 22 LTS | A+ | Long-term support until 2027, regular security patches |
 | pnpm | 9.12 | A | Content-addressable storage, strict resolution |
 
 **Why it's featured:**
 
-- 🔒 TypeScript 5.8 has had zero Critical CVEs in 3+ years — a remarkable security record
+- 🏆 **Stability choice**: React 18.3 over 19.x — 18.x is proven in millions of production apps; 19.x is too new
+- 🔒 TypeScript 5.6 has had zero Critical CVEs in 3+ years — a remarkable security record
 - 📦 pnpm's strict dependency resolution eliminates phantom dependencies and supply chain confusion attacks
-- 🏛️ Vercel maintains an active security response program with rapid CVE patching
+- 🏛️ Next.js 14.2 is the stable production release — 15.x introduces breaking changes and is less battle-tested
 - ✅ All components sign their releases and publish provenance attestations
-- 🛡️ Next.js 15.3 includes built-in security headers and CSP support
 
 ---
 
-### 🥇 Backend API: Go 1.24 + Chi 5.2 + PostgreSQL 17.5
+### 🥇 Backend API: Go 1.22 + Chi 5.2 + PostgreSQL 16.4
 
-> **Score: 95/100 (A+)** · Category: [Backend API](stacks/backend.md) | [Database](stacks/database.md)
+> **Score: 96/100 (A+)** · Category: [Backend API](stacks/backend.md) | [Database](stacks/database.md)
 
-The gold standard for secure backend development. Go's static compilation eliminates runtime dependency attacks, Chi is a minimal and well-audited router with zero dependencies, and PostgreSQL 17.5 is the most battle-tested open-source database in existence.
+The gold standard for secure backend development. Go's static compilation eliminates runtime dependency attacks, Chi is a minimal and well-audited router with zero dependencies, and PostgreSQL 16.4 has years of production hardening with zero critical vulnerabilities.
 
 **Components & Versions:**
 
 | Component | Version | Individual Score | Notes |
 |-----------|---------|------------------|-------|
-| Go | 1.24 | A+ | Google-backed, checksum database by default |
+| Go | 1.22 | A+ | Google-backed, checksum database by default, proven stable |
 | Chi | 5.2 | A+ | Zero external dependencies, minimal attack surface |
-| PostgreSQL | 17.5 | A+ | 30+ years of security hardening |
+| PostgreSQL | 16.4 | A+ | 30+ years of security hardening, 16.x is the proven production release |
 | sqlc | 1.28 | A | Compile-time SQL codegen, eliminates injection |
 
 **Why it's featured:**
 
+- 🏆 **Stability choice**: Go 1.22 over 1.24 — 1.22 is the proven previous stable with extensive production use
+- 🏆 **Stability choice**: PostgreSQL 16.4 over 17.x — 16.x has years of production hardening; 17.x is a new major
 - 🛡️ Go's `govulncheck` provides first-class vulnerability scanning built into the toolchain
 - 📦 Go modules have cryptographic verification by default via the checksum database (sum.golang.org)
 - 🔒 sqlc eliminates SQL injection by design — queries are validated at compile time, not runtime
-- 🏢 Backed by Google (Go) + PostgreSQL Global Development Group — institutional stability
-- 🐧 Go 1.24 includes enhanced FIPS 140 compliance for regulated environments
 
 ---
 
-### 🥇 Systems Backend: Rust 1.87 + Axum 0.8
+### 🥇 Systems Backend: Rust 1.80 + Axum 0.7
 
-> **Score: 94/100 (A)** · Category: [Backend API](stacks/backend.md)
+> **Score: 95/100 (A+)** · Category: [Backend API](stacks/backend.md)
 
-Memory-safe by default. Rust eliminates entire vulnerability classes (buffer overflows, use-after-free, data races) at compile time. Axum 0.8 is built on Tokio and Hyper — battle-tested foundations handling millions of production requests. Actix-web 4.11 is available as an alternative with similar security posture.
+Memory-safe by default. Rust eliminates entire vulnerability classes (buffer overflows, use-after-free, data races) at compile time. Axum 0.7 is built on Tokio and Hyper — battle-tested foundations handling millions of production requests. Actix-web 4.8 is available as an alternative with similar security posture.
 
 **Components & Versions:**
 

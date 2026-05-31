@@ -13,7 +13,7 @@
 |-----------|---------------|---------|-------------------|
 | Node.js | 22.16.0 | MIT | 0 critical (LTS) |
 | Express | 4.21.2 | MIT | 0 (4.x mature) |
-| Fastify | 5.3.3 | MIT | 0 |
+| Fastify | 4.28.1 | MIT | 0 | *(stability choice)* |
 | TypeScript | 5.4.5 | Apache-2.0 | N/A |
 
 **Dependency Tree Analysis:**
@@ -32,7 +32,7 @@ npm audit --production
 {
   "node": ">=22.16.0 <23",
   "express": "4.21.2",
-  "fastify": "5.3.3",
+  "fastify": "4.28.1",
   "helmet": "8.0.0",
   "express-rate-limit": "7.4.1",
   "typescript": "5.4.5",
@@ -53,7 +53,7 @@ npm audit --production
 
 | Component | Pinned Version | License | CVEs |
 |-----------|---------------|---------|------|
-| Python | 3.13.3 | PSF | 0 critical |
+| Python | 3.12.7 | PSF | 0 critical | *(stability choice)* |
 | FastAPI | 0.115.12 | MIT | 0 |
 | Pydantic | 2.9.2 | MIT | 0 |
 | uvicorn | 0.31.0 | BSD-3 | 0 |
@@ -85,7 +85,7 @@ sqlalchemy = "==2.0.35"
 **Reproducible Build Support:**
 - Use `uv lock` or `poetry.lock` with hash verification
 - `pip install --require-hashes -r requirements.txt`
-- Container: `python:3.13.3-slim-bookworm` (SHA256 pinned)
+- Container: `python:3.12.7-slim-bookworm` (SHA256 pinned)
 
 ---
 
@@ -95,7 +95,7 @@ sqlalchemy = "==2.0.35"
 
 | Component | Pinned Version | License | CVEs |
 |-----------|---------------|---------|------|
-| Go | 1.24.3 | BSD-3 | 0 critical |
+| Go | 1.22.8 | BSD-3 | 0 critical | *(stability choice)* |
 | Gin | 1.10.0 | MIT | 0 |
 | Echo | 4.12.0 | MIT | 0 |
 | chi | 5.1.0 | MIT | 0 |
@@ -113,7 +113,7 @@ go mod verify
 
 **Lockfile Pinning:**
 ```
-go 1.24.3
+go 1.22.8
 require (
     github.com/gin-gonic/gin v1.10.0
     github.com/go-playground/validator/v10 v10.22.1
@@ -123,7 +123,7 @@ require (
 **Reproducible Build Support:**
 - Go modules with `go.sum` hash verification
 - `CGO_ENABLED=0` for static binaries
-- Container: `golang:1.24.3-alpine` → `scratch` (minimal)
+- Container: `golang:1.22.8-alpine` → `scratch` (minimal)
 
 ---
 
@@ -133,9 +133,9 @@ require (
 
 | Component | Pinned Version | License | CVEs |
 |-----------|---------------|---------|------|
-| Rust | 1.87.0 | MIT/Apache-2.0 | 0 |
-| Actix-web | 4.11.0 | MIT/Apache-2.0 | 0 |
-| Axum | 0.8.4 | MIT | 0 |
+| Rust | 1.80.1 | MIT/Apache-2.0 | 0 | *(stability choice)* |
+| Actix-web | 4.8.0 | MIT/Apache-2.0 | 0 | *(stability choice)* |
+| Axum | 0.7.9 | MIT | 0 | *(stability choice)* |
 | Tokio | 1.41.1 | MIT | 0 |
 | Serde | 1.0.214 | MIT/Apache-2.0 | 0 |
 
@@ -153,7 +153,7 @@ cargo deny check
 **Reproducible Build Support:**
 - `Cargo.lock` with cryptographic hashes
 - `cargo build --release` produces static binaries
-- Container: `rust:1.87.0-bookworm` → `scratch`
+- Container: `rust:1.80.1-bookworm` → `scratch`
 
 ---
 
@@ -164,7 +164,7 @@ cargo deny check
 | Component | Pinned Version | License | CVEs |
 |-----------|---------------|---------|------|
 | Java (Temurin) | 21.0.4 | GPL-2.0 w/ CPE | 0 critical |
-| Spring Boot | 3.4.5 | Apache-2.0 | 0 critical |
+| Spring Boot | 3.2.11 | Apache-2.0 | 0 critical | *(stability choice)* |
 | Spring Security | 6.2.7 | Apache-2.0 | 0 |
 | Hibernate | 6.4.10 | LGPL-2.1 | 0 |
 

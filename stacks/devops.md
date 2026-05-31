@@ -11,8 +11,8 @@
 
 | Component | Pinned Version | License | CVEs |
 |-----------|---------------|---------|------|
-| Docker Engine | 28.1.1 | Apache-2.0 | 1 moderate (patched) |
-| containerd | 2.1.1 | Apache-2.0 | 0 critical |
+| Docker Engine | 27.5.1 | Apache-2.0 | 1 moderate (patched) |
+| containerd | 1.7.25 | Apache-2.0 | 0 critical |
 | BuildKit | 0.16.0 | Apache-2.0 | 0 |
 | runc | 1.2.1 | Apache-2.0 | 0 |
 
@@ -46,9 +46,9 @@
 
 | Component | Pinned Version | License | CVEs |
 |-----------|---------------|---------|------|
-| Kubernetes | 1.33.1 | Apache-2.0 | 1 moderate (patched) |
+| Kubernetes | 1.30.9 | Apache-2.0 | 1 moderate (patched) |
 | etcd | 3.5.16 | Apache-2.0 | 0 |
-| containerd | 2.1.1 | Apache-2.0 | 0 |
+| containerd | 1.7.25 | Apache-2.0 | 0 |
 
 **Security Configuration:**
 ```yaml
@@ -127,7 +127,7 @@ include:
 
 | Component | Pinned Version | License |
 |-----------|---------------|---------|
-| Terraform | 1.12.0 | BSL-1.1 |
+| Terraform | 1.7.5 | BSL-1.1 |
 | OpenTofu | 1.8.2 | MPL-2.0 (open fork) |
 | tflint | 0.53.0 | MPL-2.0 |
 | checkov | 3.2.302 | Apache-2.0 |
@@ -135,7 +135,7 @@ include:
 ```hcl
 # versions.tf — pin providers
 terraform {
-  required_version = ">= 1.12.0"
+  required_version = ">= 1.7.5"
   required_providers {
     aws = {
       source  = "hashicorp/aws"
@@ -171,8 +171,8 @@ terraform {
 
 | Component | Pinned Version | License | CVEs |
 |-----------|---------------|---------|------|
-| Prometheus | 3.4.1 | Apache-2.0 | 0 |
-| Grafana | 12.0.1 | AGPL-3.0 | 1 low |
+| Prometheus | 2.54.3 | Apache-2.0 | 0 |
+| Grafana | 10.4.8 | AGPL-3.0 | 1 low |
 | Alertmanager | 0.27.0 | Apache-2.0 | 0 |
 | Loki | 3.2.1 | AGPL-3.0 | 0 |
 | Node Exporter | 1.8.2 | Apache-2.0 | 0 |

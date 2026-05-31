@@ -16,7 +16,7 @@
 |-----------|---------------|---------|------|
 | Next.js | 14.2.15 | MIT | 0 (patched) |
 || tRPC | 11.1.3 | MIT | 0 |
-|| Prisma | 6.8.2 | Apache-2.0 | 0 |
+||| Prisma | 5.22.0 | Apache-2.0 | 0 |
 || Auth.js | 5.0.0-beta.25 | ISC | 0 |
 | Tailwind CSS | 3.4.14 | MIT | 0 |
 | TypeScript | 5.4.5 | Apache-2.0 | N/A |
@@ -34,7 +34,7 @@
     "@trpc/client": "11.1.3",
     "@trpc/next": "11.1.3",
     "@trpc/react-query": "11.1.3",
-    "@prisma/client": "6.8.2",
+    "@prisma/client": "5.22.0",
     "next-auth": "5.0.0-beta.25",
     "react": "18.3.1",
     "react-dom": "18.3.1",
@@ -42,7 +42,7 @@
     "superjson": "2.2.1"
   },
   "devDependencies": {
-    "prisma": "6.8.2",
+    "prisma": "5.22.0",
     "typescript": "5.4.5",
     "tailwindcss": "3.4.14",
     "postcss": "8.4.47",
@@ -146,8 +146,8 @@ X_FRAME_OPTIONS = "DENY"
 
 | Component | Pinned Version | License | CVEs |
 |-----------|---------------|---------|------|
-|| Ruby | 3.4.2 | Ruby | 0 critical |
-|| Rails | 8.0.2 | MIT | 0 |
+||| Ruby | 3.3.5 | Ruby | 0 critical |
+||| Rails | 7.2.2 | MIT | 0 |
 || PostgreSQL | 16.4 | PostgreSQL | 0 |
 || Puma | 6.6.0 | BSD-3 | 0 |
 | Devise | 4.9.4 | MIT | 0 |
@@ -160,7 +160,7 @@ X_FRAME_OPTIONS = "DENY"
 # Gemfile
 source "https://rubygems.org"
 
-gem "rails", "~> 8.0.2"
+gem "rails", "~> 7.2.2"
 gem "pg", "~> 1.5.8"
 gem "puma", "~> 6.6.0"
 gem "devise", "~> 4.9.4"
@@ -197,8 +197,8 @@ bundle exec brakeman --no-pager
 
 | Component | Pinned Version | License | CVEs |
 |-----------|---------------|---------|------|
-|| PHP | 8.4.6 | PHP-3.01 | 0 critical |
-|| Laravel | 12.7.2 | MIT | 0 |
+||| PHP | 8.3.12 | PHP-3.01 | 0 critical |
+||| Laravel | 11.35.1 | MIT | 0 |
 | Livewire | 3.5.12 | MIT | 0 |
 | Pest | 3.5.1 | MIT | 0 |
 | Laravel Sanctum | 4.0.2 | MIT | 0 |
@@ -210,7 +210,7 @@ bundle exec brakeman --no-pager
 {
   "require": {
     "php": ">=8.3",
-    "laravel/framework": "12.7.2",
+    "laravel/framework": "11.35.1",
     "livewire/livewire": "3.5.12",
     "laravel/sanctum": "4.0.2",
     "laravel/pint": "1.18.1"
