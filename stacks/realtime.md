@@ -83,13 +83,13 @@ const wss = new WebSocketServer({
 
 ## 2. Message Queues
 
-### RabbitMQ 3.13.x ⭐
+### RabbitMQ 3.13.8.x ⭐
 
 **Security Grade: A**
 
 | Component | Pinned Version | License | CVEs |
 |-----------|---------------|---------|------|
-| RabbitMQ | 3.13.7 | MPL-2.0 | 0 critical |
+| RabbitMQ | 3.13.8 | MPL-2.0 | 0 critical |
 | Erlang/OTP | 26.2.5 | Apache-2.0 | 0 |
 
 **Security Configuration:**

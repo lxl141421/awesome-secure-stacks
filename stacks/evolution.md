@@ -33,7 +33,7 @@ Single deployable unit. One codebase, one database, one process. This is where 9
 - Deployed as single JAR/WAR
 
 **Python:**
-- Django 5.0 + Python 3.12 LTS
+- Django 5.0.2 + Python 3.12 LTS
 - PostgreSQL 16 + Django ORM
 - Gunicorn + Nginx
 - Docker container
@@ -114,7 +114,7 @@ Single deployable, but with clear internal module boundaries. Each module has it
   ```
 
 **Python:**
-- Django 5.0 with domain-driven structure
+- Django 5.0.2 with domain-driven structure
 - django-modular or custom app boundaries
 - Module structure:
   ```
@@ -171,7 +171,7 @@ Extract modules from the monolith into independent services using the Strangler 
 - Docker + Docker Compose (dev) / Kubernetes (prod)
 - API Gateway: Kong 3.5, Traefik 3.0, or AWS API Gateway
 - Service Discovery: Consul 1.18 or Kubernetes DNS
-- Message Queue: RabbitMQ 3.13 or AWS SQS
+- Message Queue: RabbitMQ 3.13.8 or AWS SQS
 
 **Service Stacks (per extracted service):**
 - Any of the Phase 1 stacks, but smaller and focused

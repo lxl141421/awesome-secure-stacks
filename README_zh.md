@@ -20,7 +20,7 @@
   &nbsp;
   <a href="https://github.com/lxl141421/awesome-secure-stacks/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square" alt="PRs Welcome"></a>
   &nbsp;
-  <img src="https://img.shields.io/badge/last%20updated-2025--05-blue?style=flat-square" alt="Last Updated">
+  <img src="https://img.shields.io/badge/last%20updated-2026--06-blue?style=flat-square" alt="Last Updated">
   &nbsp;
   <img src="https://img.shields.io/badge/security--audited-✓-brightgreen?style=flat-square&logo=checkmarx&logoColor=white" alt="Security Audited">
   &nbsp;
@@ -90,7 +90,7 @@
 
 > ### ⚡ "我要快速出活"
 >
-> **React 18.3 + Next.js 14.2 + T3 Stack**
+> **React 18.3 + Next.js 14.2.21 + T3 Stack**
 >
 > 📊 **评分: 95/100 (A+)** — 最久经考验的前端全栈方案。
 >
@@ -259,11 +259,11 @@
 
 ---
 
-### 🥇 全栈 Web：React 18.3 + Next.js 14.2 + TypeScript 5.6
+### 🥇 全栈 Web：React 18.3 + Next.js 14.2.21 + TypeScript 5.6
 
 > **评分: 95/100 (A+)** · 分类：[Web 前端](stacks/frontend.md) | [全栈组合](stacks/fullstack.md)
 
-最久经考验的前端技术栈。React 18.3 已部署在数百万生产应用中。Next.js 14.2 经过大量安全补丁，是推荐的生产版本。TypeScript 5.6 零 Critical CVE，多年稳定验证。
+最久经考验的前端技术栈。React 18.3 已部署在数百万生产应用中。Next.js 14.2.21 经过大量安全补丁（包括 CVE-2024-56332 DoS 修复），是推荐的生产版本。TypeScript 5.6 零 Critical CVE，多年稳定验证。
 
 **组件与版本：**
 
@@ -312,11 +312,11 @@
 
 ---
 
-### 🥇 DevOps 与基础设施：Terraform 1.7 + Kubernetes 1.30
+### 🥇 DevOps 与基础设施：Terraform 1.7 + Kubernetes 1.30.7
 
 > **评分: 91/100 (A)** · 分类：[DevOps 与基础设施](stacks/devops.md)
 
-基础设施即代码与容器编排。每个基础设施变更都经过版本控制、审查和审计。Docker 25.0 提供加固的容器运行时，Kubernetes 1.30 增强了 Pod 安全标准。
+基础设施即代码与容器编排。每个基础设施变更都经过版本控制、审查和审计。Docker 25.0 提供加固的容器运行时，Kubernetes 1.30.7 增强了 Pod 安全标准（包含 CVE-2024-10220 gitRepo 卷命令执行修复）。
 
 **组件与版本：**
 
@@ -343,7 +343,7 @@
 
 框架、打包工具、CSS 方案和客户端安全工具。涵盖 React、Vue、Svelte、Angular 及新兴框架及其推荐配套工具。每个条目包含 CSP 配置、依赖审计结果和 XSS 缓解策略。
 
-> **精选：** React 18.3 + Next.js 14.2、Vue 3.5 + Nuxt 3、SvelteKit 2、Angular 18 LTS
+> **精选：** React 18.3 + Next.js 14.2.21、Vue 3.5 + Nuxt 3、SvelteKit 2、Angular 18 LTS
 
 ---
 
@@ -353,7 +353,7 @@
 
 服务端运行时、Web 框架、ORM、认证库和 API 安全工具。涵盖 Node.js、Go、Rust、Python、Java 和 .NET 生态，详细分析中间件安全、输入验证和认证模式。
 
-> **精选：** Go 1.22 + Chi 5.2 + sqlc、Rust 1.80 + Axum 0.7、Node.js 22 + Fastify 5、Python 3.12 + FastAPI 0.115、Java 21 + Spring Boot 3.4、.NET 8 + ASP.NET Core 8.0
+> **精选：** Go 1.22 + Chi 5.2 + sqlc、Rust 1.80 + Axum 0.7、Node.js 22.22 + Fastify 5、Python 3.12 + FastAPI 0.115、Java 21 + Spring Boot 3.4、.NET 8 + ASP.NET Core 8.0
 
 ---
 
@@ -445,7 +445,7 @@ LLM 编排框架、向量数据库和 AI Agent 基础设施。涵盖 LangChain�
 
 基础设施即代码、CI/CD、容器编排、密钥管理、可观测性和云服务商工具。评估整个部署流水线的供应链完整性。
 
-> **精选：** Terraform 1.7 + ArgoCD、Kubernetes 1.30 + Docker 25.0、GitHub Actions、Dagger
+> **精选：** Terraform 1.7 + ArgoCD、Kubernetes 1.30.7 + Docker 25.0、GitHub Actions、Dagger
 
 ---
 
@@ -455,7 +455,7 @@ LLM 编排框架、向量数据库和 AI Agent 基础设施。涵盖 LangChain�
 
 WebSocket、SSE、发布/订阅、消息队列和实时协作工具，关注持久连接的安全考量。评估认证、消息完整性和拒绝服务韧性。
 
-> **精选：** Kafka 3.7、RabbitMQ 3.13、NATS 2.10、Socket.IO 4.x、Redis Streams
+> **精选：** Kafka 3.7、RabbitMQ 3.13.8、NATS 2.10、Socket.IO 4.x、Redis Streams
 
 ---
 

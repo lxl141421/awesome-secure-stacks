@@ -20,7 +20,7 @@
   &nbsp;
   <a href="https://github.com/lxl141421/awesome-secure-stacks/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square" alt="PRs Welcome"></a>
   &nbsp;
-  <img src="https://img.shields.io/badge/last%20updated-2025--05-blue?style=flat-square" alt="Last Updated">
+  <img src="https://img.shields.io/badge/last%20updated-2026--06-blue?style=flat-square" alt="Last Updated">
   &nbsp;
   <img src="https://img.shields.io/badge/security--audited-✓-brightgreen?style=flat-square&logo=checkmarx&logoColor=white" alt="Security Audited">
   &nbsp;
@@ -91,8 +91,8 @@
 
 > ### ⚡ "I want to build fast"
 >
-> **React 18.3 + Next.js 14.2 + T3 Stack**
->
+> **React 18.3 + Next.js 14.2.21 + T3 Stack**
+
 > 📊 **Score: 95/100 (A+)** — The most battle-tested frontend full-stack available.
 >
 > - ✅ React 18.3 is deployed in **millions** of production applications worldwide
@@ -289,21 +289,21 @@ Hand-picked stacks that represent the best of each category. 推荐技术栈 —
 
 ---
 
-### 🥇 Full-stack Web: React 18.3 + Next.js 14.2 + TypeScript 5.6
+### 🥇 Full-stack Web: React 18.3 + Next.js 14.2.21 + TypeScript 5.6
 
 > **Score: 95/100 (A+)** · Category: [Web Frontend](stacks/frontend.md) | [Full-stack Combos](stacks/fullstack.md)
 
-The most battle-tested frontend stack available. React 18.3 is deployed in millions of production applications worldwide. Next.js 14.2 has received extensive security patching and is the recommended production release. TypeScript 5.6 has zero Critical CVEs and years of proven stability.
+The most battle-tested frontend stack available. React 18.3 is deployed in millions of production applications worldwide. Next.js 14.2.21 has received extensive security patching (including fix for CVE-2024-56332 DoS) and is the recommended production release. TypeScript 5.6 has zero Critical CVEs and years of proven stability.
 
 **Components & Versions:**
 
 | Component | Version | Individual Score | Notes |
 |-----------|---------|------------------|-------|
 | React | 18.3 | A+ | Meta-backed, signed releases, SBOM, millions of production apps |
-| Next.js | 14.2 | A | Vercel-maintained, 14.x is the proven production release |
+| Next.js | 14.2.21 | A | Vercel-maintained, 14.x is the proven production release |
 | TypeScript | 5.6 | A+ | Zero Critical CVEs in 3+ years |
 | Vite | 5.6 | A | Stable 5.x line, extensive production use |
-| Node.js | 22 LTS | A+ | Long-term support until 2027, regular security patches |
+| Node.js | 22.22 LTS | A+ | Long-term support until 2027, includes CVE-2026-21710 fix |
 | pnpm | 9.12 | A | Content-addressable storage, strict resolution |
 
 **Why it's featured:**
@@ -311,7 +311,7 @@ The most battle-tested frontend stack available. React 18.3 is deployed in milli
 - 🏆 **Stability choice**: React 18.3 over 19.x — 18.x is proven in millions of production apps; 19.x is too new
 - 🔒 TypeScript 5.6 has had zero Critical CVEs in 3+ years — a remarkable security record
 - 📦 pnpm's strict dependency resolution eliminates phantom dependencies and supply chain confusion attacks
-- 🏛️ Next.js 14.2 is the stable production release — 15.x introduces breaking changes and is less battle-tested
+- 🏛️ Next.js 14.2.21 is the stable production release — 15.x introduces breaking changes and is less battle-tested
 - ✅ All components sign their releases and publish provenance attestations
 
 ---
@@ -366,18 +366,18 @@ Memory-safe by default. Rust eliminates entire vulnerability classes (buffer ove
 
 ---
 
-### 🥇 DevOps & Infrastructure: Terraform 1.7 + Kubernetes 1.30
+### 🥇 DevOps & Infrastructure: Terraform 1.7 + Kubernetes 1.30.7
 
 > **Score: 91/100 (A)** · Category: [DevOps & Infrastructure](stacks/devops.md)
 
-Infrastructure-as-code with container orchestration. Every infrastructure change is version-controlled, reviewed, and auditable. Docker 25.0 provides hardened container runtimes, Kubernetes 1.30 brings enhanced pod security standards, and Terraform 1.7's provider ecosystem is HashiCorp-signed with SLSA provenance.
+Infrastructure-as-code with container orchestration. Every infrastructure change is version-controlled, reviewed, and auditable. Docker 25.0 provides hardened container runtimes, Kubernetes 1.30.7 brings enhanced pod security standards (includes CVE-2024-10220 fix for gitRepo volume command execution), and Terraform 1.7's provider ecosystem is HashiCorp-signed with SLSA provenance.
 
 **Components & Versions:**
 
 | Component | Version | Individual Score | Notes |
 |-----------|---------|------------------|-------|
 | Terraform | 1.7 | A | HashiCorp-signed providers, state encryption |
-| Kubernetes | 1.30 | A | Enhanced pod security, signed releases |
+| Kubernetes | 1.30.7 | A | Enhanced pod security, signed releases |
 | Docker | 25.0 | A | Content trust, image signing by default |
 | ArgoCD | 2.12 | A | GitOps, declarative auditable deployments |
 
@@ -385,7 +385,7 @@ Infrastructure-as-code with container orchestration. Every infrastructure change
 
 - 🔐 All Terraform providers are signed by HashiCorp — tamper detection at init time
 - 🔄 ArgoCD provides declarative, auditable deployments with drift detection
-- 📦 Kubernetes 1.30 includes enhanced Pod Security Admission and signed container images
+- 📦 Kubernetes 1.30.7 includes enhanced Pod Security Admission, signed container images, and CVE-2024-10220 fix
 - 📋 Infrastructure state is fully reproducible from version-controlled configuration
 - 🛡️ Docker 25.0 content trust ensures image integrity from build to runtime
 
@@ -405,7 +405,7 @@ Organized by the technology you use every day. 按日常使用的技术分类。
 
 Frameworks, bundlers, CSS solutions, and client-side security tools. Covers React, Vue, Svelte, Angular, and emerging frameworks with their recommended companion tools. Each entry includes CSP configurations, dependency audit results, and XSS mitigation strategies.
 
-> **Featured:** React 18.3 + Next.js 14.2, Vue 3.5 + Nuxt 3, SvelteKit 2, Angular 18 LTS
+> **Featured:** React 18.3 + Next.js 14.2.21, Vue 3.5 + Nuxt 3, SvelteKit 2, Angular 18 LTS
 
 ---
 
@@ -415,7 +415,7 @@ Frameworks, bundlers, CSS solutions, and client-side security tools. Covers Reac
 
 Server-side runtimes, web frameworks, ORMs, authentication libraries, and API security tools. Covers Node.js, Go, Rust, Python, Java, and .NET ecosystems with detailed analysis of middleware security, input validation, and authentication patterns.
 
-> **Featured:** Go 1.22 + Chi 5.2 + sqlc, Rust 1.80 + Axum 0.7, Node.js 22 + Fastify 5, Python 3.12 + FastAPI 0.115, Java 21 + Spring Boot 3.4, .NET 8 + ASP.NET Core 8.0
+> **Featured:** Go 1.22 + Chi 5.2 + sqlc, Rust 1.80 + Axum 0.7, Node.js 22.22 + Fastify 5, Python 3.12 + FastAPI 0.115, Java 21 + Spring Boot 3.4, .NET 8 + ASP.NET Core 8.0
 
 ---
 
@@ -507,7 +507,7 @@ Relational, document, key-value, and time-series databases with their client lib
 
 Infrastructure-as-code, CI/CD, container orchestration, secret management, observability, and cloud provider tools. Each stack is evaluated for supply chain integrity of the entire deployment pipeline.
 
-> **Featured:** Terraform 1.7 + ArgoCD, Kubernetes 1.30 + Docker 25.0, GitHub Actions, Dagger
+> **Featured:** Terraform 1.7 + ArgoCD, Kubernetes 1.30.7 + Docker 25.0, GitHub Actions, Dagger
 
 ---
 
@@ -517,7 +517,7 @@ Infrastructure-as-code, CI/CD, container orchestration, secret management, obser
 
 WebSockets, SSE, pub/sub, message queues, and real-time collaboration tools with security considerations for persistent connections. Evaluates authentication, message integrity, and denial-of-service resilience.
 
-> **Featured:** Kafka 3.7, RabbitMQ 3.13, NATS 2.10, Socket.IO 4.x, Redis Streams
+> **Featured:** Kafka 3.7, RabbitMQ 3.13.8, NATS 2.10, Socket.IO 4.x, Redis Streams
 
 ---
 
